@@ -31,7 +31,7 @@ int main() {
     cont.add(5);
     cont.add(6);
 
-    for(const auto& item : cont) {
+    for (const auto& item : cont) {
         std::cout << item << "\n";
     }
 }
