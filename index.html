@@ -71,11 +71,12 @@ about: 'about.html'
     {% endfor %}
 
     {% include pagination.html %}
+    <script src="search-script.js" type="text/javascript"></script>
     <script>
         SimpleJekyllSearch({
           searchInput: document.getElementById('search-input'),
           resultsContainer: document.getElementById('results-container'),
           json: '/search.json'
         })
-        </script>
+    </script>
 </main>
