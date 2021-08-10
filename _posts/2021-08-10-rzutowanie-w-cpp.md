@@ -12,9 +12,8 @@ Rzutowanie to mechanizm umożliwiający programiście zmianę typu danego obiekt
 
 Wady:
 
-* Możliwe jest za pomocą ich dowolne rzutowanie
-* Ciężko wypatrzeć je w kodzie
-* Trudno wyczytać zamysł programisty
+* Możliwe jest w ten sposób
+* Trudno wypatrzyć je w kodzie oraz odgadnąć zamysł programisty
 
 {% highlight cpp %}
 T obiekt = (T)wyrazenie_lub_obiekt_innego_typu
@@ -26,13 +25,13 @@ T obiekt = T(wyrazenie_lub_obiekt_innego_typu)
 
 ### Nowoczesne rzutowanie
 
-Rzutowanie w starym stylu nie dawało jakiejkolwiek kontroli nad tym czy ma ono sens logiczny dlatego Stroustrup wprowadził cztery dodatkowe operatory rzutowania: [`static_cast`](#rzutowanie-static_cast), [`dynamic_cast`](#rzutowanie-dynamic_cast), [`const_cast`](#rzutowanie-const_cast) oraz [`reinterpret_cast`](#rzutowanie-reinterpret_cast), które za wyjątkiem rzutowania dynamicznego już w trakcie kompilacji sprawdzają poprawność tej operacji.
+W związku z tym, że rzutowanie w "starym stylu" nie dawało jakiejkolwiek kontroli nad tym czy ma ono sens logiczny czy nie, troustrup wprowadził cztery dodatkowe operatory rzutowania: [`static_cast`](#rzutowanie-static_cast), [`dynamic_cast`](#rzutowanie-dynamic_cast), [`const_cast`](#rzutowanie-const_cast) oraz [`reinterpret_cast`](#rzutowanie-reinterpret_cast), które za wyjątkiem rzutowania dynamicznego już w trakcie kompilacji jest walidowane przez kompilator.
 
 #### Rzutowanie `static_cast`
 
 * Rzutowanie w trakcie kompilacji
 * Konwersja typów podstawowych: `int`, `double`, `char`
-    * W przypadku konieczności ucięcie części ułamkowej zalecane jest użycie funkcji `round()`
+    * W przypadku konieczności ucięcia części ułamkowej jakiejś liczby zalecane jest użycie funkcji `round()`
 * Konwersja typów zdefiniowanych przez użytkownika wymagana zdefiniowania konstruktora przyjmującego jeden typ i zwracający inny
 * Konwersja wskaźników klas podstawowych na ich odpowiedniki klas pochodnych (w dół hierarchii) oraz odwrotnie (w górę hierarchii)
 
