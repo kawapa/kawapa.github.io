@@ -2,7 +2,7 @@
 layout: post
 title: "Rzutowanie w C++"
 date: 2021-08-10 08:00:00
-last_modified_at: 2021-08-09 20:00:00
+last_modified_at: 2021-08-10 06:00:00
 categories: 
 ---
 
@@ -12,7 +12,7 @@ Rzutowanie to mechanizm umożliwiający programiście zmianę typu danego obiekt
 
 Wady:
 
-* Możliwe jest w ten sposób
+* Możliwe jest w ten sposób dowolne rzutowanie
 * Trudno wypatrzyć je w kodzie oraz odgadnąć zamysł programisty
 
 {% highlight cpp %}
@@ -25,7 +25,7 @@ T obiekt = T(wyrazenie_lub_obiekt_innego_typu)
 
 ### Nowoczesne rzutowanie
 
-W związku z tym, że rzutowanie w "starym stylu" nie dawało jakiejkolwiek kontroli nad tym czy ma ono sens logiczny czy nie, troustrup wprowadził cztery dodatkowe operatory rzutowania: [`static_cast`](#rzutowanie-static_cast), [`dynamic_cast`](#rzutowanie-dynamic_cast), [`const_cast`](#rzutowanie-const_cast) oraz [`reinterpret_cast`](#rzutowanie-reinterpret_cast), które za wyjątkiem rzutowania dynamicznego już w trakcie kompilacji jest walidowane przez kompilator.
+W związku z tym, że rzutowanie w "starym stylu" nie sprawdzało czy ma ono sens logiczny czy nie, Stroustrup wprowadził cztery dodatkowe operatory rzutowania: [`static_cast`](#rzutowanie-static_cast), [`dynamic_cast`](#rzutowanie-dynamic_cast), [`const_cast`](#rzutowanie-const_cast) oraz [`reinterpret_cast`](#rzutowanie-reinterpret_cast), które za wyjątkiem rzutowania dynamicznego już w trakcie kompilacji jest walidowane przez kompilator.
 
 #### Rzutowanie `static_cast`
 
