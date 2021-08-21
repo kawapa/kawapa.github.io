@@ -10,12 +10,12 @@ Michał Bartyzel to były programista, obecnie trener w firmie szkoleniowej, a t
 
 **Poniższy post to moje osobiste notatki i przemyślenia z najciekawszych (dla mnie) fragmentów lektury.** Mimo że książka jest krótka (180 stron) to zawiera dużo wartościowej treści i jest zdecydowanie warta swojej ceny (na serwisach aukcyjnych jest do kupienia za ~25 PLN).
 
-### 1. Podstawy
+## 1. Podstawy
 
 * Nie ma cudownych receptur ani trików jeśli chodzi o poprawę efektywności programisty. Jest tylko konsekwentna praca nad nawykami, dzień po dniu.
 * Wielkie problemy biorą się z małych zaniedbań, podobnie jak wielkie osiągnięcia biorą się z małych ulepszeń.
 
-### 2. Wielozadaniowość
+## 2. Wielozadaniowość
 
 Wielozadaniowość to:
 * Próba wykonywania dwóch zadań jednocześnie oraz
@@ -25,7 +25,7 @@ Unikanie wielozadaniowości polega na:
 * Skupieniu się na wykonywaniu tylko na jednej rzeczy oraz
 * **Podzieleniu pracy na takie elementarne części, że możesz wykonać jedną z nich, a następnie o niej zapomnieć i przejść do kolejnej**.
 
-### 3. Jednominutowy kurs asertywności
+## 3. Jednominutowy kurs asertywności
 
 > Jeśli nie udaje Ci się wykonać swoich wszystkich zadań w założonym terminie, nie proś o więcej czasu, proś raczej o rewizję celów.
 
@@ -39,7 +39,7 @@ Przykładowe wyjście z sytuacji:
 > - *Rozumiem, że zależy ci na tym, a bym __CZYJAŚ_PROŚBA__.*
 > - *W tej chwili zajmuję się __AKTUALNIE_WYKONYWANE_ZADANIE__ i mam zaplanowane jeszcze __KOLEJNE_TRZY_ZADANIA__. Z czego mam zrezygnować albo co przesunąć, aby wykonać to, o co mnie prosisz?*
 
-### 4. Metodyka pracy z zadaniami do wykonania
+## 4. Metodyka pracy z zadaniami do wykonania
 
 * Wszystkie tematy które do Ciebie trafiają wpisujesz do tak zwanego **rejestru**
     * Dotyczy to także sytuacji w których coś (telefon, mail lub pomysł który przyszedł Ci do głowy) lub ktoś na chwilę przerywa naszą pracę
@@ -49,7 +49,7 @@ Przykładowe wyjście z sytuacji:
 * Przed rozpoczęciem pracy zaglądasz do rejestru i wybierasz zadanie do zrobienia
 * Po wykonaniu zadania nie wykreślasz zadania, oznaczasz je jako wykonane
 
-#### 4.1 Cechy dobrego rejestru
+### 4.1 Cechy dobrego rejestru
 
 * Rejestr jest tylko jeden
 * Rejestr jest zawsze widoczny/otwarty
@@ -58,7 +58,7 @@ Przykładowe wyjście z sytuacji:
 * **Rejestr powinien odzwierciedlać postępy w pracy** (ruch na tablicy KANBAN lub checkbox-y)
     * Brak widocznych postępów w danym projekcie jest jedną z najczęstszych przyczyn prokrastynacji oraz zaniechania stosowania systemów do organizacji zadań.
 
-#### 4.2 Dobrze zdefiniowane zadanie
+### 4.2 Dobrze zdefiniowane zadanie
 
 * Ma jasno zdefiniowany cel i jest on możliwy do zaobserwowania
     * Jeśli nie wiesz, co chcesz ostatecznie uzyskać to nie wiesz także, co po kolei należy zrobić. W konsekwencji albo robisz cokolwiek albo nie robisz nic.
@@ -77,7 +77,7 @@ Przechowywanie tak zdefiniowanych zadań ma jeszcze jedną olbrzymią zaletę:
 
 **Praca z nieskonkretyzowanym zadaniem wiąże się z częstym "ładowaniem" i "rozładowywaniem" kontekstu**. To ogromna strata czasu i energii. Z tego też powodu zadania muszą być zdefiniowane tak i drobno i zawierały w swoim sformułlowaniu taką ilość kontekstu, że można przystąpić do ich wykonywania w ciągu kilku sekund.
 
-### 5. Praca z trudnymi zadaniami
+## 5. Praca z trudnymi zadaniami
 
 Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wystartować. Z pomocą przychodzi metoda indywidualnej burzy mózgu:
 
@@ -88,33 +88,33 @@ Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wysta
     * Nie przerywaj jeśli na kartce nie znajduje się przynajmniej 30 pomysłów
 3. Przeanalizuj wszystkie pomysły - **być może wśród nich kryje się wskazówka prowadząca do rozwiązania**
 
-### 6. Czytanie książek branżowych
+## 6. Czytanie książek branżowych
 
 * Unikaj czytania książek technicznych od deski do deski. Twoim celem jest nauczenie się czegoś z nich, więc od samego początku szukaj treści które:
     * Rozwiązują problemy z którymi aktualnie się mierzysz
     * Potencjalnie mogą Ci się przydać w przyszłości
 
-#### 6.1 Jak zapoznawać się z książką? - Metoda Balcerowicza
+### 6.1 Jak zapoznawać się z książką? - Metoda Balcerowicza
 
 1. Przejrzyj spis treści i na jego podstawie spisz listę pytań, na które odpowiedzi chciałbyś znaleźć w tej książce
     * Pytania muszą być konkretne!
 2. Przeczytaj tylko te fragmenty, w których Twoim zdaniem mogą znajdować się odpowiedzi 
 3. Koniec. Zapoznałeś się z książką.
 
-### 7. Planowanie pracy
+## 7. Planowanie pracy
 
 * Skupiaj się na rzeczach ważnych gdyż to właśnie one przynoszą faktyczną wartość w pracy (i w życiu)
     * Rzeczy ważne to te których konsekwencje wykonania lub zaniechania są największe (zarówno w perspektywie krótko- jak i długoterminowej)
 * Minimalizuj lub eliminuj pozostałe zadania lub chociaż optymalizuj ich wykonywanie
 * Ludzie wpisują do kalendarza wydarzenia, które są co prawda związane z konkretną datą i czasem, ale na ogół są mało ważne. Dużo lepsze korzyści przyniesie planowanie czasu na intensywną pracę na rzeczami ważnymi, a rzeczy mniej istotne wykonywać wtedy gdy wystarczy na nie czasu.
 
-#### 7.1 Cel dnia
+### 7.1 Cel dnia
 
 * Każdy dzień w pracy rozpoczynaj od przeglądu rejestru zadań i wybrania celu na dany dzień
     * Cel dnia to **jedno i tylko jedno zadanie** które wykonasz danego dnia
 * Nawet jeśli cały dzień okaże się "poszarpany", będziesz miał świadomość, że udało Ci się wykonać to jedno najważniejsze zadanie
 
-### 8. Higiena pracy
+## 8. Higiena pracy
 
 * Oddzielaj pracę od odpoczynku: nie jedz przy komputerze, nie relaksuj się przeglądając fora itp.
 * Programując w skupieniu, znajdujesz się w określonym stanie psychicznym który często jest wywoływany lub wzmacniany przez jakiś bodziec.
@@ -122,7 +122,7 @@ Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wysta
     * W przypadku programowania będzie to: IDE w które wpatrujesz się większość dnia, ulubiona muzyka w tle.
 * Jeśli w tych samych warunkach będziesz wykonywał różne czynności - trudniej Ci będzie osiągnąć skupienie w każdej z nich.
 
-### 9. Praca z zadaniami, których unikasz
+## 9. Praca z zadaniami, których unikasz
 
 * Bywają zadania, do których ciężko jest Ci się zabrać i które od tygodni przesuwasz je na koniec kolejki. Warto wtedy zdekomponować to zadanie zgodnie z krokami opisanymi w "Metodyka pracy z zadaniami do wykonania" lub zastosować technikę przedstawioną w rozdziale Praca z trudnymi zadaniami.
 * Gdy jednak i to nie pomaga i ciągle brakuje motywacji, możesz zastosować tak zwane 10-minutowe wyzwanie:
@@ -130,6 +130,6 @@ Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wysta
     * Trik polega na tym, że motywacja pojawi się gdy zaczynasz dostrzegać nawet najmniejsze rezultaty swojej pracy. W 10 minut masz szansę posunąć jakiś temat do przodu chociaż o centrymetr, prawda?
 
 
-### Bibliografia
+## Bibliografia
 
 * [Michał Bartyzel - Getting Things Programmed. Droga do efektywności](https://helion.pl/ksiazki/getting-things-programmed-droga-do-efektywnosci-michal-bartyzel,droppp.htm#format/d)
