@@ -1480,10 +1480,10 @@ body:not(.post-template) .post-title {
 
 
 /* ==========================================================================
-   11. Media Queries - Smaller than 500px
+   11. Media Queries - Smaller than 600px
    ========================================================================== */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 
     .main-header {
         margin-bottom: 15px;
@@ -1566,13 +1566,14 @@ body:not(.post-template) .post-title {
         margin: 2rem auto;
     }
 
+    /* asd */
     .post {
         width: auto;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 0;
+        margin-bottom: 0;
         margin-left: 16px;
         margin-right: 16px;
-        padding-bottom: 2rem;
+        padding-bottom: 0;
         line-height: 1.65em;
     }
 
