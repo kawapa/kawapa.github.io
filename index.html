@@ -37,7 +37,7 @@ about: 'about.html'
 
     <article class="post">
         <header class="post-header">
-            <ul><li><h5><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a><time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+            <li><a class="body" href="{{ post.url | relative_url }}">{{ post.title }}</a><time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
                 {% assign m = post.date | date: "%-m" %}
                 {{ post.date | date: "%-d" }}
                 {% case m %}
@@ -55,7 +55,7 @@ about: 'about.html'
                 {% when '12' %}grudnia
                 {% endcase %}
                 {{ post.date | date: "%Y" }}
-            </time></h5></li></ul>
+            </time></li>
         </header>
     </article>
 
