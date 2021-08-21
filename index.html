@@ -37,16 +37,7 @@ about: 'about.html'
 
     <article class="post">
         <header class="post-header">
-            <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        </header>
-        <!-- <section class="post-excerpt">
-            {{ post.excerpt }} <a class="read-more" href="{{ post.url | relative_url }}">&raquo;</a>
-        </section> -->
-        <!-- <footer class="post-meta">
-            {% if site.author %}
-                {{ site.author }}
-            {% endif %}
-            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+            <ul><li><h5><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a><time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
                 {% assign m = post.date | date: "%-m" %}
                 {{ post.date | date: "%-d" }}
                 {% case m %}
@@ -64,11 +55,11 @@ about: 'about.html'
                 {% when '12' %}grudnia
                 {% endcase %}
                 {{ post.date | date: "%Y" }}
-            </time>
-        </footer> -->
+            </time></h5></li></ul>
+        </header>
     </article>
 
     {% endfor %}
 
-    {% include pagination.html %}
+    <!-- {% include pagination.html %} -->
 </main>
