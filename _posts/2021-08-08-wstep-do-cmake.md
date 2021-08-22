@@ -2,7 +2,6 @@
 layout: post
 title: "Wstęp do CMake"
 date: 2021-08-08 12:30:00
-last_modified_at: 2021-08-08 12:30:00
 categories: 
 ---
 

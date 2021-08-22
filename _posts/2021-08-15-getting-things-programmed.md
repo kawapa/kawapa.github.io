@@ -2,13 +2,11 @@
 layout: post
 title: "Książka: Getting Things Programmed. Droga do efektywności"
 date: 2021-08-15 17:00:00
-last_modified_at: 2021-08-15 17:00:00
 categories: 
 ---
 
-Michał Bartyzel to były programista, obecnie trener w firmie szkoleniowej, a tytułowa książka to jak sam autor pisze - praktyczny kurs efektywności dla programistów. Autor wyodrębnił w nim najważniejsze aspekty wpływające na ogólną efektywność programisty, a następnie demonstruje konkretne techniki usprawniające.
-
-**Poniższy post to moje osobiste notatki i przemyślenia z najciekawszych (dla mnie) fragmentów lektury.** Mimo że książka jest krótka (180 stron) to zawiera dużo wartościowej treści i jest zdecydowanie warta swojej ceny (na serwisach aukcyjnych jest do kupienia za ~25 PLN).
+<h7>Poniższy wpis to moje osobiste notatki i przemyślenia z najciekawszych (dla mnie) fragmentów lektury.<br>
+Zachęcam do sięgnięcia po źródło(a) oryginalne (linki na końcu wpisu).</h7><br>
 
 ## 1. Podstawy
 
@@ -36,8 +34,8 @@ W sytuacji gdy masz mnóstwo zadań na głowie, a otrzymujesz do zrobienia kolej
 Pracując na etacie nie masz wyjścia: przyjmujesz kolejne zadanie do wykonanie zadania (bo do tego celu zostałeś zatrudniony), ale **nie musisz zgadzać się na podejmowanie decyzji o priorytetach**.<br>
 Przykładowe wyjście z sytuacji:
 
-> - *Rozumiem, że zależy ci na tym, a bym __CZYJAŚ_PROŚBA__.*
-> - *W tej chwili zajmuję się __AKTUALNIE_WYKONYWANE_ZADANIE__ i mam zaplanowane jeszcze __KOLEJNE_TRZY_ZADANIA__. Z czego mam zrezygnować albo co przesunąć, aby wykonać to, o co mnie prosisz?*
+> - Rozumiem, że zależy ci na tym, a bym __CZYJAŚ_PROŚBA__.
+> - W tej chwili zajmuję się __AKTUALNIE_WYKONYWANE_ZADANIE__ i mam zaplanowane jeszcze __KOLEJNE_TRZY_ZADANIA__. Z czego mam zrezygnować albo co przesunąć, aby wykonać to, o co mnie prosisz?
 
 ## 4. Metodyka pracy z zadaniami do wykonania
 
@@ -63,7 +61,7 @@ Przykładowe wyjście z sytuacji:
 * Ma jasno zdefiniowany cel i jest on możliwy do zaobserwowania
     * Jeśli nie wiesz, co chcesz ostatecznie uzyskać to nie wiesz także, co po kolei należy zrobić. W konsekwencji albo robisz cokolwiek albo nie robisz nic.
 * Jest sformułowane w formie pełnego zdania
-* Jest skierowane do Ciebie (np. "*Przeczytaj rozdział "Wprowadzenie do..."*")
+* Jest skierowane do Ciebie (np. "*Przeczytaj rozdział "Wprowadzenie do...*")
 * Potencjalnie zajmie mniej niż 4 h (w zasadzie im są krótsze, tym lepiej)
     * Łatwiej jest zabrać się do wykonywania małego zadania
     * Odznaczanie kolejnych zadań jako "zrobione" sprzyja utrzymaniu motywacji
