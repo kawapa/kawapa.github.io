@@ -232,6 +232,11 @@ h6 {
     font-size: 2rem;
 }
 
+h7 {
+    color: red;
+    font-weight: bold;
+}
+
 a {
     color: #4A4A4A;
     transition: color ease 0.3s;
@@ -1490,6 +1495,10 @@ body:not(.post-template) .post-title {
         height: 40%;
     }
 
+    .poweredby {
+        display: none;
+    }
+
     .no-cover.main-header {
         height: 30%;
     }
@@ -1595,7 +1604,7 @@ body:not(.post-template) .post-title {
 
     p, ul, ol, dl {
         font-size: 0.95em;
-        margin: 0 0 2.5rem 0;
+        margin: 0 0 1rem 0;
     }
 
     .page-title {
