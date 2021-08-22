@@ -5,8 +5,8 @@ date: 2021-08-15 17:00:00
 categories: 
 ---
 
-<h7>Poniższy wpis to moje osobiste notatki i przemyślenia z najciekawszych (dla mnie) fragmentów lektury.<br>
-Zachęcam do sięgnięcia po źródło(a) oryginalne (linki na końcu wpisu).</h7><br>
+**Poniższy wpis to moje osobiste notatki i przemyślenia z najciekawszych (dla mnie) fragmentów lektury.<br>
+Zachęcam do sięgnięcia po źródło oryginalne (link na końcu wpisu).**<br><br>
 
 ## 1. Podstawy
 
@@ -73,7 +73,7 @@ Przechowywanie tak zdefiniowanych zadań ma jeszcze jedną olbrzymią zaletę:
 * Gdy w końcu wydaje Ci się, że wiesz wszystko co jest potrzebne do rozpoczęcia pracy, słyszysz alert kalendarza, że trzeba iść na spotkanie.
 * Po spotkaniu cały proces rozpoczyna się od nowa
 
-**Praca z nieskonkretyzowanym zadaniem wiąże się z częstym "ładowaniem" i "rozładowywaniem" kontekstu**. To ogromna strata czasu i energii. Z tego też powodu zadania muszą być zdefiniowane tak i drobno i zawierały w swoim sformułlowaniu taką ilość kontekstu, że można przystąpić do ich wykonywania w ciągu kilku sekund.
+**Praca z nieskonkretyzowanym zadaniem wiąże się z częstym "ładowaniem" i "rozładowywaniem" kontekstu**. To ogromna strata czasu i energii. Z tego też powodu zadania muszą być zdefiniowane tak i drobno i zawierały w swoim sformułowaniu taką ilość kontekstu, że można przystąpić do ich wykonywania w ciągu kilku sekund.
 
 ## 5. Praca z trudnymi zadaniami
 
@@ -124,8 +124,8 @@ Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wysta
 
 * Bywają zadania, do których ciężko jest Ci się zabrać i które od tygodni przesuwasz je na koniec kolejki. Warto wtedy zdekomponować to zadanie zgodnie z krokami opisanymi w "Metodyka pracy z zadaniami do wykonania" lub zastosować technikę przedstawioną w rozdziale Praca z trudnymi zadaniami.
 * Gdy jednak i to nie pomaga i ciągle brakuje motywacji, możesz zastosować tak zwane 10-minutowe wyzwanie:
-    * Zdecyduj, że przez najbliższe 10 minut będziesz zajmować się tylko tym zadaniem (z największym zaangażowaniem na jakie Cię stać). Tylko 10 minut, potem możesz znów odłożyc to zadanie na bok jeśli tak postanowisz
-    * Trik polega na tym, że motywacja pojawi się gdy zaczynasz dostrzegać nawet najmniejsze rezultaty swojej pracy. W 10 minut masz szansę posunąć jakiś temat do przodu chociaż o centrymetr, prawda?
+    * Zdecyduj, że przez najbliższe 10 minut będziesz zajmować się tylko tym zadaniem (z największym zaangażowaniem na jakie Cię stać). Tylko 10 minut, potem możesz znów odłożyć to zadanie na bok jeśli tak postanowisz
+    * Trik polega na tym, że motywacja pojawi się gdy zaczynasz dostrzegać nawet najmniejsze rezultaty swojej pracy. W 10 minut masz szansę posunąć jakiś temat do przodu chociaż o centymetr, prawda?
 
 
 ## Bibliografia
