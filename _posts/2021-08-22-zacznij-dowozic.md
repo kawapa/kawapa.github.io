@@ -65,6 +65,6 @@ To marnotrawstwo energii. **Plan daje stałe, przyjemne poczucie pewności tego 
 * Czy to rozwiązanie jest wystarczająco dobre w obecnych warunkach?
 * Czy poprzednie funkcjonalności dalej działają?
 
-## Bibliografia
+## 6. Bibliografia
 
 * [Krzysztof Jedrzyca - Zacznij dowozić zadania, w czasie krótszym o połowę](https://kjendrzyca.notion.site/kjendrzyca/Zacznij-dowozi-zadania-w-czasie-kr-tszym-o-po-ow-8073e7f6a8b44bcf8168ea178fed5901)

@@ -7,7 +7,7 @@ categories:
 
 Rzutowanie to mechanizm umożliwiający programiście zmianę typu danego obiektu na inny. 
 
-## Rzutowanie w starym stylu
+## 1. Rzutowanie w starym stylu
 
 Wady:
 
@@ -22,11 +22,11 @@ T obiekt = T(wyrazenie_lub_obiekt_innego_typu)
 // rzutowanie w stylu funkcyjnym
 {% endhighlight %}
 
-## Nowoczesne rzutowanie
+## 2. Nowoczesne rzutowanie
 
 W związku z tym, że rzutowanie w "starym stylu" nie sprawdzało czy ma ono sens logiczny czy nie, Stroustrup wprowadził cztery dodatkowe operatory rzutowania: [`static_cast`](#rzutowanie-static_cast), [`dynamic_cast`](#rzutowanie-dynamic_cast), [`const_cast`](#rzutowanie-const_cast) oraz [`reinterpret_cast`](#rzutowanie-reinterpret_cast), które za wyjątkiem rzutowania dynamicznego już w trakcie kompilacji jest walidowane przez kompilator.
 
-### Rzutowanie `static_cast`
+### 2.1 Rzutowanie `static_cast`
 
 * Rzutowanie w trakcie kompilacji
 * Konwersja typów podstawowych: `int`, `double`, `char`
@@ -39,7 +39,7 @@ const double PI = 3.14159265358979323846264279502;
 int int_pi = static_cast<int>(PI);
 {% endhighlight %}
 
-### Rzutowanie `dynamic_cast`
+### 2.2 Rzutowanie `dynamic_cast`
 
 * Konwersja wskaźników (lub referencji) klas podstawowych na ich odpowiedniki klas pochodnych (w dół hierarchii) oraz odwrotnie (w górę hierarchii)
 * **Bezpieczne** rzutowanie w trakcie wykonywanie programu gdyż w razie niekompatybilności `dynamic_cast` zwróci:
@@ -61,7 +61,7 @@ int main() {
 }
 {% endhighlight %}
 
-### Rzutowanie `const_cast`
+### 2.3 Rzutowanie `const_cast`
 
 * Służy do nadawania lub zdejmowania kwalifikatorów `const` i `volatile`
     * **Typ musi być ten sam!**
@@ -99,7 +99,7 @@ int main() {
 }
 {% endhighlight %}
 
-### Rzutowanie `reinterpret_cast`
+### 2.4 Rzutowanie `reinterpret_cast`
 
 Konwersje między niespokrewnionymi typami, na przykład:
 * Ze wskaźnika jednego typu na inny
@@ -127,7 +127,7 @@ int* wsk = reinterpret_cast<int*>(addres);
 // ustawienie wskaźnika na adres
 {% endhighlight %}
 
-## Bibliografia
+## 3. Bibliografia
 
 * [Bjarne Stroustrup - Język C++. Kompendium wiedzy](https://helion.pl/ksiazki/jezyk-c-kompendium-wiedzy-wydanie-iv-bjarne-stroustrup,jcppkw.htm#format/d)
 * [Mirosław Głowacki - Programowanie Obiektowo Zorientowane w języku C++. Rzutowania](http://home.agh.edu.pl/~glowacki/docs/matwykl/O-o/_ProgObiekt_Rzutowania.pdf)

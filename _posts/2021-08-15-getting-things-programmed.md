@@ -128,6 +128,6 @@ Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wysta
     * Trik polega na tym, że motywacja pojawi się gdy zaczynasz dostrzegać nawet najmniejsze rezultaty swojej pracy. W 10 minut masz szansę posunąć jakiś temat do przodu chociaż o centymetr, prawda?
 
 
-## Bibliografia
+## 10. Bibliografia
 
 * [Michał Bartyzel - Getting Things Programmed. Droga do efektywności](https://helion.pl/ksiazki/getting-things-programmed-droga-do-efektywnosci-michal-bartyzel,droppp.htm#format/d)
