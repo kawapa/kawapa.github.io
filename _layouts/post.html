@@ -16,27 +16,7 @@ post_class: post-template
 
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
-            <a href="{{site.github.repository_url}}/blob/master/{{page.relative_path}}">Edytuj ten wpis na GitHub</a>
-            {% if page.last_modified_at %} &nbsp;&nbsp;|&nbsp;&nbsp; Ostatnio zmodyfikowano:
-            {% assign m = page.date | date: "%-m" %}
-            {{ page.date | date: "%-d" }}
-            {% case m %}
-              {% when '1' %}stycznia
-              {% when '2' %}lutego
-              {% when '3' %}marca
-              {% when '4' %}kwietnia
-              {% when '5' %}maja
-              {% when '6' %}czerwca
-              {% when '7' %}lipca
-              {% when '8' %}sierpnia
-              {% when '9' %}września
-              {% when '10' %}października
-              {% when '11' %}listopada
-              {% when '12' %}grudnia
-            {% endcase %}
-            {{ page.date | date: "%Y" }}
-            {% endif %}
-            <br><br>
+            <a href="{{site.github.repository_url}}/blob/master/{{page.relative_path}}">Edytuj ten wpis na GitHub</a><br><br>
         </header>
 
         <section class="post-content">
