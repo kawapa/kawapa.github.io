@@ -506,6 +506,11 @@ margin on the iframe, cause it breaks stuff. */
     
 }
 
+.article-list {
+    font-size: 1.15em;
+    text-decoration: none;
+}
+
 .main-nav {
     position: relative;
     padding: 35px 40px;
@@ -1377,6 +1382,10 @@ body:not(.post-template) .post-title {
         min-height: 240px;
         height: 60%;
         padding: 15% 0;
+    }
+
+    .article-list {
+        font-size: 0.9em;
     }
 
     .scroll-down,

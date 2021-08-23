@@ -37,7 +37,7 @@ about: 'about.html'
 
     <article class="post">
         <header class="post-header">
-            <li><a class="body" href="{{ post.url | relative_url }}">{{ post.title }}</a><time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+            <li><a class="article-list" href="{{ post.url | relative_url }}">{{ post.title }}</a><time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
                 {% assign m = post.date | date: "%-m" %}
                 {{ post.date | date: "%-d" }}
                 {% case m %}
