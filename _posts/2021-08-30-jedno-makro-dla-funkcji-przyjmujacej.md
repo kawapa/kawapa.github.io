@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jedno makro dla funkcji przyjmującej różną liczbę argumentów"
-date: 2021-08-30 09:00:00
+date: 2021-08-30 17:55:00
 categories: 
 ---
 
