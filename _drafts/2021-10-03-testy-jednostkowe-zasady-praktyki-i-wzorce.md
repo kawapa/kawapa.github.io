@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Książka: Testy jednostkowe. Zasady, praktyki i wzorce"
-date: 2021-10-03 09:00:00
+# date: 2021-10-03 09:00:00
+date: 2021-08-31 09:00:00
 categories: 
 ---
 
@@ -31,9 +32,89 @@ Zachęcam do sięgnięcia po źródło oryginalne (link na końcu wpisu).**<br><
 
 * Inaczej **pokrycie testowe**
 * Iloraz ( liczba wykonanych linii kodu przynajmniej przez jeden test ) / ( łączna ilość linii)
+* Łatwo manipulować wartością wskaźnika
+  * Im bardziej zwięzły kod, tym lepsze wskaźniki pokrycia ponieważ weryfikacji podlega liczba linii
+
+Przykład: pokrycie kodu wynosi 4/5 = 80%
+
+{% highlight cpp %}
+bool isEven(int number)
+{
+  if (number % 2 == 0)
+    return true
+  return false
+}
+// ...
+ASSERT_TRUE(isEven(2));
+{% endhighlight %}
+
+Przykład: pokrycie kodu wynosi 3/3 = 100%
+
+{% highlight cpp %}
+bool isEven(int number)
+{
+  return number % 2 == 0;
+}
+// ...
+ASSERT_TRUE(isEven(2));
+{% endhighlight %}
 
 ##### 1.2.2 Wskaźnika pokrycia gałęzi
 
+* Dokładniejszy niż wskaźnik pokrycia kodu (nie można go aż tak zmanipulować)
+* Iloraz ( liczba trawersowanych gałęzi ) / ( łączna liczba gałęzi )
+* Nie sprawdza czy testy weryfikujące wszystkie możliwe ścieżki wykonania mają asercje
+* Kod wykonany uznaje za przetestowany - nawet jeśli nie kończy się asercją (test bezużyteczny)
+
+Przykład: 100% pokrycia kodu i 50% pokrycia gałęzi
+
+{% highlight cpp %}
+int foo;          // zmienna globalna
+
+bool addOne(int number)
+{
+  int res += 1;
+  foo = res;      // pierwsza wartość wynikowa
+
+  return res;     // druga wartość wynikowa
+}
+// ...
+ASSERT_TRUE(isEven(2));   // test weryfikuje tylko drugą wartość wynikową
+{% endhighlight %}
+
+##### 1.3. Właściwości dobrego zestawu testowego
+
+Nie ma zautomatyzowanych sposobów określania czy zestaw test jest dobry, natomiast wiadomo, że:
+
+* Powinien być zintegrowany z cyklem wytwarzania oprogramowania
+  * Idealnie gdybyś uruchamiał wszystkie testy przy każdej zmianie kodu
+* Powinien koncentrować się na najważniejszych częściach bazy kodu
+  * Najwnikliwiej testuj najbardziej istotne obszary (logikę biznesową) a pozostałe obszary powierzchownie
+* Powinien dostarczać jak największej wartości przy jak najniższym koszcie jego utrzymania
+
+### Rozdział 2. Co to jest test jednostkowy?
+
+#### 2.1. Definicja testu jednostkowego
+
+Test jednostkowy to automatyczny test, który:
+* Weryfikuje niewielki fragment kodu
+* Jest szybki
+* Robi to w odizolowaniu od pozostałych części systemu
+
+Aspekt izolacji stanowi sedno różnic między klasyczną, a londyńską szkoła testowania jednostkowego.
+
+Szkoła londyńska - wywodzi się ze społeczności programistycznej w Londynie (nazywa się ich mockistami)
+Szkoła klasyczna - nazywana czasem szkołą z Detroit lub klasycystycznym podejściem
+
+##### 2.1.1. Izolacja - podejście londyńskie
+
+* Należ izolować testowany system od jego współzależności i konsumentów
+  * Wszystko zastąpić testowymi dublerami
+* Zalety takiego podejścia:
+  * Jest test zwraca wynik negatywny, wiadomo która część kodu zawiera błąd
+  * W przypadku skomplikowanej sieci klas, w której każda zależy od innych - można łatwo przerwać łańcuch zależności
+  * Pozwala testować wyłącznie jedną klasę na raz (upraszcza to strukturę testów)
+
 <br>
 <br>
 <br>
@@ -47,19 +128,6 @@ Zachęcam do sięgnięcia po źródło oryginalne (link na końcu wpisu).**<br><
 <br>
 <br>
 
-1.3.3. Problemy z pokryciem gałęzi 27<br>
-1.3.4. Wymaganie procentowej wartości pokrycia 30<br>
-1.4. Właściwości dobrego zestawu testowego 31<br>
-1.4.1. Integracja z cyklem wytwarzania oprogramowania 31<br>
-1.4.2. Koncentracja na najważniejszych częściach kodu 31<br>
-1.4.3. Maksymalna wartość przy minimalnych kosztach 32<br>
-1.5. Czego nauczysz się z tej książki 33<br>
-Podsumowanie 34<br>
-<br>
-Rozdział 2. Co to jest test jednostkowy? 37<br>
-<br>
-2.1. Definicja testu jednostkowego 38<br>
-2.1.1. Izolacja - podejście londyńskie 38<br>
 2.1.2. Izolacja - podejście klasyczne 44<br>
 2.2. Klasyczna i londyńska szkoła testów jednostkowych 47<br>
 2.2.1. Obsługa zależności według szkoły londyńskiej i klasycznej 47<br>
