@@ -14,9 +14,9 @@ Jeśli musimy przetestować prywatną cześć klasy, trzeba najpierw zdobyć do
 3. Oznaczenie metod prywantych jako chronione
 4. Przeniesienie funkcjonalności do nowej klasy
 
-## Stworzenie klasy zaprzyjaźnionej
+## 1. Stworzenie klasy zaprzyjaźnionej
 
-* **Integerencja w kod produkcyjny!**... chyba że skorzystamy z tak zwanej kompilacji warunkowej (*conditional compilation*) i w wersji *Release* usuniemy deklaracje zaprzyjaźnionych klas
+* **Integerencja w kod produkcyjny!** ...chyba że skorzystamy z tak zwanej kompilacji warunkowej (*conditional compilation*) i w wersji *Release* usuniemy deklaracje zaprzyjaźnionych klas
 
 {% highlight cpp %}
 class TestClass;
