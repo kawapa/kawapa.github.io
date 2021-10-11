@@ -6,7 +6,7 @@ categories:
 ---
 
 **Poniższy wpis to moje osobiste notatki i przemyślenia z najciekawszych (dla mnie) fragmentów mini e-booka *Zacznij dowozić zadania, w czasie krótszym o połowę* autorstwa Krzysztofa Jendrzycy.<br>
-Zachęcam do sięgnięcia po źródło oryginalne (link na końcu wpisu).**<br><br>
+Zachęcam do sięgnięcia po źródło oryginalne (link na końcu wpisu).**
 
 ## 1. Pytaj, dopóki nie zrozumiesz co masz zrobić
 
