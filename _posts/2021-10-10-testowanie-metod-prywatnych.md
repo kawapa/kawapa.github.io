@@ -16,31 +16,27 @@ Jeśli musimy przetestować prywatną cześć klasy, trzeba najpierw zdobyć do
 
 ## 1. Stworzenie klasy zaprzyjaźnionej
 
-* **Integerencja w kod produkcyjny!** ...chyba że skorzystamy z tak zwanej kompilacji warunkowej (*conditional compilation*) i w wersji *Release* usuniemy deklaracje zaprzyjaźnionych klas
+* **Integerencja w kod produkcyjny!** ...chyba że skorzystamy z tak zwanej kompilacji warunkowej (*conditional compilation*) i w wersji *Release* usuniemy deklarację zaprzyjaźnionych klas
 
 {% highlight cpp %}
-class TestClass;
+class KlasaWspierajaca;
 
-class ToBeTested {
-    int Calculate() { return 0; }
-    friend UnitTestClass;
+class KlasaTestowana {
+    int oblicz() { return 0; }
+    friend KlasaWspierajaca;
 };
 
-class UnitTestClass {
+class KlasaWspierajaca {
 public:
-    void runTest() {
-        ToBeTested object_under_test;
-        if (object_under_test.Calculate() == 0) {
-            std::cout << "Test passed" << std::endl;
-        } else {
-            std::cout << "Test failed" << std::endl;
-        }
+    void testuj() {
+        KlasaTestowana kt;
+        ASSERT_TRUE(kt.oblicz() == 0);
     }
 };
 
 int main() {
-    UnitTestClass unit_tester;
-    unit_tester.RunTest();
+    KlasaWspierajaca kw;
+    kw.testuj();
 }
 {% endhighlight %}
 
@@ -54,25 +50,21 @@ int main() {
 * Klasa testująca dziedziczy po klasie którą mamy przetestować
 
 {% highlight cpp %}
-class ToBeTested {
+class KlasaTestowana {
 protected:
-    int Calculate() { return 0; }   
+    int oblicz() { return 0; }   
 };
 
-class UnitTestClass : ToBeTested {
+class KlasaWspierajaca : KlasaTestowana {
 public:
-    void RunTest() {
-        if (Calculate() == 0) {
-            std::cout << "Test passed" << std::endl;
-        } else {
-            std::cout << "Test failed" << std::endl;
-        }
+    void testuj() {
+        ASSERT_TRUE(oblicz() == 0);
     }
 };
 
 int main() {
-    UnitTestClass unit_tester;
-    unit_tester.RunTest();
+    KlasaWspierajaca kw;
+    kw.testuj();
 }
 {% endhighlight %}
 
@@ -82,32 +74,25 @@ int main() {
 * Preferowane przechowywanie wskaźnika lub referencji i użycie DI
 
 {% highlight cpp %}
-class Calculator {
-    int GetResult() { return 0; }
+class Kalkulator {
+    int oblicz() { return 0; }
 };
 
-class ToBeTested {
-    Calculator calculator;
-
-public:
-    ToBeTested() = default;
+class KlasaTestowana {
+    Kalkulator kalkulator;
 };
 
-class UnitTestClass {
+class KlasaWspierajaca {
 public:
-    void RunTest() {
-        Calculator calculator_under_test;
-        if (calculator_under_test.GetResult() == 0) {
-            std::cout << "Test passed" << std::endl;
-        } else {
-            std::cout << "Test failed" << std::endl;
-        }
+    void testuj() {
+        Kalkulator kalkulator;
+        ASSERT_TRUE(kalkulator.oblicz() == 0);
     }
 };
 
 int main() {
-    UnitTestClass unit_tester;
-    unit_tester.RunTest();
+    KlasaWspierajaca kw;
+    kw.testuj();
 }
 {% endhighlight %}
 
