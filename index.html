@@ -35,7 +35,7 @@ about: 'about.html'
 
     {% for post in paginator.posts %}
 
-    <article class="post">
+    <article class="post-list">
         <header class="post-header">
             <li><a class="article-list" href="{{ post.url | relative_url }}">{{ post.title }}</a><time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
                 {% assign m = post.date | date: "%-m" %}

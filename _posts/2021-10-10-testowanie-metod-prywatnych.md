@@ -14,6 +14,8 @@ Jeśli musimy przetestować prywatną cześć klasy, trzeba najpierw zdobyć do
 3. Oznaczenie metod prywantych jako chronione
 4. Przeniesienie funkcjonalności do nowej klasy
 
+<code data-gist-id="6ddd6fe3bfd9f75ef70a72452085b8a0" data-gist-hide-line-numbers="true" data-gist-hide-footer="true"></code>
+
 ## 1. Stworzenie klasy zaprzyjaźnionej
 
 * **Integerencja w kod produkcyjny!** ...chyba że skorzystamy z tak zwanej kompilacji warunkowej (*conditional compilation*) i w wersji *Release* usuniemy deklarację zaprzyjaźnionych klas

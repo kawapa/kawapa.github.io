@@ -3,7 +3,7 @@ description:
 meta_description: 
 
 markdown: kramdown
-highlighter: rouge
+# highlighter: rouge
 logo: false
 paginate: 15
 baseurl: "/"
@@ -17,3 +17,5 @@ author: "kawapa"
 
 # Disqus config
 disqus-shortname: ""
+plugins:
+  - jekyll-gist

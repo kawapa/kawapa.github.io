@@ -38,6 +38,7 @@ html {
    -webkit-text-size-adjust: 100%;
 }
 body { margin: 0; }
+
 a { background: transparent; }
 a:focus { outline: thin dotted; }
 a:active, a:hover { outline: 0; }
@@ -742,17 +743,41 @@ margin on the iframe, cause it breaks stuff. */
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
+    background-color: white;
+    width: 80%;
+    max-width: 910px;
+    margin: 4rem auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5px 65px 65px 65px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    /* /* border-bottom: #EBF2F6 1px solid; */
+    word-break: break-word;
+    /* hyphens: auto; */
+}
+
+.content2 {
+    background-color: #ECEEF0;
+    /* margin-bottom: 15px !important; */
+    padding-bottom: 25px !important;
+}
+
+.post-list {
+    position: relative;
+    /* background-color: white; */
     width: 80%;
     max-width: 910px;
     margin: 4rem auto;
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
-    /* border-bottom: #EBF2F6 1px solid; */
+    border-radius: 6px; */
+    /* /* border-bottom: #EBF2F6 1px solid; */
     word-break: break-word;
     /* hyphens: auto; */
 }
-
+ 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 /* .post:after {
@@ -1098,6 +1123,7 @@ body:not(.post-template) .post-title {
     min-height: 0;
     margin-bottom: 0;
     background: transparent;
+    background-color: #ECEEF0 !important;
 }
 
 .tag-head.main-header {
@@ -1327,7 +1353,7 @@ body:not(.post-template) .post-title {
 
 .site-footer {
     position: relative;
-    margin: 8rem 0 0 0;
+    margin: 0 0 0 0;
     padding: 0.5rem 15px;
     border-top: #EBF2F6 1px solid;
     font-family: "Inter", sans-serif;
@@ -1386,6 +1412,7 @@ body:not(.post-template) .post-title {
 
     .article-list {
         font-size: 0.9em;
+        padding-bottom: 25px !important;
     }
 
     .scroll-down,
@@ -1687,6 +1714,7 @@ body:not(.post-template) .post-title {
     .post-footer {
         padding: 5rem 0 3rem 0;
         text-align: center;
+        background-color: yellow !important;
     }
 
     .post-footer .author {
@@ -1725,7 +1753,7 @@ body:not(.post-template) .post-title {
     }
 
     .site-footer {
-        margin-top: 3rem;
+        margin-top: 0rem;
     }
 
     .author-profile {
