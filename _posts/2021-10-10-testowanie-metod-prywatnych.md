@@ -12,9 +12,9 @@ Jeśli musimy przetestować prywatną cześć klasy, trzeba najpierw zdobyć do
 1. Stworzenie klasy zaprzyjaźnionej
 2. Użycie makra `#define private public`
 3. Oznaczenie metod prywantych jako chronione
-4. Przeniesienie funkcjonalności do nowej klasy
+4. Przeniesienie funkcjonalności do nowej klasy SS
 
-<code data-gist-id="6ddd6fe3bfd9f75ef70a72452085b8a0" data-gist-hide-line-numbers="true" data-gist-hide-footer="true"></code>
+{% gist 6ddd6fe3bfd9f75ef70a72452085b8a0 %}
 
 ## 1. Stworzenie klasy zaprzyjaźnionej
 

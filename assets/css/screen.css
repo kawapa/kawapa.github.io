@@ -962,7 +962,7 @@ body:not(.post-template) .post-title {
 .post-footer {
     position: relative;
     margin: 6rem 0 0 0;
-    padding: 6rem 0 0 0;
+    padding: 6rem 0 4rem 0;
     border-top: #EBF2F6 1px solid;
 }
 
@@ -1385,6 +1385,19 @@ body:not(.post-template) .post-title {
     float: left;
 }
 
+body .gist .blob-num {
+    display: none;
+}
+
+.gist .gist-meta {
+    display: none;
+}
+
+.gist .gist-data {
+    border-radius: 6px 6px 6px 6px !important;
+    border-bottom: 0px !important;
+    padding: 10px 0px 10px 0px !important;
+}
 
 /* ==========================================================================
    10. Media Queries - Smaller than 900px
@@ -1615,6 +1628,7 @@ body:not(.post-template) .post-title {
         margin-right: 16px;
         padding-bottom: 0;
         line-height: 1.65em;
+        padding: 16px 16px 16px 16px;
     }
 
     .post-date {
@@ -1652,7 +1666,8 @@ body:not(.post-template) .post-title {
 
     h1, h2, h3,
     h4, h5, h6 {
-        margin: 0 0 0.3em 0;
+        /* margin: 0 0 0.3em 0; */
+        margin: 0.75em 0 0.75em 0;
     }
 
     h1 {
@@ -1712,15 +1727,14 @@ body:not(.post-template) .post-title {
     }
 
     .post-footer {
-        padding: 5rem 0 3rem 0;
+        padding: 5rem 0 1rem 0;
         text-align: center;
-        background-color: yellow !important;
     }
 
     .post-footer .author {
-        margin: 0 0 2rem 0;
-        padding: 0 0 1.6rem 0;
-        border-bottom: #EBF2F6 1px dashed;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        /* border-bottom: #EBF2F6 1px dashed; */
     }
 
     .post-footer .share {
