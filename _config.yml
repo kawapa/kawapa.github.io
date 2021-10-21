@@ -3,13 +3,11 @@ description:
 meta_description: 
 
 markdown: kramdown
-# highlighter: rouge
 logo: false
 paginate: 15
 baseurl: "/"
 domain_name: ""
 google_analytics: "UA-XXXXXXXX-X"
-plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
 url: ""
@@ -19,3 +17,4 @@ author: "kawapa"
 disqus-shortname: ""
 plugins:
   - jekyll-gist
+  - jekyll-paginate
