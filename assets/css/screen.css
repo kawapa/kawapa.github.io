@@ -1375,6 +1375,7 @@ body .gist .blob-num {
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
+    background-color: white !important;
 }
 
 .site-footer a {
