@@ -1290,6 +1290,26 @@ body:not(.post-template) .post-title {
     border: none;
 }
 
+/* ========================================================================== */
+/* GitHub checkboxes */
+/* ========================================================================== */
+
+.box,
+.box_done,
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
 /* ==========================================================================
    8. Pagination - Tools to let you flick between pages
    ========================================================================== */
