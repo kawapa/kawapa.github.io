@@ -55,3 +55,42 @@ typedef std::pair<float, char> Pair;    // OK!
 std::pair<float, char> typedef Pair;    // OK!
 {% endhighlight %}
 
+### Slowo kluczowe `auto`
+
+* Oznacza, żeby kompilator sam wydedukował typ na podstawie wyrażenia po prawej stronie
+* `auto` istniało wcześniej, ale przed C++11 oznaczało zmienna zaalokowaną na stosie
+* Przydaje się żeby nie pisać długich typów, np. `std::vector<int>::iterator`
+* Umożliwia wygodną iterację po kontenerach
+
+for (const auto& object : objects) {
+    // ...
+}
+
+#### Mechanizm dedukcji typu
+
+* Jeśli specyfikator przy `auto` nie jest ani referencją ani wskaźnikiem
+    * Jeśli wyrażenie po prawej stronie jest referencją - referencja jest usuwana
+    * Usuwanę są modyfikatory `const` i `volatile`
+    * Jeśli wyrażenie po prawej stronie to tablica lub funkcja - otrzymujemy wskaźnik
+
+int a = 42;
+int& b = a;
+const int& c = a;
+
+auto a1 = x; // a1 : int
+auto a2 = ref_x; // a2 : int
+auto a3 = cref_x; // a3 : int
+
+* Stawiając referencję `&` przy `auto`, wszelkie modifikatory (`const`, `volatile`) zostają zachowane (jeśli nie, są pomijane)
+
+{% highlight cpp %}
+auto p1 = 5;    // int
+auto& p2 = p1;  // int&
+auto p3 = {1};  // std::initializer_list<int>
+auto&& p4 = 5;  // int&&
+auto&& p5 = p1; // int&
+
+auto p6 = 1, p7 = 2, p8 = 3;    // int, int, int
+auto p9 = 2.5, p10 = true;      // ERROR
+auto p11;                       // ERROR
+{% endhighlight %}
