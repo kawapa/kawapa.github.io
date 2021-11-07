@@ -1,5 +1,2 @@
 name: CppDev
-baseurl: "/"
 remote_theme: kawapa/just-the-docs
-plugins:
-  - jekyll-gist
