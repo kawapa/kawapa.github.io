@@ -3,3 +3,14 @@ title: CppDev
 description: Prywatna baza wiedzy
 baseurl: ""
 url: "https://cppdev.pl"
+
+back_to_top: true
+back_to_top_text: "W górę"
+
+gh_edit_link: true
+gh_edit_link_text: "Edytuj tę stronę na GitHub"
+gh_edit_repository: "https://github.com/kawapa/kawapa.github.io"
+gh_edit_branch: "master"
+gh_edit_view_mode: "tree"
+
+footer_content: "CppDev © 2021 | Wszelkie prawa zastrzeżone. Motyw Jekyll: <a href=\"https://github.com/pmarsceill/just-the-docs\">Just the Docs.</a>"
