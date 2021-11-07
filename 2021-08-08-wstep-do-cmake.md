@@ -5,15 +5,28 @@ date: 2021-08-08 12:30:00
 categories: 
 ---
 
+# Wstęp do CMake
+
+<details open markdown="block">
+  <summary>
+    Spis treści
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+
 CMake to narzędzie do automatyzacji procesu budowania programów napisanych w C/C++ poprzez generowanie plików `Makefile` (`CMake` sam w sobie nie jest system budowania). Nazwa `CMake` to z angielskiego *cross-platform Make*.
 
-## 1. Główne cechy
+## Główne cechy
 
 * Domyślna konfiguracja w pliku `CMakeLists.txt`
 * Dobrze napisany `CMakeLists.txt` daje niezależność od platformy na której budowana jest aplikacja (można podać inny, ale wymaga to podania dodatkowej flagi)
 * Jeśli nie było zmian w jakichś plikach - szybsza ponowna kompilacja
 
-##  2. Minimalny CMakeLists
+## Minimalny CMakeLists
 
 {% highlight cmake %}
 cmake_minimum_required(VERSION 3.10)
@@ -22,7 +35,7 @@ project(ProjectName)
 add_executable(<NAZWA_PLIKU_WYNIKOWEGO> main.cpp)
 {% endhighlight %}
 
-## 3. Budowanie
+## Budowanie
 
 {% highlight cmake %}
 > mkdir <KATALOG>       # tworzymy katalog z wynikami budowania
@@ -39,7 +52,7 @@ add_executable(<NAZWA_PLIKU_WYNIKOWEGO> main.cpp)
 > cmake --build <KATALOG> --parallel
 {% endhighlight %}
 
-## 4. Tworzenie zmiennych
+## Tworzenie zmiennych
 
 Zastosowanie zmiennych umożliwia:
 * Wielokrotne wykorzystanie tych samych nazw w projekcie
@@ -63,7 +76,7 @@ set(NAME TheGreatestProject)
 set(CMAKE_CXX_COMPILER g++-10)
 {% endhighlight %}
 
-## 5. Tworzenie binarki (plik aplikacji lub testy)
+## Tworzenie binarki (plik aplikacji lub testy)
 
 {% highlight cmake %}
 add_executable(<name> [source1] [source2 ...])
@@ -76,7 +89,7 @@ add_executable(${NAME} main.cpp)
 * Jeśli pliki `*.hpp` są w innej lokalizacji to trzeba dodać `include_directories(inc1/ inc2/)`
 * Więcej informacji w [dokumentacji](https://cmake.org/cmake/help/latest/command/add_executable.html)
 
-## 6. Tworzenie bibliotek
+## Tworzenie bibliotek
 
 * Biblioteka to zestaw wielu plików `cpp` bez funkcji `main()` (z tego powodu biblioteki nie można uruchomić)
 
@@ -102,7 +115,7 @@ Dla przypomnienia:
 * W przypadku zmian w bibliotece nie jest wymagana powtórna kompilacja (linkowanie odbywa się w czasie działania programu)
 * Rozszerzenie `*.so`
 
-### 6.1 Linkowanie bibliotek
+### Linkowanie bibliotek
 
 Biblioteki linkujemy z binarką (**lub inną biblioteką**) poprzez:
 
@@ -122,7 +135,7 @@ target_link_libraries(main lib)
 target_link_libraries(ut lib)
 {% endhighlight %}
 
-## 7. Podsumowanie
+## Podsumowanie
 
 {% highlight cmake %}
 add_library(${PROJECT_NAME}-lib STATIC functions.cpp modules.cpp)
@@ -130,7 +143,7 @@ add_executable(${PROJECT_NAME} main.cpp functions.cpp modules.cpp)
 add_executable(${PROJECT_NAME}-ut test.cpp functions.cpp modules.cpp)
 {% endhighlight %}
 
-## 8. Dodawanie flag kompilacji
+## Dodawanie flag kompilacji
 
 * `target_compile_option` pozwala na ustawianie różnych flag dla różnych binarek
     * Flagi kompilacji można wrzucić też najpierw do zmiennej, a później zmienną do `target_compile_options`
@@ -147,7 +160,7 @@ add_executable(${PROJECT_NAME} main.cpp)
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra)                                
 {% endhighlight %}
 
-## 9. Włączanie standardu C++17
+## Włączanie standardu C++17
 
 {% highlight cmake %}
 # Przykład 1 - może nie działać z MVC
@@ -164,7 +177,7 @@ add_executable(${PROJECT_NAME} main.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 {% endhighlight %}
 
-## 10. Budowanie w trybie Debug / Release
+## Budowanie w trybie Debug / Release
 
 {% highlight cmake %}
 # Debug
@@ -187,7 +200,7 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 
 * Jeśli chcemy wspierać budowanie w dwóch trybach: Debug i Release zalecane jest stworzenie dla nich oddzielnych katalogów z rezultatami budowania
 
-## 11. CTest
+## CTest
 
 * `CTest` to moduł `CMake` - aplikacja do uruchamiania testów
 * Normalnie należy uruchomić binarkę z testami, `CTest` umożliwia uruchomienie wszystkich testów jedną komendą - `ctest`
@@ -201,13 +214,13 @@ enable_testing()
 add_test(NAME someTests COMMAND ./${PROJECT_NAME}-ut)
 {% endhighlight %}
 
-### 11.1 Uruchamianie testów z CTest
+### Uruchamianie testów z CTest
 
 * `ctest` - uruchomienie wszystkich testów (ze skróconymi wynikami)
 * `ctest -V` - uruchomienie wszystkich testów + szczegółowy output z testów
 * Więcej informacji po wpisaniu `ctest --help`
 
-## 12. Bibliografia
+## Bibliografia
 
 - [Coders School - Moduł Cmake](https://github.com/coders-school/cmake)
 - [Mateusz Szychowski - CMake - from zero to something](https://muttleyxd.github.io/)
