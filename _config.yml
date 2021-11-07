@@ -1,3 +1,5 @@
 remote_theme: kawapa/just-the-docs
+title: CppDev
+description: Prywatna baza wiedzy
 baseurl: ""
 url: "https://cppdev.pl"
