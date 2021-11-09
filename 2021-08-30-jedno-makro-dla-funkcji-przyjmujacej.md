@@ -2,8 +2,9 @@
 layout: post
 title: "Jedno makro dla funkcji przyjmującej różną liczbę argumentów"
 date: 2021-08-30 17:55:00
-categories: 
 ---
+
+# Jedno makro dla funkcji przyjmującej różną liczbę argumentów
 
 Makro to instrukcja dla preprocesora, który przetwarza i przygotowuje kod źródłowy programu do kompilacji. Gdy preprocesor napotyka na zdefiniowane wcześniej makro, podmienia je na zdefiniowane wcześniej wyrażenie lub instrukcję. Używanie makr w nowoczesnym kodzie jest mocno kontrowersyjne (może oprócz Embedded), ale często spotyka się je w projektach legacy.
 

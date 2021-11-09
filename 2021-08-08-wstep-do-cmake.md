@@ -2,10 +2,10 @@
 layout: post
 title: "Wstęp do CMake"
 date: 2021-08-08 12:30:00
-categories: 
 ---
 
 # Wstęp do CMake
+{: .no_toc }
 
 <details open markdown="block">
   <summary>
@@ -116,6 +116,7 @@ Dla przypomnienia:
 * Rozszerzenie `*.so`
 
 ### Linkowanie bibliotek
+{: .no_toc }
 
 Biblioteki linkujemy z binarką (**lub inną biblioteką**) poprzez:
 
@@ -215,6 +216,7 @@ add_test(NAME someTests COMMAND ./${PROJECT_NAME}-ut)
 {% endhighlight %}
 
 ### Uruchamianie testów z CTest
+{: .no_toc }
 
 * `ctest` - uruchomienie wszystkich testów (ze skróconymi wynikami)
 * `ctest -V` - uruchomienie wszystkich testów + szczegółowy output z testów
