@@ -37,20 +37,20 @@ add_executable(<NAZWA_PLIKU_WYNIKOWEGO> main.cpp)
 
 ## Budowanie
 
-{% highlight cmake %}
-> mkdir <KATALOG>       # tworzymy katalog z wynikami budowania
-> cd <KATALOG>          # wchodzimy do tego katalogu
-> cmake ..              # generujemy system budowania podając ścieżkę do pliku CMakeLists.txt
-> cmake --build .       # budujemy projekt
-{% endhighlight %}
+```sh
+$ mkdir <KATALOG>
+$ cd <KATALOG>
+$ cmake ..          // generowanie plików Makefile
+$ cmake --build .   // budowanie
+```
 
-* `cmake --build .` jest uniwersalne, ale można użyć `make` (lub `make -j`) jeśli wiemy, że generujemy pliki `Makefile`.<br>
+* Budowanie przy pomocy `cmake --build .` jest uniwersalne, ale można użyć `make` (lub `make -j`) jeśli wiemy, że budujemy na podstawie plików `Makefile`<br>
 * Skrócona wersja bez konieczności wchodzenia do katalogu:
 
-{% highlight cmake %}
-> cmake -B <KATALOG>
-> cmake --build <KATALOG> --parallel
-{% endhighlight %}
+```sh
+$ cmake -B <KATALOG>
+$ cmake --build <KATALOG> --parallel
+```
 
 ## Tworzenie zmiennych
 
@@ -60,30 +60,30 @@ Zastosowanie zmiennych umożliwia:
 
 **UWAGA!** W przypadku zapisania do zmiennej wszystkich plików źródłowych, a następnie podanie ich w `add_executable` spowoduje i tak wielokrotną kompilację tych samych plików. Lepszym wyborem jest stworzenie biblioteki, a następnie zlinkowanie jej z plikami wykonywalnymi.
 
-{% highlight cmake %}
+```cmake
 # Konwencja - UPPERCASE_WITH_UNDERSCORE
 set(VARIABLE value)
 
 # Przykład
 set(NAME TheGreatestProject)
-{% endhighlight %}
+```
 
 * `project(ProjectName)` tworzy zmienną `PROJECT_NAME` o wartości `ProjectName`
 * Do zmiennych odwołujemy się poprzez `${NAZWA_ZMIENNEJ}`
 * Czasem `CMake` nie wykrywa wersji kompilatora i trzeba ją podać samodzielnie (nie jest to zalecany sposób nadpisywanie predefiniowanych zmiennych)
 
-{% highlight cmake %}
+```cmake
 set(CMAKE_CXX_COMPILER g++-10)
-{% endhighlight %}
+```
 
 ## Tworzenie binarki (plik aplikacji lub testy)
 
-{% highlight cmake %}
+```cmake
 add_executable(<name> [source1] [source2 ...])
 
 # Przykład
 add_executable(${NAME} main.cpp)
-{% endhighlight %}
+```
 
 * W `add_executable` nie można podać `*.cpp` (wszystkich plików `cpp`)
 * Jeśli pliki `*.hpp` są w innej lokalizacji to trzeba dodać `include_directories(inc1/ inc2/)`
@@ -93,9 +93,9 @@ add_executable(${NAME} main.cpp)
 
 * Biblioteka to zestaw wielu plików `cpp` bez funkcji `main()` (z tego powodu biblioteki nie można uruchomić)
 
-{% highlight cmake %}
+```cmake
 add_library(${PROJECT_NAME}-lib [STATIC | SHARED | MODULE] functions.cpp modules.cpp)
-{% endhighlight %}
+```
 
 * `STATIC` oznacza, że biblioteka jest kopiowana do pliku wykonywalnego
 
@@ -120,29 +120,30 @@ Dla przypomnienia:
 
 Biblioteki linkujemy z binarką (**lub inną biblioteką**) poprzez:
 
-{% highlight cmake %}
+```cmake
 target_link_libraries(<target> ... <item>... ...)
-{% endhighlight %}
+```
 
 * `target` - nazwa z `add_executable`
 * `<item>` - konkretna biblioteka
 
 Przykład:
-{% highlight cmake %}
+
+```cmake
 add_library(lib STATIC functions.cpp modules.cpp)
 add_executable(main main.cpp)
 add_executable(ut tests.cpp)
 target_link_libraries(main lib)
 target_link_libraries(ut lib)
-{% endhighlight %}
+```
 
 ## Podsumowanie
 
-{% highlight cmake %}
+```cmake
 add_library(${PROJECT_NAME}-lib STATIC functions.cpp modules.cpp)
 add_executable(${PROJECT_NAME} main.cpp functions.cpp modules.cpp)
 add_executable(${PROJECT_NAME}-ut test.cpp functions.cpp modules.cpp)
-{% endhighlight %}
+```
 
 ## Dodawanie flag kompilacji
 
@@ -151,7 +152,7 @@ add_executable(${PROJECT_NAME}-ut test.cpp functions.cpp modules.cpp)
 * `add_compile_options()` umożliwia ustawienie flag dla wszystkich plików wynikowych zdefiniowanych w obrębie danego pliku `CMakeLists.txt` (niezalecane)
 * **Do tworzenia bibliotek też można ustawiać flagi kompilacji**
 
-{% highlight cmake %}
+```cmake
 target_compile_options(<target> [BEFORE]
                                 <INTERFACE|PUBLIC|PRIVATE> [items1...]
                                 [<INTERFACE|PUBLIC|PRIVATE> [items2...]
@@ -159,11 +160,11 @@ target_compile_options(<target> [BEFORE]
 # Przykład
 add_executable(${PROJECT_NAME} main.cpp)
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra)                                
-{% endhighlight %}
+```
 
 ## Włączanie standardu C++17
 
-{% highlight cmake %}
+```cmake
 # Przykład 1 - może nie działać z MVC
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -176,28 +177,28 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 # Przykład 3
 add_executable(${PROJECT_NAME} main.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
-{% endhighlight %}
+```
 
 ## Budowanie w trybie Debug / Release
 
-{% highlight cmake %}
+```cmake
 # Debug
 > cmake -D CMAKE_BUILD_TYPE=Debug ..
 
 # Release
 > cmake -D CMAKE_BUILD_TYPE=Release ..
-{% endhighlight %}
+```
 
 * Wersja Debug używa flag `-O0` (optymalizacja czasu kompilacji) oraz z `-g` (z symbolami do debugowania)
 * Wersja Release używa flagi `-O3` (optymalizacja wielkości kodu oraz czasu wykonywania)
 * Podczas uruchamiania CMake'a można nadpisać każdą flagę poprzez:
 
-{% highlight cmake %}
-> mkdir buildDebug
-> cd buildDebug
-> cmake -DCMAKE_BUILD_TYPE=Debug ..
-> cmake --build
-{% endhighlight %}
+```sh
+$ mkdir buildDebug
+$ cd buildDebug
+$ cmake -DCMAKE_BUILD_TYPE=Debug ..
+$ cmake --build
+```
 
 * Jeśli chcemy wspierać budowanie w dwóch trybach: Debug i Release zalecane jest stworzenie dla nich oddzielnych katalogów z rezultatami budowania
 
@@ -206,14 +207,14 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 * `CTest` to moduł `CMake` - aplikacja do uruchamiania testów
 * Normalnie należy uruchomić binarkę z testami, `CTest` umożliwia uruchomienie wszystkich testów jedną komendą - `ctest`
 
-{% highlight cmake %}
+```cmake
 enable_testing()
 add_test(NAME <name> COMMAND <command> [<arg>...])
 
 # Przykład
 enable_testing()
 add_test(NAME someTests COMMAND ./${PROJECT_NAME}-ut)
-{% endhighlight %}
+```
 
 ### Uruchamianie testów z CTest
 {: .no_toc }
