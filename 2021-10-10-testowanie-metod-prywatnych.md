@@ -51,4 +51,4 @@ Jeśli musimy przetestować prywatną cześć klasy, trzeba najpierw zdobyć do
 
 ## Bibliografia
 
-- [How to Unit Test a Private Function in C++](https://www.codeproject.com/Tips/5249547/How-to-Unit-Test-a-Private-Function-in-Cplusplus)
+- [Marcell Lipp - How to Unit Test a Private Function in C++](https://www.codeproject.com/Tips/5249547/How-to-Unit-Test-a-Private-Function-in-Cplusplus)

@@ -28,12 +28,12 @@ CMake to narzędzie do automatyzacji procesu budowania programów napisanych w C
 
 ## Minimalny CMakeLists
 
-{% highlight cmake %}
+```cmake
 cmake_minimum_required(VERSION 3.10)
 project(ProjectName)
 
 add_executable(<NAZWA_PLIKU_WYNIKOWEGO> main.cpp)
-{% endhighlight %}
+```
 
 ## Budowanie
 

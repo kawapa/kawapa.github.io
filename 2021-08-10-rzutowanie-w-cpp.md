@@ -7,6 +7,9 @@ date: 2021-08-10 08:00:00
 # Rzutowanie w C++
 {: .no_toc }
 
+Krótki opis rzutowania czyli mechanizmu umożliwiającego programiście zmianę typu danego obiektu na inny.
+{: .fs-6 .fw-300 }
+
 <details open markdown="block">
   <summary>
     Spis treści
@@ -15,8 +18,6 @@ date: 2021-08-10 08:00:00
 1. TOC
 {:toc}
 </details>
-
-Rzutowanie to mechanizm umożliwiający programiście zmianę typu danego obiektu na inny. 
 
 ## Rzutowanie w starym stylu
 

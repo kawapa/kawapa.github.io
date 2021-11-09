@@ -7,7 +7,7 @@ date: 2021-08-22 06:00:00
 # Zacznij dowozić zadania, w czasie krótszym o połowę
 {: .no_toc }
 
-Notatki i przemyślenia z najciekawszych fragmentów mini e-booka Krzysztofa Jendrzycy.
+Notatki z najciekawszych fragmentów mini e-booka autorstwa Krzysztofa Jendrzycy.
 {: .fs-6 .fw-300 }
 
 <details open markdown="block">
@@ -81,4 +81,4 @@ To marnotrawstwo energii. **Plan daje stałe, przyjemne poczucie pewności tego 
 
 ## Bibliografia
 
-* [Zacznij dowozić zadania, w czasie krótszym o połowę](https://kjendrzyca.notion.site/kjendrzyca/Zacznij-dowozi-zadania-w-czasie-kr-tszym-o-po-ow-8073e7f6a8b44bcf8168ea178fed5901)
+* [Krzysztof Jedrzyca - Zacznij dowozić zadania, w czasie krótszym o połowę](https://kjendrzyca.notion.site/kjendrzyca/Zacznij-dowozi-zadania-w-czasie-kr-tszym-o-po-ow-8073e7f6a8b44bcf8168ea178fed5901)

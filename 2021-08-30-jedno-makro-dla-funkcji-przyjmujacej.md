@@ -12,22 +12,11 @@ Makro to instrukcja dla preprocesora, który przetwarza i przygotowuje kod źró
 
 Mamy w projekcie klasę do zrzucania/zapisywania logów. Może one przyjmować (w zależności od typu zdarzenia) różne argumenty np.: tekst, liczby/enum'y (które określają na przykład typ i klasę zdarzenia). Co zrobić by móc wygodnie korzystać z przeciążonej funkcji `log()` (na przykład poprzez `LOG(...)`, która przyjmie wszystkie możliwe formy argumentów)?
 
-{% highlight cpp %}
-class Logger {
-public:
-    void log(const char* text);
-    void log(const char* text, int type);
-    void log(const char* text, int type, Sentry::severity s);
-// ...
-};
-{% endhighlight %}
+{% gist 292f8a2d65db9388b7aac565d4bc76d6 %}
 
 ## Rozwiązanie
 
-{% highlight cpp %}
-#define GET_MACRO(_0,_1,_2,NAME,...) log
-#define LOG(...) GET_MACRO(__VA_ARGS__, LOG3, LOG2, LOG1)(__VA_ARGS__)
-{% endhighlight %}
+{% gist e5a62e16ad8a790cd728a3dc85f258ad %}
 
 ## Bibliografia
 
