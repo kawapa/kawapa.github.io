@@ -23,7 +23,8 @@ CMake to narzędzie do automatyzacji procesu budowania programów napisanych w C
 ## Główne cechy
 
 * Domyślna konfiguracja w pliku `CMakeLists.txt`
-* Dobrze napisany `CMakeLists.txt` daje niezależność od platformy na której budowana jest aplikacja (można podać inny, ale wymaga to podania dodatkowej flagi)
+  * Można podać inny, ale wymaga to podania dodatkowej flagi przy budowaniu
+* Dobrze napisany `CMakeLists.txt` daje niezależność od platformy na której budowana jest aplikacja
 * Jeśli nie było zmian w jakichś plikach - szybsza ponowna kompilacja
 
 ## Minimalny CMakeLists
@@ -58,7 +59,7 @@ Zastosowanie zmiennych umożliwia:
 * Wielokrotne wykorzystanie tych samych nazw w projekcie
 * Uniknięcie duplikacji w przypadku podawania tych samych plików źródłowych lub flag kompilacji dla wielu plików binarnych
 
-**UWAGA!** W przypadku zapisania do zmiennej wszystkich plików źródłowych, a następnie podanie ich w `add_executable` spowoduje i tak wielokrotną kompilację tych samych plików. Lepszym wyborem jest stworzenie biblioteki, a następnie zlinkowanie jej z plikami wykonywalnymi.
+**UWAGA!** W przypadku zapisania do zmiennej wszystkich plików źródłowych, a następnie podanie ich w `add_executable`, nie unikniemy wielokrotnej kompilacji tych samych plików. Lepszym wyborem jest stworzenie biblioteki, a następnie zlinkowanie jej z plikami wykonywalnymi.
 
 ```cmake
 # Konwencja - UPPERCASE_WITH_UNDERSCORE
@@ -70,10 +71,11 @@ set(NAME TheGreatestProject)
 
 * `project(ProjectName)` tworzy zmienną `PROJECT_NAME` o wartości `ProjectName`
 * Do zmiennych odwołujemy się poprzez `${NAZWA_ZMIENNEJ}`
-* Czasem `CMake` nie wykrywa wersji kompilatora i trzeba ją podać samodzielnie (nie jest to zalecany sposób nadpisywanie predefiniowanych zmiennych)
+* Czasem `CMake` nie wykrywa wersji kompilatora i trzeba ją podać samodzielnie
 
 ```cmake
 set(CMAKE_CXX_COMPILER g++-10)
+# Niezalecane jest nadpisywanie predefiniowanych zmiennych w ten sposób
 ```
 
 ## Tworzenie binarki (plik aplikacji lub testy)
@@ -85,7 +87,7 @@ add_executable(<name> [source1] [source2 ...])
 add_executable(${NAME} main.cpp)
 ```
 
-* W `add_executable` nie można podać `*.cpp` (wszystkich plików `cpp`)
+* W `add_executable` nie można podać `*.cpp` jako "wszystkie pliki `cpp`"
 * Jeśli pliki `*.hpp` są w innej lokalizacji to trzeba dodać `include_directories(inc1/ inc2/)`
 * Więcej informacji w [dokumentacji](https://cmake.org/cmake/help/latest/command/add_executable.html)
 
@@ -118,7 +120,7 @@ Dla przypomnienia:
 ### Linkowanie bibliotek
 {: .no_toc }
 
-Biblioteki linkujemy z binarką (**lub inną biblioteką**) poprzez:
+* Biblioteki linkujemy z binarką (**lub inną biblioteką**) poprzez:
 
 ```cmake
 target_link_libraries(<target> ... <item>... ...)
