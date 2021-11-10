@@ -2,6 +2,7 @@
 layout: post
 title: "Rzutowanie w C++"
 date: 2021-08-10 08:00:00
+permalink: /rzutowanie-w-cpp
 ---
 
 # Rzutowanie w C++

@@ -2,6 +2,7 @@
 layout: post
 title: "Jedno makro dla funkcji przyjmującej różną liczbę argumentów"
 date: 2021-08-30 17:55:00
+permalink: /jedno-makro-dla-funkcji
 ---
 
 # Jedno makro dla funkcji przyjmującej różną liczbę argumentów

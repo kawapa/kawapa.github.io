@@ -2,6 +2,7 @@
 layout: post
 title: "Testowanie metod prywatnych"
 date: 2021-10-10 17:00:00
+permalink: /testowanie-metod-prywatnych
 ---
 
 # Testowanie metod prywatnych

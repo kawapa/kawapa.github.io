@@ -2,6 +2,7 @@
 layout: post
 title: "Książka: Getting Things Programmed. Droga do efektywności"
 date: 2021-08-15 17:00:00
+permalink: /getting-things-programmed
 ---
 
 # Książka: Getting Things Programmed. Droga do efektywności

@@ -2,6 +2,7 @@
 layout: post
 title: "Wstęp do CMake"
 date: 2021-08-08 12:30:00
+permalink: /wstep-do-cmake
 ---
 
 # Wstęp do CMake
