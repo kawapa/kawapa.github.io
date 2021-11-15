@@ -15,10 +15,26 @@ Prywatna baza wiedzy / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
-* [Testowanie metod prywatnych](testowanie-metod-prywatnych) - 10 października 2021
-* [Jedno makro dla funkcji przyjmującej różną liczbę argumentów](jedno-makro-dla-funkcji) - 30 sierpnia 2021
-* [Artykuł: Zacznij dowozić zadania, w czasie krótszym o połowę](zacznij-dowozic) - 22 sierpnia 2021
-* [Książka: Getting Things Programmed. Droga do efektywności](getting-things-programmed) - 15 sierpnia 2021
-* [Rzutowanie w C++](rzutowanie-w-cpp) - 10 sierpnia 2021
-* [Wstęp do CMake](wstep-do-cmake) - 8 sierpnia 2021
-* [Początek](poczatek) - 5 sierpnia 2021
+<ul>
+  {% for post in site.posts %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+                {% assign m = post.date | date: "%-m" %}
+                {{ post.date | date: "%-d" }}
+                {% case m %}
+                {% when '1' %}stycznia
+                {% when '2' %}lutego
+                {% when '3' %}marca
+                {% when '4' %}kwietnia
+                {% when '5' %}maja
+                {% when '6' %}czerwca
+                {% when '7' %}lipca
+                {% when '8' %}sierpnia
+                {% when '9' %}września
+                {% when '10' %}października
+                {% when '11' %}listopada
+                {% when '12' %}grudnia
+                {% endcase %}
+                {{ post.date | date: "%Y" }}
+            </time></li>
+  {% endfor %}
+</ul>
