@@ -28,6 +28,8 @@ CMake to narzędzie do automatyzacji procesu budowania programów napisanych w C
 * Dobrze napisany `CMakeLists.txt` daje niezależność od platformy na której budowana jest aplikacja
 * Jeśli nie było zmian w jakichś plikach - szybsza ponowna kompilacja
 
+---
+
 ## Minimalny CMakeLists
 
 ```cmake
@@ -36,6 +38,8 @@ project(ProjectName)
 
 add_executable(<NAZWA_PLIKU_WYNIKOWEGO> main.cpp)
 ```
+
+---
 
 ## Budowanie
 
@@ -53,6 +57,8 @@ $ cmake --build .   // budowanie
 $ cmake -B <KATALOG>
 $ cmake --build <KATALOG> --parallel
 ```
+
+---
 
 ## Tworzenie zmiennych
 
@@ -79,6 +85,8 @@ set(CMAKE_CXX_COMPILER g++-10)
 # Niezalecane jest nadpisywanie predefiniowanych zmiennych w ten sposób
 ```
 
+---
+
 ## Tworzenie binarki (plik aplikacji lub testy)
 
 ```cmake
@@ -91,6 +99,8 @@ add_executable(${NAME} main.cpp)
 * W `add_executable` nie można podać `*.cpp` jako "wszystkie pliki `cpp`"
 * Jeśli pliki `*.hpp` są w innej lokalizacji to trzeba dodać `include_directories(inc1/ inc2/)`
 * Więcej informacji w [dokumentacji](https://cmake.org/cmake/help/latest/command/add_executable.html)
+
+---
 
 ## Tworzenie bibliotek
 
@@ -118,6 +128,8 @@ Dla przypomnienia:
 * W przypadku zmian w bibliotece nie jest wymagana powtórna kompilacja (linkowanie odbywa się w czasie działania programu)
 * Rozszerzenie `*.so`
 
+---
+
 ### Linkowanie bibliotek
 {: .no_toc }
 
@@ -140,6 +152,8 @@ target_link_libraries(main lib)
 target_link_libraries(ut lib)
 ```
 
+---
+
 ## Podsumowanie
 
 ```cmake
@@ -147,6 +161,8 @@ add_library(${PROJECT_NAME}-lib STATIC functions.cpp modules.cpp)
 add_executable(${PROJECT_NAME} main.cpp functions.cpp modules.cpp)
 add_executable(${PROJECT_NAME}-ut test.cpp functions.cpp modules.cpp)
 ```
+
+---
 
 ## Dodawanie flag kompilacji
 
@@ -165,6 +181,8 @@ add_executable(${PROJECT_NAME} main.cpp)
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra)                                
 ```
 
+---
+
 ## Włączanie standardu C++17
 
 ```cmake
@@ -181,6 +199,8 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 add_executable(${PROJECT_NAME} main.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 ```
+
+---
 
 ## Budowanie w trybie Debug / Release
 
@@ -205,6 +225,8 @@ $ cmake --build
 
 * Jeśli chcemy wspierać budowanie w dwóch trybach: Debug i Release zalecane jest stworzenie dla nich oddzielnych katalogów z rezultatami budowania
 
+---
+
 ## CTest
 
 * `CTest` to moduł `CMake` - aplikacja do uruchamiania testów
@@ -225,6 +247,8 @@ add_test(NAME someTests COMMAND ./${PROJECT_NAME}-ut)
 * `ctest` - uruchomienie wszystkich testów (ze skróconymi wynikami)
 * `ctest -V` - uruchomienie wszystkich testów + szczegółowy output z testów
 * Więcej informacji po wpisaniu `ctest --help`
+
+---
 
 ## Bibliografia
 

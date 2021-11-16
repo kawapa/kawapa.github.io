@@ -17,10 +17,14 @@ permalink: /getting-things-programmed
 {:toc}
 </details>
 
+---
+
 ## Podstawy
 
 * Nie ma cudownych receptur ani trików jeśli chodzi o poprawę efektywności programisty. Jest tylko konsekwentna praca nad nawykami, dzień po dniu.
 * Wielkie problemy biorą się z małych zaniedbań, podobnie jak wielkie osiągnięcia biorą się z małych ulepszeń.
+
+---
 
 ## Wielozadaniowość
 
@@ -31,6 +35,8 @@ Wielozadaniowość to:
 Unikanie wielozadaniowości polega na:
 * Skupieniu się na wykonywaniu tylko na jednej rzeczy oraz
 * **Podzieleniu pracy na takie elementarne części, że możesz wykonać jedną z nich, a następnie o niej zapomnieć i przejść do kolejnej**.
+
+---
 
 ## Jednominutowy kurs asertywności
 
@@ -45,6 +51,8 @@ Przykładowe wyjście z sytuacji:
 
 > - Rozumiem, że zależy ci na tym, a bym __CZYJAŚ_PROŚBA__.
 > - W tej chwili zajmuję się __AKTUALNIE_WYKONYWANE_ZADANIE__ i mam zaplanowane jeszcze __KOLEJNE_TRZY_ZADANIA__. Z czego mam zrezygnować albo co przesunąć, aby wykonać to, o co mnie prosisz?
+
+---
 
 ## Metodyka pracy z zadaniami do wykonania
 
@@ -86,6 +94,8 @@ Przechowywanie tak zdefiniowanych zadań ma jeszcze jedną olbrzymią zaletę:
 
 **Praca z nieskonkretyzowanym zadaniem wiąże się z częstym "ładowaniem" i "rozładowywaniem" kontekstu**. To ogromna strata czasu i energii. Z tego też powodu zadania muszą być zdefiniowane tak i drobno i zawierały w swoim sformułowaniu taką ilość kontekstu, że można przystąpić do ich wykonywania w ciągu kilku sekund.
 
+---
+
 ## Praca z trudnymi zadaniami
 
 Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wystartować. Z pomocą przychodzi metoda indywidualnej burzy mózgu:
@@ -96,6 +106,8 @@ Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wysta
     * Pisz w równym tempie, bez zastanawiania się co masz właśnie napisać
     * Nie przerywaj jeśli na kartce nie znajduje się przynajmniej 30 pomysłów
 3. Przeanalizuj wszystkie pomysły - **być może wśród nich kryje się wskazówka prowadząca do rozwiązania**
+
+---
 
 ## Czytanie książek branżowych
 
@@ -111,6 +123,8 @@ Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wysta
 2. Przeczytaj tylko te fragmenty, w których Twoim zdaniem mogą znajdować się odpowiedzi 
 3. Koniec. Zapoznałeś się z książką.
 
+---
+
 ## Planowanie pracy
 
 * Skupiaj się na rzeczach ważnych gdyż to właśnie one przynoszą faktyczną wartość w pracy (i w życiu)
@@ -125,6 +139,8 @@ Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wysta
     * Cel dnia to **jedno i tylko jedno zadanie** które wykonasz danego dnia
 * Nawet jeśli cały dzień okaże się "poszarpany", będziesz miał świadomość, że udało Ci się wykonać to jedno najważniejsze zadanie
 
+---
+
 ## Higiena pracy
 {: .no_toc }
 
@@ -134,12 +150,15 @@ Od czasu do czasu zdarzają się takie zadania z którymi nie wiadomo jak wysta
     * W przypadku programowania będzie to: IDE w które wpatrujesz się większość dnia, ulubiona muzyka w tle.
 * Jeśli w tych samych warunkach będziesz wykonywał różne czynności - trudniej Ci będzie osiągnąć skupienie w każdej z nich.
 
+---
 ## Praca z zadaniami, których unikasz
 
 * Bywają zadania, do których ciężko jest Ci się zabrać i które od tygodni przesuwasz je na koniec kolejki. Warto wtedy zdekomponować to zadanie zgodnie z krokami opisanymi w "Metodyka pracy z zadaniami do wykonania" lub zastosować technikę przedstawioną w rozdziale Praca z trudnymi zadaniami.
 * Gdy jednak i to nie pomaga i ciągle brakuje motywacji, możesz zastosować tak zwane 10-minutowe wyzwanie:
     * Zdecyduj, że przez najbliższe 10 minut będziesz zajmować się tylko tym zadaniem (z największym zaangażowaniem na jakie Cię stać). Tylko 10 minut, potem możesz znów odłożyć to zadanie na bok jeśli tak postanowisz
     * Trik polega na tym, że motywacja pojawi się gdy zaczynasz dostrzegać nawet najmniejsze rezultaty swojej pracy. W 10 minut masz szansę posunąć jakiś temat do przodu chociaż o centymetr, prawda?
+
+---
 
 ## Bibliografia
 

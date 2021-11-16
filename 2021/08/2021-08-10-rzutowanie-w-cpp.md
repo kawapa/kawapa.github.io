@@ -20,6 +20,8 @@ Krótki opis rzutowania czyli mechanizmu umożliwiającego programiście zmianę
 {:toc}
 </details>
 
+---
+
 ## Rzutowanie w starym stylu
 
 Wady:
@@ -35,9 +37,13 @@ T obiekt = T(wyrazenie_lub_obiekt_innego_typu)
 // rzutowanie w stylu funkcyjnym
 ```
 
+---
+
 ## Nowoczesne rzutowanie
 
 W związku z tym, że rzutowanie w "starym stylu" nie sprawdzało czy ma ono sens logiczny czy nie, Stroustrup wprowadził cztery dodatkowe operatory rzutowania: [`static_cast`](#rzutowanie-static_cast), [`dynamic_cast`](#rzutowanie-dynamic_cast), [`const_cast`](#rzutowanie-const_cast) oraz [`reinterpret_cast`](#rzutowanie-reinterpret_cast), które za wyjątkiem rzutowania dynamicznego już w trakcie kompilacji jest walidowane przez kompilator.
+
+---
 
 ## Rzutowanie `static_cast`
 
@@ -51,6 +57,8 @@ W związku z tym, że rzutowanie w "starym stylu" nie sprawdzało czy ma ono sen
 const double PI = 3.14159265358979323846264279502;
 int int_pi = static_cast<int>(PI);
 ```
+
+---
 
 ## Rzutowanie `dynamic_cast`
 
@@ -76,6 +84,8 @@ int main() {
     // rzutowanie w dół
 }
 ```
+
+---
 
 ## Rzutowanie `const_cast`
 
@@ -115,6 +125,8 @@ int main() {
 }
 ```
 
+---
+
 ## Rzutowanie `reinterpret_cast`
 
 Konwersje między niespokrewnionymi typami, na przykład:
@@ -142,6 +154,8 @@ int address = 0x0f6a2f1;
 int* wsk = reinterpret_cast<int*>(addres);
 // ustawienie wskaźnika na adres
 ```
+
+---
 
 ## Bibliografia
 

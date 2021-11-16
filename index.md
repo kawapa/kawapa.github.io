@@ -15,8 +15,6 @@ Prywatna baza wiedzy / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
-AA
-
 * [Testowanie metod prywatnych](testowanie-metod-prywatnych) - 10 października 2021
 * [Jedno makro dla funkcji przyjmującej różną liczbę argumentów](jedno-makro-dla-funkcji) - 30 sierpnia 2021
 * [Artykuł: Zacznij dowozić zadania, w czasie krótszym o połowę](zacznij-dowozic) - 22 sierpnia 2021

@@ -20,11 +20,15 @@ Notatki z najciekawszych fragmentów mini e-booka autorstwa Krzysztofa Jendrzycy
 {:toc}
 </details>
 
+---
+
 ## Pytaj, dopóki nie zrozumiesz co masz zrobić
 
 * Nie ma sensu rozpoczynać pracy nad zadaniem, którego się nie rozumie do końca
 * Zadawaj pytania by wyjaśnić każdą nieścisłość
     * Zadawanie pytań to nie objaw niekompetencji. Przeciwnie - zadawanie właściwych pytań oznacza, że znasz się na rzeczy i zależy Ci rzetelnym wykonaniu danego zadania
+
+---
 
 ## Zdefiniuj cel
 
@@ -32,6 +36,8 @@ Notatki z najciekawszych fragmentów mini e-booka autorstwa Krzysztofa Jendrzycy
 
 * Zapisz wszystko (w punktach) co jest do zrobienia
     * Zapanujesz w ten sposób nad swoim wewnętrznym perfekcjonistą, który ciągle będzie chciał coś ulepszać i poprawiać
+
+---
 
 ## Rozpisz plan
 
@@ -67,6 +73,8 @@ To marnotrawstwo energii. **Plan daje stałe, przyjemne poczucie pewności tego 
 * Czy trzeba zrobić najpierw jakiś refactor?
 * Jak przetestować daną funkcjonalność?
 
+---
+
 ## Rozpocznij pisanie kodu
 
 * Zacznij od tego, co jest najważniejsze
@@ -75,10 +83,14 @@ To marnotrawstwo energii. **Plan daje stałe, przyjemne poczucie pewności tego 
     * Dopiero kiedy okazało się że kod rozwiązuje dany problem, dopieszczasz rozwiązanie.
 * Testuj
 
+---
+
 ## Po skończonej pracy
 
 * Czy to rozwiązanie jest wystarczająco dobre w obecnych warunkach?
 * Czy poprzednie funkcjonalności dalej działają?
+
+---
 
 ## Bibliografia
 
