@@ -20,6 +20,10 @@ Notatki z wykładu Anothony'ego Robbinsa na temat planowania celów.
 {:toc}
 </details>
 
+---
+
+## Wstęp
+
 To czy uda Ci się osiągnąć wybrany przez siebie cel zależy od tego:
 * Jak konkretnie i jednoznacznie sprecyzujesz to czego chcesz
 * Czy jesteś wystarczająco zmotywowany do pracy nad danym celem, **zwłaszcza jeśli sprawy nie będą szły po Twojej myśli**
@@ -62,6 +66,10 @@ To czy uda Ci się osiągnąć wybrany przez siebie cel zależy od tego:
     * Przeanalizuj je pomysły i zredukuj ich liczbę do 20%
 
 ---
+
+## Co dalej?
+
+* Kiedy nauczysz się myśleć w ten sposób, nie będziesz potrzebował żadnego systemu zadań
 
 ## Bibliografia
 
