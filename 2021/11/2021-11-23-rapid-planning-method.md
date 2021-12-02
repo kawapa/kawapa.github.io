@@ -3,6 +3,7 @@ layout: post
 title: "Rapid Planning Method"
 date: 2021-11-23 16:00:00
 permalink: /rapid-planning-method
+search_exclude: true
 ---
 
 # Rapid Planning Method
