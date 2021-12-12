@@ -15,6 +15,7 @@ Prywatna baza wiedzy / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+* [Qt: QMYSQL driver not loaded](qt-qmysql-driver-not-loaded) - 12 grudnia 2021
 * [Polecenie `chown`](chown) - 2 grudnia 2021
 * [Testowanie metod prywatnych](testowanie-metod-prywatnych) - 10 października 2021
 * [Jedno makro dla funkcji przyjmującej różną liczbę argumentów](jedno-makro-dla-funkcji) - 30 sierpnia 2021
