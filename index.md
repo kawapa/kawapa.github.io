@@ -15,6 +15,7 @@ Prywatna baza wiedzy / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+* [Kompilator i kompilacja](kompilator-i-kompilacja) - 9 stycznia 2022
 * [Wielowątkowość w C++ - część 1](wielowatkowosc1) - 24 grudnia 2021
 * [Qt: QMYSQL driver not loaded](qt-qmysql-driver-not-loaded) - 12 grudnia 2021
 * [Polecenie chown](chown) - 2 grudnia 2021
