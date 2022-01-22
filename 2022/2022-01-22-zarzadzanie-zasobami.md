@@ -115,17 +115,7 @@ Alokacja na stercie to:
 * Wywołanie konstruktora `T`
 * Przypisanie adresu do wskaźnika
 
-```cpp
-// C++
-int* i = new int(5);  // operator new
-delete i;
-
-// C
-int* i;
-i = (int*)malloc(sizeof(int));
-*i = 5;
-free(i);
-```
+{% gist 6175b4a1054b2fdc735143bf7b71a47d %}
 
 ---
 
