@@ -8,13 +8,14 @@ permalink: /
 # CppDev
 {: .fs-9 }
 
-Prywatna baza wiedzy / blog / [o mnie](o-mnie)
+Prywatna baza wiedzy / wiki / [o mnie](o-mnie)
 {: .fs-6 .fw-300 }
 
 ---
 
 ## Lista wpisów
 
+* [Zarządzanie zasobami](zarzadzanie-zasobami) - 22 stycznia 2022
 * [Kompilator i kompilacja](kompilator-i-kompilacja) - 9 stycznia 2022
 * [Wielowątkowość w C++ - część 1](wielowatkowosc1) - 24 grudnia 2021
 * [Qt: QMYSQL driver not loaded](qt-qmysql-driver-not-loaded) - 12 grudnia 2021
