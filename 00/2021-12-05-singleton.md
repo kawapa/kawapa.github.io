@@ -60,3 +60,76 @@ Nie można dziedziczyć statycznych pól klasy;.
 ## Bibliografia
 
 * http://home.agh.edu.pl/~glowacki/docs/matwykl/O-o/_ProgObiekt-C++14-Rozsz.pdf
+
+
+
+
+
+
+
+
+
+
+
+---
+layout: post
+title: Wzorce projektowe - Singleton
+date: 2021-12-17 17:00:00
+permalink: /singleton
+---
+
+# Wzorce projektowe - Singleton
+{: .no_toc }
+
+<details close markdown="block">
+  <summary>
+    Spis treści
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+## Kiedy u�ywa�?
+
+* Kiedy w programie potrzebna jest tylko jedna instancja danej klasy (wszystkie klasy korzystaj� z tego jednego obiektu). Przyk�ady:
+  * Dost�p do bazy danych
+  * Fabryka obiekt�w
+  * Jakakolwiek klasa, kt�rej stworzenie b�d� r�wnoleg�e u�ywanie wi�cej ni� jednego obiektu **jest kosztowne pod wzgl�dem zasob�w**
+
+## Przyk�adowe implementacje
+
+### Singleton Meyers'a
+
+### Singleton z u�yciem mutex�w
+
+* Zablokuj tworzenie i robienie kopii
+  * Uczy� konstruktor prywatnym
+  * Usu� konstruktor kopiuj�cy oraz kopiuj�cy operator przypisania (`= delete`)
+* Rozwa� p�n� inicjalizacj� (stworzenie obiektu dopiero w momencie pierwszego u�ycia)
+* Zabezpiecz moment tworzenia obiektu mutex'em
+* Zabezpiecz zasoby kt�rymi dysponuje ORAZ zasoby, kt�rymi dysponuje Singleton przy u�yciu mutex'�w (je�li aplikacja jest wielow�tkowa)
+
+### Singleton z u�yciem call_once
+
+
+* Utw�rz statyczn� metod� np. `getInstance()` zwracaj�ca statyczny obiekt (przez referencj� lub wska�nik)
+
+## Problemy ze wzorce Singleton
+
+* Utrudnione (b�d� niemo�liwe) jest testowanie klas/metod korzystaj�cych z Singleton'a
+  * Nie mo�na na potrzeby test�w podmieni� klasy zapewniaj�cej na przyk�ad dost�p do bazy inn� klas� (testowana klasa jest silnie sprze�ona z Singleton'em)
+    * Jedyne co mo�na zrobi� to napisa� test, podczas kt�rego nast�pi po��czenie z prawdziw� baz� - **taki test nie jest ju� testem jednostkowym, a testem integracyjnym**
+
+## Rozwi�zanie problemu
+
+* Zastosowanie Dependency Injection (DI)
+  * Utw�rz interfejs  interfejsu naszemu Singletonowi, b�dzie zawiera� on tylko czysto wirtualne metody faktycznie zwracaj�ce konkretne warto�ci (a nie `getInstance()`)
+
+## Rzeczy, kt�re wa
+
+Nie mo�na dziedziczy� statycznych p�l klasy;.
+
+## 5. Bibliografia
+
+- [Dmitri Nesteruk - Design Patterns in Modern C++ (Udemy)](https://www.udemy.com/course/patterns-cplusplus/)

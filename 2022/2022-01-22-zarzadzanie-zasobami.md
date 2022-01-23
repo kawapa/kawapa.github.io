@@ -27,6 +27,7 @@ Idiom, wzorzec w C++ oznaczający *Resource Acquisition Is Initialization*.
 * Zasób pozyskany w konstruktorze
 * Zasób automatycznie zwalniany w destruktorze
   * Nasz obiekt (wrapper) jest alokowany na stosie
+  * Jeśli wystąpi wyjątek to automatycznie wołany jest destruktor (zwijanie stosu)
 
 Wykorzystanie: pliki, gniazda sieciowe, mutexy...
 

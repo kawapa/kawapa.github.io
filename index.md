@@ -15,6 +15,7 @@ Prywatna baza wiedzy / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+* [Inteligentne wskaźniki](inteligentne-wskazniki) - 24 stycznia 2022
 * [C++17 - nowe elementy języka](cpp17) - 23 stycznia 2022
 * [Zarządzanie zasobami](zarzadzanie-zasobami) - 22 stycznia 2022
 * [Kompilator i kompilacja](kompilator-i-kompilacja) - 9 stycznia 2022
