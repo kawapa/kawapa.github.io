@@ -13,4 +13,4 @@ gh_edit_repository: "https://github.com/kawapa/kawapa.github.io"
 gh_edit_branch: "master"
 gh_edit_view_mode: "tree"
 
-footer_content: "CppDev © 2021 | Wszelkie prawa zastrzeżone. Motyw Jekyll: własny, na podstawie <a href=\"https://github.com/pmarsceill/just-the-docs\">Just the Docs.</a>"
+footer_content: "CppDev © 2022 | Wszelkie prawa zastrzeżone. Motyw Jekyll: własny, na podstawie <a href=\"https://github.com/pmarsceill/just-the-docs\">Just the Docs.</a>"
