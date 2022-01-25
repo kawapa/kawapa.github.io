@@ -8,7 +8,7 @@ permalink: /
 # CppDev
 {: .fs-9 }
 
-Prywatna baza wiedzy / wiki / [o mnie](o-mnie)
+Blog / wiki / [o mnie](o-mnie)
 {: .fs-6 .fw-300 }
 
 ---
