@@ -15,6 +15,7 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+* [STL - Kontenery sekwencyjne](kontenery) - 30 stycznia 2022
 * [Programowanie obiektowe](oop) - 29 stycznia 2022
 * [System kontroli wersji Git](git) - 27 stycznia 2022
 * [Inteligentne wskaźniki](inteligentne-wskazniki) - 24 stycznia 2022
