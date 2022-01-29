@@ -35,13 +35,6 @@ Kontener sekwencyjny - elementy są przechowywane dokładnie w takiej kolejnośc
   <img src = "2022/sequence_containers.png">
 </p>
 
-| Kontener | Wstawianie | Dostęp | Usuwanie | Wyszukiwanie |
-|:---------|:-----------|:-------|:---------|:-------------|
-| `array` | - | O(1) |  | - | O(n) |
-| `vector` | Na koniec: O(1)<br> Na pocz.: O(n) | O(1) | Z końca: O(1)<br> Inne: O(n) | Posortowany: O(log n)<br> Inne: O(n) |
-| `deque` | Na koniec: O(1)<br> Na pocz.: O(n) | O(1) | Z końca: O(1)<br> Inne: O(n) | Posortowany: O(log n)<br> Inne: O(n) |
-| `list`/`forward_list` | Pocz./koniec: O(1)<br> Z it:: O(1)<br> W miejsce: O(n) | Pocz./koniec: O(1)<br> Z it: O(1)<br> W miejsce: O(n) | Pocz./koniec: O(1)<br> Z it: O(1)<br> W miejsce: O(n) | O(n) |
-
 ## Wspólne 
 
 | Metoda | Opis |
@@ -52,6 +45,8 @@ Kontener sekwencyjny - elementy są przechowywane dokładnie w takiej kolejnośc
 | `begin(), end()` |  |
 | `cbegin(), cend()` |  |
 | `swap()` |  |
+
+---
 
 ### `std::array`
 
@@ -79,6 +74,8 @@ void print(const std::array<int, T>& array) {
 | Usuwanie | - |
 | Wyszukiwanie | O(n)<br> **O(log n)** jeśli posortowany) |
 
+---
+
 ### `std::vector`
 
 * **Chache-friendly** bo:
@@ -100,6 +97,8 @@ void print(const std::array<int, T>& array) {
 | Usuwanie | **O(n)** bo trzeba przesunąć wszystkie pozostałe<br> Końcowy element: **O(1)** |
 | Wyszukiwanie | **O(n)**<br> **O(log n)** jeśli posortowany |
 
+---
+
 ### `std::list`
 
 * Lista dwukierunkowa
@@ -118,10 +117,12 @@ void print(const std::array<int, T>& array) {
 | Usuwanie | **O(1)** bo to tylko przypisanie wskaźników |
 | Wyszukiwanie | **O(n)** bo trzeba iterować od początku<br> Na posortowanej liście też **O(n)** |
 
-#### Kiedy `std::list` a kiedy `std::vector`?
+#### Kiedy wybrać listę, a kiedy wektor?
 
 * Jeśli chcemy mieć szybki dostęp do n-tego  elementu -> `std::vector`
 * Jeśli często potrzebujesz dodawać i usuwać elementy -> `std::list`
+
+---
 
 ### `std::forward_list`
 
@@ -139,6 +140,8 @@ void print(const std::array<int, T>& array) {
 | Dostęp | **O(n)** bo trzeba iterować od początku |
 | Usuwanie | **O(1)** bo to tylko przypisanie wskaźników |
 | Wyszukiwanie | **O(n)** bo trzeba iterować od początku<br> Na posortowanej liście też **O(n)** |
+
+---
 
 ### `std::deque`
 
