@@ -15,6 +15,7 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+* [Programowanie obiektowe](oop) - 29 stycznia 2022
 * [System kontroli wersji Git](git) - 27 stycznia 2022
 * [Inteligentne wskaźniki](inteligentne-wskazniki) - 24 stycznia 2022
 * [C++17 - nowe elementy języka](cpp17) - 23 stycznia 2022
