@@ -51,7 +51,7 @@ Zalety:
 * Konstruktor przenoszący
 * Przenoszący operator przypisania
 
-... **to najprawdopodobniej musisz zaimplementować je wszystkie** ponieważ w przypadku kopiowania będzie to kopiowanie płytkie.
+... **to znaczy, że ręcznie zarządzasz zasobami i najprawdopodobniej musisz zaimplementować je wszystkie**. Dzięki temu mamy pewność prawidłowego użycia w każdym kontekście.  ponieważ w przypadku kopiowania będzie to kopiowanie płytkie.
 
 * Nie dotyczy to sytuacji w której implementujemy wirtualny destruktor (z pustą implementacją) na potrzeby dziedziczenia
 * Przed C++11 i wprowadzeniem semantyki przenoszenia była "Zasada 3".
@@ -60,7 +60,7 @@ Zalety:
 
 ### Zasada 0
 
-**Jeśli używasz wrapper'ów RAII na zasoby, nie musisz implementować żadnej z powyższych funkcji.**
+**Jeśli używasz wrapper'ów RAII na zasoby, nie musisz implementować żadnej z powyższych funkcji.** Wszystkie operacje kopiowania i przenoszenia zostaną wygenerowane automatycznie (lub usunięte) przez kompilator.
 
 ---
 
