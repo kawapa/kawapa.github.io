@@ -15,7 +15,12 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
-* [STL - Kontenery sekwencyjne](kontenery) - 30 stycznia 2022
+* [Grub - problem z uruchomieniem Windows'a](grub-windows10-problem) - 19 lutego 2022
+* [Algorytmy](algorytmy) - 15 lutego 2022
+* [Semantyka przenoszenia](semantyka-przenoszenia) - 12 lutego 2022
+* [Funkcje, wskaźniki na funkcje i lambdy](funkcje) - 5 lutego 2022
+* [Szablony](szablony) - 1 lutego 2022
+* [STL - Kontenery](kontenery) - 30 stycznia 2022
 * [Programowanie obiektowe](oop) - 29 stycznia 2022
 * [System kontroli wersji Git](git) - 27 stycznia 2022
 * [Inteligentne wskaźniki](inteligentne-wskazniki) - 24 stycznia 2022

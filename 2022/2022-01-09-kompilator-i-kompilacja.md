@@ -30,6 +30,8 @@ permalink: /kompilator-i-kompilacja
 * Połączenie wszystkich plików obiektowych w jeden plik wynikowy
 * Wynik - gotowa binarka (`*.exe`, `*.bin`) lub biblioteka (`*.a`, `*.so`, `*.dll`)
 
+---
+
 ## Obsluga kompilatora z linii komend
 
 `g++ PLIK -o <PLIK>`<br>
@@ -38,7 +40,6 @@ permalink: /kompilator-i-kompilacja
 * Przy kompilacji nie podaje się plików nagłówkowych
    * `g++ main.cpp entity.cpp`<br>
    * `g++ *.cpp`
-
 
 ### Podstawowe flagi
 

@@ -278,7 +278,7 @@ CTRL + L | Odświeżenie widoku
 
 ## Mutexy
 
-###  `std::mutex`
+### `std::mutex`
 
 * Blokuje jednoczesny dostęp do tzw. sekcji krytycznej
   * Dobrą praktyką jest wydzielenie sekcji krytycznej do osobnej funkcji
@@ -384,8 +384,6 @@ Funkcja | Opis
 * Te same własności co `std::unique_lock`
 * Przyjmuje dodatkowy patarametr
 
-
-
 ---
 
 ### Dodatkowe parametry dla `std::lock_guard`, `std::unique_lock` oraz `std::shared_lock`
@@ -399,3 +397,5 @@ Funkcja | Opis
     * Działanie przeciwne do `std::defer_lock`
 
 {% gist b2b402830f6c14f3f828b9772303f633 %}
+
+**Funkcja `std::lock()` gwarantuje zablokowanie wszystkich mutexów bez zakleszczenia niezależnie od kolejności ich pozyskania.**

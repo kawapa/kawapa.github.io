@@ -50,6 +50,7 @@ To wszystko wysypie program.
 * Możliwy własny deleter
     * `std::unique_ptr` nie musi zarządzać pamięcią, może czymś innym (np. zamykać plik)
     * Własny deleter zwiększa rozmiar `std::unique_ptr` bo nie ma on bloku kontrolnego
+* W C++11 co prawda nie ma `std::make_unique` ale możemy sobie zami stworzy szablon wariadyczny, który będzie przyjmowal w konstruktorze arguemnty i zwróci utworzony `std::unique_ptr`
 
 ```cpp
 // TWORZENIE

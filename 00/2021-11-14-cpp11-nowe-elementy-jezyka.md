@@ -267,11 +267,7 @@ int main() {
 
 ## Lambdy
 
-*Anonimowa* funkcja tworzona w miejscu użycia. Wyrażenie lambda składa się z:
-- `[ ]` - Lista przechwytująca (*capture list*). Umożliwia korzystanie ze zmiennych użytych wcześniej w kodzie
-- `( )` - (**OPCJONALNE**) Lista argumentów np. `mutable` (zmienne przechwycone przez wartość mogą być modyfikowane wewnątrz ciała wyrażenia)
-- `->` (**OPCJONALNE**) Typ zwracany
-- `{ }` - Ciało funkcji
+
 
 ## Jednolita inicjalizacja
 
@@ -411,9 +407,13 @@ OVERRIDE
     * Destruktor
     * Konstruktor domyślny
     * Konstruktor kopiujący (`Entity(const Entity& other)`)
-    * Konstruktor przenoszący (`Entity(Entity&& object)`)
     * Operator przypisania kopiujący (`Entity& operator=(const Entity& other)`)
+    * Konstruktor przenoszący (`Entity(Entity&& object)`)
     * Operator przypisania przenoszący (`Entity& operator=(Entity&& object)`)
+
+jeśli nie zdefiniujemy żadnej z wymienionych funkcji składowych, wszystkie zostaną wygenerowane przez kompilator
+jeśli zdefiniujemy dowolny z 3 pierwszych elementów, kompilator nie wygeneruje konstruktora przenoszącego i przenoszącego operatora przypisania
+jeśli zdefiniujemy konstruktor przenoszący lub przenoszący operator przypisania, żaden z pozostałych elementów nie zostanie automatycznie wygenerowany
 
 ## Funkcje `delete`
 

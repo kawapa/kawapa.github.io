@@ -51,7 +51,9 @@ Zalety:
 * Konstruktor przenoszący
 * Przenoszący operator przypisania
 
-... **to najprawdopodobniej musisz zaimplementować je wszystkie** ponieważ w przypadku kopiowania będzie to kopiowanie płytkie.
+... **to najprawdopodobniej musisz zaimplementować je wszystkie** ponieważ domyślnie:
+  * W destruktorze po raz kolejny będziemy zwalniać tą samą pamięć
+  * W przypadku kopiowania będzie to kopiowanie płytkie
 
 * Nie dotyczy to sytuacji w której implementujemy wirtualny destruktor (z pustą implementacją) na potrzeby dziedziczenia
 * Przed C++11 i wprowadzeniem semantyki przenoszenia była "Zasada 3".
@@ -60,7 +62,8 @@ Zalety:
 
 ### Zasada 0
 
-**Jeśli używasz wrapper'ów RAII na zasoby, nie musisz implementować żadnej z powyższych funkcji.**
+**Jeśli używasz wrapper'ów RAII na zasoby, nie musisz implementować żadnej z powyższych funkcji** (nawet jako `= default`)
+  * Wszystkie dozwolone funkcje zostaną wydedukowane i niejawnie zaimplementowane przez kompilator (na podstawie tego co przechowujesz w klasie)
 
 ---
 
@@ -71,7 +74,7 @@ Zalety:
   * W tym `.rodata` - dane tylko do odczytu (np. stałe)
 * `.bss` - *block starting symbol* czy lista zmiennych niezaincjalizowanych lub zaincjalizowanych zerem (w zależności od platformy). Można w ten sposób skompresować dane i zmniejszyć rozmiar pliku wykonywalnego
 * sterta - dynamicznie zaalokowana pamieć
-* sos - stos wywołań, adresy powrotu, parametry funkcji, zmienne lokalne
+* stos - stos wywołań, adresy powrotu, parametry funkcji, zmienne lokalne
 
 Sekcje można podejrzeć poleceniem `objdump`:
 * `$ g++ main.cpp`
@@ -156,4 +159,3 @@ Narzędzia do wykrywania problemów z pamięcią
 * Valgrind
   * Oddzielny program
   * `valgrind --leak-check=full ./a.out`
-
