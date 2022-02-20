@@ -3,6 +3,7 @@ layout: post
 title: Idiomy w c++
 date: 2021-12-31 06:00:00
 permalink: /idiomy
+search_exclude: true
 ---
 
 ## copy-and-swap idiom

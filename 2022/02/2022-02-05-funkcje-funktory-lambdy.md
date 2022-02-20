@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Funkcje, funktory i lambdy
-date: 2022-01-27 17:00:00
+date: 2022-02-05 17:00:00
 permalink: /funkcje
 ---
 

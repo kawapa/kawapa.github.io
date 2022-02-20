@@ -3,6 +3,7 @@ layout: post
 title: Specjalne funkcje składowe
 date: 2022-01-30 17:00:00
 permalink: /specjalne-funkcje-skladowe
+search_exclude: true
 ---
 
 # Specjalne funkcje składowe

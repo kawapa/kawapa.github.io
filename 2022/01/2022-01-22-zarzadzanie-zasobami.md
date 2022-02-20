@@ -79,7 +79,7 @@ Sekcje można podejrzeć poleceniem `objdump`:
 * `$ objdump a.out`
 
 <p align="center">
-  <img width="200" height = auto src = "2022/process_memory.jpg">
+  <img width="200" height = auto src = "2022/01/process_memory.jpg">
 </p>
 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Semantyka przenoszenia
-date: 2022-01-31 17:00:00
+date: 2022-02-12 17:00:00
 permalink: /semantyka-przenoszenia
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: STL - Kontenery
-date: 2022-01-29 17:00:00
+date: 2022-01-30 17:00:00
 permalink: /kontenery
 ---
 
@@ -32,7 +32,7 @@ permalink: /kontenery
 Kontener sekwencyjny - elementy są przechowywane dokładnie w takiej kolejności w jakiej są wrzucane.
 
 <p align="center">
-  <img src = "2022/sequence_containers.png">
+  <img src = "2022/01/sequence_containers.png">
 </p>
 
 ---
@@ -147,7 +147,7 @@ Kontener sekwencyjny - elementy są przechowywane dokładnie w takiej kolejnośc
 | Wyszukiwanie | **O(n)** bo trzeba iterować od początku<br> Na posortowanej liście też **O(n)** |
 
 <p align="center">
-  <img src = "2022/deque.png">
+  <img src = "2022/01/deque.png">
 </p>
 
 ---
