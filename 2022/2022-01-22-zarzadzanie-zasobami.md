@@ -51,9 +51,7 @@ Zalety:
 * Konstruktor przenoszący
 * Przenoszący operator przypisania
 
-... **to najprawdopodobniej musisz zaimplementować je wszystkie** ponieważ domyślnie:
-  * W destruktorze po raz kolejny będziemy zwalniać tą samą pamięć
-  * W przypadku kopiowania będzie to kopiowanie płytkie
+... **to znaczy, że ręcznie zarządzasz zasobami i najprawdopodobniej musisz zaimplementować je wszystkie**. Dzięki temu mamy pewność prawidłowego użycia w każdym kontekście.
 
 * Nie dotyczy to sytuacji w której implementujemy wirtualny destruktor (z pustą implementacją) na potrzeby dziedziczenia
 * Przed C++11 i wprowadzeniem semantyki przenoszenia była "Zasada 3".
