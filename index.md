@@ -15,13 +15,17 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+### Maj 2022
+
+* [Bycie efektywnym członkiem zespołu](bycie-efektywnym-czlonkiem-zespolu)
+
 ### Luty 2022
 
 * [Grub - problem z uruchomieniem Windows'a](grub-windows10-problem)
 * [Algorytmy](algorytmy)
 * [Semantyka przenoszenia](semantyka-przenoszenia)
-* [Funkcje, wskaźniki na funkcje i lambdy](funkcje)
 * [Szablony](szablony)
+* [Funkcje, wskaźniki na funkcje i lambdy](funkcje)
 
 ### Styczeń 2022
 
