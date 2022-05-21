@@ -17,6 +17,7 @@ Blog / wiki / [o mnie](o-mnie)
 
 ### Maj 2022
 
+* [Notatki z książki "Ekstremalny kod w języku C"](ekstremalny-c) ~~szkic~~
 * [Bycie efektywnym członkiem zespołu](bycie-efektywnym-czlonkiem-zespolu)
 
 ### Luty 2022
