@@ -15,6 +15,10 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+### Czerwiec 2022
+
+* [Optymalizacje w C++](optymalizacje)
+
 ### Maj 2022
 
 * [Bycie efektywnym członkiem zespołu](bycie-efektywnym-czlonkiem-zespolu)

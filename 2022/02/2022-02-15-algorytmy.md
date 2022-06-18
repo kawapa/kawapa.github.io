@@ -8,7 +8,7 @@ permalink: /algorytmy
 # Algorytmy STL
 {: .no_toc }
 
-<details open markdown="block">
+<details close markdown="block">
   <summary>
     Spis treści
   </summary>
