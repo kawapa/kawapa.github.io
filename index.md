@@ -17,6 +17,7 @@ Blog / wiki / [o mnie](o-mnie)
 
 ### Lipiec 2022
 
+* [Bądź pozytywnie nastawiony w pracy](badz-pozytywny)
 * [Specjalne funkcje składowe klasy](specjalne-funkcje-skladowe-klasy)
 
 ### Czerwiec 2022
