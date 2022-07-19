@@ -15,6 +15,10 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+### Sierpień 2022
+
+* [Specjalne funkcje składowe klasy](specjalne-funkcje-skladowe-klasy)
+
 ### Czerwiec 2022
 
 * [Optymalizacje w C++](optymalizacje)
