@@ -15,7 +15,7 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
-### Sierpień 2022
+### Lipiec 2022
 
 * [Specjalne funkcje składowe klasy](specjalne-funkcje-skladowe-klasy)
 
