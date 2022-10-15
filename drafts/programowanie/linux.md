@@ -1,0 +1,212 @@
+---
+layout: post
+title: Linux
+date: 2022-01-30 17:00:00
+permalink: /linux
+search_exclude: true
+---
+
+# Linux
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Spis treści
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+
+
+| Komenda | Opis |
+|:-------------|:------------------|
+| `cd ~` | Przejście do katalogu domowego |
+| `pwd` | Pokazuje aktualną ścieżkę |
+| `cd -` | Powrót do poprzedniej lokalizacji |
+`ls -l` - wyświetla w formie listy szczegółowej
+`ls -a` - wyswietla pliki ukryte
+
+## Wyszukiwanie plików
+
+FIND
+
+`find <plik>` - szuka pliki w aktualnym katalogu
+`find -name
+-name szukanie po naziwe
+
+find <scieżka> -name "*.cpp"
+(nie trzeba pisac -name bo jest domyślne)
+
+wazny cudzyslow
+
+
+mozna sobie ograniczac liste wynikow stosujac przekierowania 
+
+`find <scieżka> -name "*.cpp" | head`
+`find <scieżka> -name "*.cpp" | head -n5`
+
+find czesto sieje bledami bo uzytkownik nie ma uprawnien do przeszukania tego. Mozna odsciac pbledy stosujac:
+
+`find / -name kawapa > result.txt 2> /dev/null`
+
+`2>` - std::err standardowe wyjście błędów
+
+`&>` - przekierowanie zarówno std::err jak i std::out
+
+co oznacza ze bledow nie zapisuj tylko 
+
+jesli chcemy zarowno bledy jak i wyniki przekierowac w to samo miejsce
+
+`find /users/ -name kawapa &> readme.txt
+---
+
+`head` - wyświetla 5 pierwszych linii
+`head -n10` - wyświetla 10 pierwszych linii
+
+
+## Wyszukiwanie w tekście
+
+Szukanie frazy w pliku/plikach w danej lokalizacji
+`grep <fraza> <gdzie-szukac>`
+
+zeby szukal wewnatrz katalogu dodajemy `-r`
+
+`-n` wyswietla numer linii
+`-i` case insensitivyy - ignoruje wielkosc znakow
+
+Najczestsze uzycie
+`grep -rni <fraza> <lokalizacja>`
+
+## Przydatne
+
+| Komenda | Opis |
+|:-------------|:------------------|
+| `gedit &` | Otworzenie procesu w tle |
+| `Ctrl + R` | Wyszukiwanie w historii wprowadzonych komend |
+| `g++ main.cpp && ./a.out` | Uruchomienie dwóch komend jednocześnie. Druga wykona się tylko w przypadku powodzenia pierwszej |
+| `g++ main.cpp; ./a.out` | Jak wyżej ale druga komenda wykona się zawsze |
+
+---
+
+## Lokalizacja bibliotek w Ubuntu
+
+Pliki nagłówkowe: `/usr/local/include`
+Biblioteki: `/usr/local/lib`
+
+---
+
+## Przekierowania
+
+### Przekierowania do pliku
+
+`cat . > file.txt` wpisze do pliku
+`>>` - dopisuje do konca
+
+Jeśli program oczekuje wejscia z klaiwatury to mozna mu przekazac taki input z pliku i stosujac taki zapis:
+`<aplikacja> < <plik>`
+
+albo `<aplikacja> << EOF` i po enterze mozna pisac.. (jesli zakonczylismy, piszemy EOPF)
+
+### Przekierowania pomiędzy procesami
+
+`echo 4 + 5 | bc`
+
+bc - to kalkulator
+
+---
+
+## Vim
+
+### Wyszukiwanie
+
+Wyszukiwanie
+
+`/` i tekst którego szukamy
+LUB
+`?` i tekst którego szukamy
+
+---
+
+## Procesy
+
+programy do obslugi procesor: ps, top, htop
+
+`px aux` - wszystkie procesy
+- `a` tez innych uzytkoniwkow
+- `u` wyswietla nazwy uztytkownikow
+
+PID - process ID
+
+kill (sluzy nie do ubujania procesow tylko do wysylania sygnałów)
+
+
+`kill -9 <PID>` - wysłanie KILL
+
+CTRL + D - znak konca wpisywania danych do strumienia (np. wysylajac maila z terminala)
+
+CTRL + Z - stopuje program
+`fg` - uruchamia ostanio zatrzymany program (foreground)
+
+jesli jest ich wiecej to `jobs` zwraca liste i wtedy na przykład `fg 1`
+
+`jobs` wyświetla co działa w tle
+
+
+odpalenie programu w tle `./a.out &`
+
+wtedy dziala w tle i mozna sie do niego podlaczyc `fg`
+
+----
+drwxrwxrwx 
+
+d[rwx][rwx][rwx] - pierwsze rwx dla autora
+drugei dla grupy
+dla wszystkich pzoa
+
+---
+
+
+## Linux hhh
+
+
+
+---
+WYŚWIETLANIE
+
+`cat <file>`
+nie mozna scrollować
+
+LEPSZE:
+`more <file>`   - nie dziala PgUp i PDown
+- jak zjedziemy na sam dol to sie zamknie
+
+NAJLEPSZY
+`less <file>` - 
+- less is more powerfull than more
+- dziala pgup i pgdown
+- mozna szukac za pomoca `/` albo `?`
+    - `n` wyszukuje kolejne wystapienie
+    - `N` wyszukuje poprzednie wystapienie
+
+---
+`wc <file>` - wyswietla liczbe linii, slow i bajtow
+`wc -l <file>` - liczba liniiq
+
+
+
+
+
+
+
+
+
+
+Dodanie ścieżki do bibliotek
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your/custom/path/
+
+
+mkdir -s <MOŻNA PODAC KILKA KATALOGOW>
+mkdir build; cd build; cmake ..

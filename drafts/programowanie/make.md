@@ -1,0 +1,53 @@
+---
+layout: post
+title: Make - budowanie
+date: 2021-11-28 17:00:00
+permalink: /XXX
+search_exclude: true
+---
+
+Kurs na Coders School
+https://makefiletutorial.com/
+Dwa artykuły na CppPolska
+
+
+# Make
+
+* Automatyzuje proces budowania
+* Plik `Makefile` **musi być bez rozszerzenia**
+* Komenda `make` szuka w bieżącym katalogu pliku `Makefile` i jeśli nie ma podanego żadnego dodatkowego argumentu wykonuje pierwszą z góry recepturę
+
+
+```cmake
+greeter: *.cpp, *.hpp
+    g++ -std=c++17 -Wall -Werror -Wextra -pedantic *.cpp
+
+clean:
+    rm greeter
+
+.PHONY: clean
+```
+
+* Normalnie *Make* sprawdza czy plik o nazwie **NAZWA** jest nowszy niż wszystkie zależności wpisane po dwukropku. Jeśli jest plik o takiej samej nazwie jak receptura (**NAZWA**) jest nowszy to przy próbie wywołania `make NAZWA` wyświetli się `make: NAZWA is up to date.`
+
+* Jeśli chcemy by komenda wywoływała się niezależnie od systemu plików (np. w ścieżce może istnieć plik `clean` i wtedy komenda `clean` się nie wykona!) to dodajemy ją do tzw. PHONY.
+
+### Tworzenie zmiennych
+
+```cmake
+VARIABLE = value
+
+targetA: dependencyA1 dependencyA2
+[TAB]   command $(VARIABLE)
+
+targetB: dependency B1
+[TAB]   command &(VARIABLE)
+```
+
+
+
+
+
+## Bibliografia
+
+* http://home.agh.edu.pl/~glowacki/docs/matwykl/O-o/_ProgObiekt-C++14-Rozsz.pdf
