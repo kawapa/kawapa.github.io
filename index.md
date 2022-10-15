@@ -15,6 +15,10 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+### Październik 2022
+
+* [Instalowanie i odinstalowywanie aplikacji python'owych ze źródeł](python-usuwanie-aplikacji)
+
 ### Lipiec 2022
 
 * [Bądź pozytywnie nastawiony w pracy](badz-pozytywny)
