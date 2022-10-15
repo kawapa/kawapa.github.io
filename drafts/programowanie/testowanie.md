@@ -1,0 +1,13 @@
+https://www.researchgate.net/profile/Robert-Nowak/publication/233868973_Badanie_pokrycia_kodu_C_testami_jednostkowymi/links/02e7e52cc05e21e65d000000/Badanie-pokrycia-kodu-C-testami-jednostkowymi.pdf
+https://infotraining.bitbucket.io/cpp-tdd/unit-tests-intro.html
+http://cpp-polska.pl/post/testy-jednostkowe-z-googletest
+https://geek.justjoin.it/jak-opracowac-strategie-testowania
+https://www.jetbrains.com/help/clion/unit-testing-tutorial.html
+https://www.youtube.com/watch?v=F-NoROQAqfo
+https://www.youtube.com/watch?v=1a5PST2BUtM
+https://m.youtube.com/c/arisaif/videos
+https://esj.com/Articles/2012/09/24/Better-Unit-Testing.aspx?Page=1
+https://www.methodsandtools.com/archive/archive.php?id=122
+https://www.dropbox.com/s/2w6kywi5i6yalvf/SmartTesting%20-%20Mega%20Piguła%20Wiedzy%20O%20Testach%20Jednostkowych.pdf
+https://m.youtube.com/watch?v=gCQDBz-TMIE
+https://m.youtube.com/watch?v=JJqRlSTQlh4
