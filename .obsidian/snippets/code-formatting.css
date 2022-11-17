@@ -1,0 +1,14 @@
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight), .markdown-rendered code {
+    font-family: 'SF Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-style: normal !important;
+    font-size: 0.95em;
+    white-space: pre-wrap;
+    border: #E3EDF3 1px solid;
+    color: #c7254e;
+    background: #f9f2f4;
+    border-radius: 5px;
+}
+
+body {
+    color: rgb(55, 55, 55) !important;
+}
