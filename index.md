@@ -15,6 +15,10 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+### Listopad 2022
+
+* [Błędy, których powinieneś unikać w pracy](bledy-w-pracy)
+
 ### Październik 2022
 
 * [Instalowanie i odinstalowywanie aplikacji python'owych ze źródeł](python-usuwanie-aplikacji)
