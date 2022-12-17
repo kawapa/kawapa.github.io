@@ -15,6 +15,10 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+### Grudzień 2022
+
+* [`std::visit`](std-visit)
+
 ### Listopad 2022
 
 * [Błędy, których powinieneś unikać w pracy](bledy-w-pracy)
