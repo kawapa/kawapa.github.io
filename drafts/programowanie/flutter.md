@@ -1,6 +1,80 @@
 #
 
-
+Typ `dynamic` pozwala na zmianę typu obiektu przy kolejnych przypisaniach
+`dynamic` sam w sobie nie jest typem - to wyłączenie sprawdzania typów
+Jeśli chcemy mieć zmienną o "zmiennym typie" (ale ten typ będzie zmieniał się zawsze w obrębie typów języka Dart) - **zalecane jest korzystanie z typu `Object`**
+`dynamic` powinien być wykorzystywany tylko z konieczności, na przykłąd jeśli dostajemy jakieś dane z internetu
+`const` - stała na etapie kompilacji - musi być od razu zainicjalizowana
+`final` - stała na etapie działania programu - na początku może być pusta, ale po pierwszym przypisaniu nie może zostać zmieniona
+Typy wbudowane Dart udostępniają właściwość `.runtimeType` , która zwraca nazwę typu
+## Typy
+Dart jest językiem z inferencją typów czyli sam potrafi rozpoznać typ zmiennej
+Czasem przydaje się jawne pisanie typów - od razu wiadomo czego można użyć
+Typ | Opis
+--- | ---
+`num` | Typ całkowity i zmiennoprzecinkowy
+`int` |
+`double` | Liczby zmiennoprzecinkowe lub całkowite, które chcemy zrzutować na zmiennoprzecinkowe
+`bool` |
+`String` | Ciąg znaków
+```dart
+// Konkatenacja
+print(text1 + text2 + text3);
+// Interpolacja
+print('$text1   +   $text2   +   $text3')
+```
+Łączenie Stringów:
+Konkatenacja (użycie `+`) - nie uwzględnia pustych znaków
+Interpolacja
+Inne o Stringach
+Multiline
+```dart
+String multiline = """
+multi
+line
+"""
+```
+Raw String
+```dart
+String text = r'This is \n description';
+```
+```dart
+void printList(List list) {
+print("All elements: ${list}");
+}
+void main() {
+var list = [1, 3, 5, 8];
+var stringList = ['one', 'three', 'five', 'eight'];
+print("Length: ${list.length}");
+printList(list);
+list.add(10);
+printList(list);
+// Miksowanie list o różnych typach
+// spread-operator (...)
+var mixedList = [...list, ...stringList];
+printList(mixedList);
+print(mixedList.runtimeType);
+// Typ listy mieszanej to JSArray<Object>
+// Pojawia się JSArray bo ten kod kompiluje DartPad
+// Istotny jest typ Object - czyli typ dowolny
+}
+```
+## Set
+# Nieprzerobione
+# Flutter
+Sound null safety - analizator kodu przed uruchominieme programu sprawdza czy nie będzie nulli. Potem
+Kotlin używany w Androidzie
+Dart używany praktycznie tylko we Flutterze.
+Wcześniej było coś takiego jak "Angular Dart", ale projekt został zamknięty
+## Paczki i pluginy
+Czym się różni paczka od pluginu
+Plugin np. na Androida/Windowsa - używa natywnego kodu np. w Androidzie i Windowsie
+Paczka dart ffi (umożliwia wykorzystanie kodu C/C++ w kodzie Darta
+fluent_ui - umożliwia użycie kontrolek z Windowsa (domyslnie Flutter dostarcza kontrolki Andorid/iOS)
+Dart się interpoluje z innymi językami (np. ze Swiftem)
+*
+## Efective Dart
+Dobre praktyki
 
 
 
