@@ -8,10 +8,12 @@ permalink: /vsc-skroty-klawiszowe
 # Skróty klawiszowe VSC, które chciałbym zapamiętać
 {: .no_toc }
 
+---
+
 ## Ogólne
 
 | Skrót klawiszowy                 | Znaczenie                                           |
-| -------------------------------- | --------------------------------------------------- |
+| :------------------------------- | :-------------------------------------------------- |
 | Ctrl + Shift + P                 | Panel komend                                        |
 | F1                               | Panel komend                                        |
 | Ctrl + B                         | Pokaż / ukryj sidebar                               |
@@ -28,11 +30,12 @@ permalink: /vsc-skroty-klawiszowe
 | Ctrl + Tab                       | Przełącz się na następny plik / kartę               |
 | Ctrl + Tab (nie puszczając Ctrl) | Przejdź do wybranego pliku / karty                  |
 
+---
 
 ## Edycja kodu
 
 | Skrót klawiszowy           | Znaczenie                                                |
-| -------------------------- | -------------------------------------------------------- |
+| :------------------------- | :------------------------------------------------------- |
 | Ctrl + X (bez zaznaczenia) | Wytnij aktywny wiersz                                    |
 | Ctrl + C (bez zaznaczenia) | Kopiuj aktywny wiersz                                    |
 | Ctrl + Enter               | **Wstaw wiersz poniżej**                                 |
@@ -46,16 +49,20 @@ permalink: /vsc-skroty-klawiszowe
 | Alt + click                | Wstaw kursor (do pisania w wielu miejscach jednocześnie) |
 | Shift + Alt + ↑ / ↓        | Wstaw kursora powyżej / poniżej                          |
 
+---
+
 ## Debug
 
 | Skrót klawiszowy | Znaczenie          |
-| ---------------- | ------------------ |
+| :--------------- | :----------------- |
 | F9               | Toggle breakpoint  |
 | F5               | Rozpocznij / Dalej |
 | F11 / Shift+F11  | Step into/out      |
 | F10              | Step over          |
 | Shift+F5         | **Zatrzymaj**      |
 | Ctrl+K Ctrl+I    | Show hover         |
+
+---
 
 ## Bibliografia
 
