@@ -15,6 +15,10 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+### Luty 2023
+
+* [Skróty klawiszowe VSC, które chciałbym zapamiętać](vsc-skroty-klawiszowe)
+
 ### Grudzień 2022
 
 * [`std::visit`](std-visit)
