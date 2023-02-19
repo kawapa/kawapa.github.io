@@ -16,7 +16,7 @@ Blog / wiki / [o mnie](o-mnie)
 ## Lista wpisów
 
 ### Luty 2023
-
+* [Anothony Robbins - Rapid Planning Method](rapid-planning-method)
 * [Skróty klawiszowe VSC, które chciałbym zapamiętać](vsc-skroty-klawiszowe)
 
 ### Grudzień 2022
