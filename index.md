@@ -15,6 +15,10 @@ Blog / wiki / [o mnie](o-mnie)
 
 ## Lista wpisów
 
+### Czerwiec 2023
+
+* [Thiago Forte - Zbuduj swój drugi mózg](second-brain) - szkic
+
 ### Luty 2023
 * [Anothony Robbins - Rapid Planning Method](rapid-planning-method)
 * [Skróty klawiszowe VSC, które chciałbym zapamiętać](vsc-skroty-klawiszowe)
