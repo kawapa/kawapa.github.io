@@ -117,7 +117,6 @@ docker exec -ti <KONTENER> sh
 Szybciej:
 
 ```dockerfile
-docker inspect <KONTENTER> --format "{{ .NetworkSettings.Network.bridge.IPAddress }}"
 
 // LUB
 

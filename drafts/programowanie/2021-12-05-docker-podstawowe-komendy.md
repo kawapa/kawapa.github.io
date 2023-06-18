@@ -6,42 +6,39 @@ permalink: /docker
 ---
 
 
-| Komenda | Opis |
-|:-------------|:------------------|
+| Komenda                 | Opis                                            |
+| :---------------------- | :---------------------------------------------- |
 | Nadpisanie `entrypoint` | `docker run -it --entrypoint /bin/bash <IMAGE>` |
-| Nadpisanie `CMD` | `docker run -it /bin/bash <IMAGE>` |
+| Nadpisanie `CMD`        | `docker run -it /bin/bash <IMAGE>`              |
 
 ## Obrazy
 
-| Komenda | Opis |
-|:-------------|:------------------|
-| Pobranie obrazu z DockerHub'a | `docker pull <IMAGE>` |
-| Wyświetlenie listy obrazów | `docker images -a` |
-| Usuwanie obrazu | `docker rmi <IMAGE>` |
-| Zapis obrazu do pliku | `docker save <IMAGE> <FILE>.tar` |
-| Podgląd warstw obrazu | `docker history <IMAGE>` |
+| Komenda                       | Opis                             |
+| :---------------------------- | :------------------------------- |
+| Pobranie obrazu z DockerHub'a | `docker pull <IMAGE>`            |
+| Wyświetlenie listy obrazów    | `docker images -a`               |
+| Usuwanie obrazu               | `docker rmi <IMAGE>`             |
+| Zapis obrazu do pliku         | `docker save <IMAGE> <FILE>.tar` |
+| Podgląd warstw obrazu         | `docker history <IMAGE>`         |
 
 ## Kontenery
 
-| Komenda | Opis |
-|:-------------|:------------------|
-| Lista kontenerów | `docker ps` |
-| Lista kontenerów (również zatrzymanych) | `docker ps -a` |
-| Filtrowanie listy kontenerów po nazwie | `docker ps -a -f name=site` |
-| Zmiana nazwy kontenera | `docker container rename site site.old` |
-| Usuwanie kontenera | `docker rm <CONTAINER>` |
-| Uruchomienie kontenera | `docker start <CONTAINER>` |
-| Zatrzymanie kontenera 1 | `docker stop <CONTAINER>` |
-| Zatrzymanie kontenera 2 | `docker kill <CONTAINER>` |
-| Skopiowanie pliku do kontenera | `docker cp <HOST>:<CONTAINER>` |
+| Komenda                                 | Opis                                    |
+| :-------------------------------------- | :-------------------------------------- |
+| Lista kontenerów                        | `docker ps`                             |
+| Lista kontenerów (również zatrzymanych) | `docker ps -a`                          |
+| Filtrowanie listy kontenerów po nazwie  | `docker ps -a -f name=site`             |
+| Zmiana nazwy kontenera                  | `docker container rename site site.old` |
+| Usuwanie kontenera                      | `docker rm <CONTAINER>`                 |
+| Uruchomienie kontenera                  | `docker start <CONTAINER>`              |
+| Zatrzymanie kontenera 1                 | `docker stop <CONTAINER>`               |
+| Zatrzymanie kontenera 2                 | `docker kill <CONTAINER>`               |
+| Skopiowanie pliku do kontenera          | `docker cp <HOST>:<CONTAINER>`          |
 
 
 ### Rzadziej używane
 
 * Sprawdzenie IP kontenera:
-
-`docker inspect <CONTAINER> --format "{{ .NetworkSettings.Network.bridge.IPAddress }}"`
-`docker inspect site | jq -r .[].NetworkSettings.Network.bridge.IPAddress`
 
 
 sprawdzenie co nasluchuje

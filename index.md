@@ -13,36 +13,70 @@ Blog / wiki / [o mnie](o-mnie)
 
 ---
 
-## Lista wpisów
+### [Thiago Forte - Zbuduj swój drugi mózg](second-brain) - szkic
+3 czerwca 2023
+{: .fs-2 .text-grey-dk-000}
 
-### Czerwiec 2023
+---
 
-* [Thiago Forte - Zbuduj swój drugi mózg](second-brain) - szkic
+### [Anothony Robbins - Rapid Planning Method](rapid-planning-method)
+19 lutego 2023
+{: .fs-2 .text-grey-dk-000}
 
-### Luty 2023
-* [Anothony Robbins - Rapid Planning Method](rapid-planning-method)
-* [Skróty klawiszowe VSC, które chciałbym zapamiętać](vsc-skroty-klawiszowe)
+---
 
-### Grudzień 2022
+### [Skróty klawiszowe VSC, które chciałbym zapamiętać](vsc-skroty-klawiszowe)
+8 lutego 2023
+{: .fs-2 .text-grey-dk-000}
 
-* [`std::visit`](std-visit)
+---
 
-### Listopad 2022
+### [Do czego służy `std::visit`](std-visit)
+17 grudnia 2022
+{: .fs-2 .text-grey-dk-000}
 
-* [Błędy, których powinieneś unikać w pracy](bledy-w-pracy)
+---
 
-### Październik 2022
+### [Błędy, których powinieneś unikać w pracy](bledy-w-pracy)
+11 listopada 2022
+{: .fs-2 .text-grey-dk-000}
 
-* [Instalowanie i odinstalowywanie aplikacji python'owych ze źródeł](python-usuwanie-aplikacji)
+---
 
-### Lipiec 2022
+### [Instalowanie i odinstalowywanie aplikacji python'owych ze źródeł](python-usuwanie-aplikacji)
+11 listopada 2022
+{: .fs-2 .text-grey-dk-000}
 
-* [Bądź pozytywnie nastawiony w pracy](badz-pozytywny)
-* [Specjalne funkcje składowe klasy](specjalne-funkcje-skladowe-klasy)
+---
 
-### Czerwiec 2022
+### [Instalowanie i odinstalowywanie aplikacji python'owych ze źródeł](python-usuwanie-aplikacji)
+15 października 2022
+{: .fs-2 .text-grey-dk-000}
 
-* [Optymalizacje w C++](optymalizacje)
+---
+
+### [Bądź pozytywnie nastawiony w pracy](badz-pozytywny)
+19 lipca 2022
+{: .fs-2 .text-grey-dk-000}
+
+---
+
+### [Specjalne funkcje składowe klasy](specjalne-funkcje-skladowe-klasy)
+19 lipca 2022
+{: .fs-2 .text-grey-dk-000}
+
+---
+
+### [Optymalizacje w C++](optymalizacje)
+18 czerwca 2022
+{: .fs-2 .text-grey-dk-000}
+
+---
+
+
+
+
+
 
 ### Maj 2022
 

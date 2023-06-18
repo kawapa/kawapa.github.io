@@ -10,6 +10,10 @@ permalink: /kompilator-i-kompilacja
 
 1. Pre-processing
 2. Kompilacja
+   2.1 Diagnostyka
+   2.2 Optymalizacja
+   2.3 Wygenerowanie kodu Assembler'a
+   2.4 Przetworzenie kodu Assembler'a na kod maszynowy
 3. Linkowanie
 
 ### Pre-processing
@@ -22,8 +26,26 @@ permalink: /kompilator-i-kompilacja
 ### Kompilacja
 
 * Właściwa kompilacja
+  * Diagnostyka: sprawdzenie kodu pod kątem poprawności składniowej oraz semantycznej (czy kod ma sens)
+  * Optymalizacja: przekształcenia kodu niezmieniające jego zachowania, a pozwalające oszczędzić na zasobach takich jak czas wykonania, zużycie pamięci czy wielkość pliku wynikowego
+  * Wygenerowanie kodu Assembler'a
+  * Przetworzenie kodu Assembler'a na kod maszynowy zrozumiały dla systemu operacyjnego
 * Dla każdego pliku `*.cpp` powstaje plik obiektowy `*.o`
 * Flaga `-c` kończy kompilację na typ etapie
+  * Alternatywnie można użyć komendy `g++ main.cpp -o NAZWA.o` i samodzielnie nazwać plik obiektowy
+
+Błąd semantyczny
+
+```cpp
+int main() {
+   std::cout << 4 / 0;
+   // Błąd semantyczny: dzielenie przez 0
+
+   int a, b, c;
+   a + b = c;
+   // Błąd semantyczny: po lewej stronie równania znajduje się wyrażenie
+}
+```
 
 ### Linkowanie
 

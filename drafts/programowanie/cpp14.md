@@ -8,18 +8,97 @@ permalink: /cpp14
 # Standard C++14
 {: .no_toc }
 
+Nowości wprowadzone wraz ze standardem C++14.
+{: .fs-6 .fw-300 }
+
+<details open markdown="block">
+  <summary>
+    Spis treści
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 ---
 
+## Nowe elementy języka
 
-std::shared_timed_mutex and std::shared_lock
-std::integer_sequence
-std::exchange
-std::quoted
-and many small improvements to existing library facilities, such as
-two-range overloads for some algorithms
-type alias versions of type traits
-user-defined literals for basic_string, duration and complex
-etc.
+### variable templates
+
+### generic lambdas
+
+### lambda init-capture
+
+### new/delete elision
+
+### relaxed restrictions on constexpr functions
+
+### binary literals
+
+### digit separators
+
+### return type deduction for functions
+
+### aggregate classes with default non-static member initializers.
+
+## Nowe elementy biblioteki standardowej
+
+### `std::make_unique`
+
+```cpp
+auto uniqueEntity = std::make_unique<Entity>(); // działa od C++14
+
+std::unique_ptr<Entity> entity(new Entity());
+```
+
+Rekomendowane tworzenie `std::unique_ptr` poprzez `std::make_unique`
+    * Brak użycia używamy operatora `new`
+    * Nie trzeba dwa razy pisać typu: `std::unique_ptr<Entity> entity(new Entity())`
+    * Bezpieczene w przypadku wystąpienia wyjątku - przykład poniżej
+
+```cpp
+foo(std::unique_ptr<T>{new T}, function_that_throws(), std::unique_ptr<T>{new T});
+
+// kompilator nie gwarantuje kolejności wykonania, a możliwe że 
+// nastąpi przeplot operacji. Zawołanie operatora new to:
+// * Alokacja pamięci na stercie
+// * Wywołanie konstruktora
+// * Przypisanie adresu pamięci do wskaźnika
+```
+
+* Rekomendowane przekazywane do funkcji `std::unique_ptr` przez stałą referencję
+
+### std::shared_timed_mutex and std::shared_lock
+
+### std::integer_sequence
+
+### std::exchange
+
+### std::quoted
+
+### and many small improvements to existing library facilities, such as two-range overloads for some algorithms, type alias versions of type traits, user-defined literals for basic_string, duration and complex etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
+
+
 
 
 #### Literaly dla `std::complex`, `std::chrono` i `std::string`
@@ -48,32 +127,7 @@ int main() {
 
 ## std::make_unique
 
-```cpp
-auto uniqueEntity = std::make_unique<Entity>(); // działa od C++14
 
-std::unique_ptr<Entity> entity(new Entity());
-```
-
-* Rekomendowane tworzenie wskaźnika poprzez `std::make_unique`
-    * Brak użycia używamy operatora `new`
-    * Brak powtórzeń typu w kodzie (`std::make_shared<T>{new T}`)
-    * Bezpieczene w przypadku wystąpienia wyjątku
-
-```cpp
-foo(std::unique_ptr<T>{new T}, function_that_throws(), std::unique_ptr<T>{new T});
-
-// kompilator nie gwarantuje kolejności wykonania, a możliwe że 
-// nastąpi przeplot operacji. Zawołanie operatora new to:
-// * Alokacja pamięci na stercie
-// * Wywołanie konstruktora
-// * Przypisanie adresu pamięci do wskaźnika
-```
-
-* Rekomendowane przekazywane do funkcji `std::unique_ptr` jako `const&`
-
-```cpp
-void foo(const std::unique_ptr<Entity>& p);
-```
 
 ## Bibliografia
 

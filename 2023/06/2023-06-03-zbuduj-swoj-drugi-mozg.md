@@ -8,6 +8,9 @@ permalink: /second-brain
 # Thiago Forte - Zbuduj swój drugi mózg
 {: .no_toc }
 
+Notatki z książki
+{: .fs-6 .fw-300 }
+
 <details open markdown="block">
   <summary>
     Spis treści
