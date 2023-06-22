@@ -1,12 +1,10 @@
 ---
-layout: default
+layout: post
 title: Kontakt
-nav_order: 1
+date: 2023-06-22 15:00:00
 permalink: /kontakt
 ---
 
 # O mnie
 {: .fs-9 }
-
-ASD2
 

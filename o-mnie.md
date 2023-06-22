@@ -7,4 +7,4 @@ permalink: /o-mnie
 
 # O mnie
 
-
+Hej, nazywam się Paweł Kawalec i pracuję jako inżynier oprogramowania w jednym z wrocławskich Software House'ów.
