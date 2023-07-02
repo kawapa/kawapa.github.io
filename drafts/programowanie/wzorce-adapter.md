@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Wzorce projektowe - Adapter
-date: 2022-01-25 17:00:00
 permalink: /adapter
 ---
 

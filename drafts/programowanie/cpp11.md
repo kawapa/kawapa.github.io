@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Standard C++11"
-date: 2022-07-19 17:00:00
 permalink: /cpp11
 ---
 

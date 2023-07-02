@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Operator post- i pre-inkrementacji
-date: 2021-11-28 17:00:00
 permalink: /XXX
 search_exclude: true
 ---

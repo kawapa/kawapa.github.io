@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Książka: Zrozumieć programowanie"
-date: 2023-01-28 06:00:00
 permalink: /zrozumiec-programowanie
 ---
 

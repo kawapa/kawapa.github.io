@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Flutter
-date: 2023-06-18 17:00:00
 permalink: /flutter
 ---
 

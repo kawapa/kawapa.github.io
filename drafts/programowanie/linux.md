@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Linux
-date: 2022-01-30 17:00:00
 permalink: /linux
 search_exclude: true
 ---

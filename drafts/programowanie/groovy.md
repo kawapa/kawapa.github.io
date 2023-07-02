@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Groovy
-date: 2022-07-19 09:00:00
 permalink: /groovy
 ---
 

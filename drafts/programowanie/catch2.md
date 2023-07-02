@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Catch2 - wprowadzenie
-date: 2022-07-19 17:00:00
 permalink: /catch2
 ---
 

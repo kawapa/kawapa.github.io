@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Docker - podstawowe komendy
-date: 2022-06-09 17:00:00
 permalink: /docker
 ---
 

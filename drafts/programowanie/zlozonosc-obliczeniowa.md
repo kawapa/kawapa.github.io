@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Różne
-date: 2022-01-27 17:00:00
 permalink: /zlozonosc
 search_exclude: true
 ---

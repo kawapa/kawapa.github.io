@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Wzorce projektowe
-date: 2022-12-23 07:00:00
 permalink: /wzorce-projektowe
 ---
 

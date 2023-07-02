@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Lokalna zmiana definicji makra"
-date: 2021-12-31 06:00:00
 permalink: /XXX
 search_exclude: true
 ---

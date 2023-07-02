@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Narzędzie addr2line
-date: 2022-07-19 17:00:00
 permalink: /addr2line
 ---
 

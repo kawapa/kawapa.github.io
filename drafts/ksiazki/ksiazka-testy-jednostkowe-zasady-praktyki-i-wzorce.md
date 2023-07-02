@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Książka: Testy jednostkowe. Zasady, praktyki i wzorce"
-date: 2023-01-02 07:00:00
 permalink: /testy-jednostkowe
 ---
 

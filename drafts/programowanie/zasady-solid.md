@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Zasady SOLID, DRY, KISS i YAGNI
-date: 2022-01-27 17:00:00
 permalink: /zasady
 search_exclude: true
 ---

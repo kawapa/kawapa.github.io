@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Książka: Nierozpraszalni. Jak panować nad uwagą i decydować o swoim życiu"
-date: 2023-01-21 06:00:00
 permalink: /nierozpraszalni
 ---
 

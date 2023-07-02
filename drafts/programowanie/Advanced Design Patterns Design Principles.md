@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Advanced Design Patterns Design Principles
-date: 2022-07-19 17:00:00
 permalink: /stos-czy-sterta
 search_exclude: true
 ---
