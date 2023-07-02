@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Inteligentne wskaźniki
-date: 2022-01-24 17:00:00
+categories: [post]
+date: 2022-01-24
 permalink: /inteligentne-wskazniki
 ---
 

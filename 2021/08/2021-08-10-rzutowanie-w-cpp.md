@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Rzutowanie w C++"
-date: 2021-08-10 08:00:00
+title: Rzutowanie w C++
+categories: [post]
+date: 2021-08-10
 permalink: /rzutowanie-w-cpp
 ---
 

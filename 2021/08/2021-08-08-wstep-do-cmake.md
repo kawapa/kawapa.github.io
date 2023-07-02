@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Wstęp do CMake"
-date: 2021-08-08 12:30:00
+title: Wstęp do CMake
+categories: [post]
+date: 2021-08-08
 permalink: /wstep-do-cmake
 ---
 

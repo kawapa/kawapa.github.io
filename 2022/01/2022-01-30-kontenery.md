@@ -1,7 +1,8 @@
 ---
 layout: post
 title: STL - Kontenery
-date: 2022-01-30 17:00:00
+categories: [post]
+date: 2022-01-30
 permalink: /kontenery
 ---
 

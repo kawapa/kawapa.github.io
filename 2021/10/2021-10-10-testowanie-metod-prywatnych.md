@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Testowanie metod prywatnych"
-date: 2021-10-10 17:00:00
+title: Testowanie metod prywatnych
+categories: [post]
+date: 2021-10-10
 permalink: /testowanie-metod-prywatnych
 ---
 

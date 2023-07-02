@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Optymalizacje
-date: 2022-06-18 06:00:00
+categories: [post]
+date: 2022-06-18
 permalink: /optymalizacje
 ---
 

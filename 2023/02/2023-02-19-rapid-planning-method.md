@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Rapid Planning Method"
-date: 2023-02-19 07:00:00
+title: Rapid Planning Method
+categories: [post]
+date: 2023-02-19
 permalink: /rapid-planning-method
 ---
 

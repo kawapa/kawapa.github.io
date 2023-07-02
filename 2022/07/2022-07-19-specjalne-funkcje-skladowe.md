@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Specjalne funkcje składowe klas
-date: 2022-07-19 17:00:00
+categories: [post]
+date: 2022-07-19
 permalink: /specjalne-funkcje-skladowe-klasy
 ---
 

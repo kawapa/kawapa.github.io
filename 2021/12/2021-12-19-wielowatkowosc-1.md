@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Wielowątkowość w C++ - część 1
-date: 2021-12-24 17:00:00
-permalink: /wielowatkowosc1
+categories: [post]
+date: 2021-12-24
+permalink: /wielowatkowosc
 ---
 
 # Wielowątkowość w C++ - część 1

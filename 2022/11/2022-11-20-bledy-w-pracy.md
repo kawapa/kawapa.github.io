@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Błędy, których powinieneś unikać w pracy
-date: 2022-11-20 07:00:00
+categories: [post]
+date: 2022-11-20
 permalink: /bledy-w-pracy
 ---
 

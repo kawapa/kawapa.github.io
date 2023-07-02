@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Algorytmy STL
-date: 2022-02-15 17:00:00
+categories: [post]
+date: 2022-02-15
 permalink: /algorytmy
 ---
 

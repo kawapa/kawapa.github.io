@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Thiago Forte - Zbuduj swój drugi mózg"
-date: 2023-06-03 06:00:00
+title: Thiago Forte - Zbuduj swój drugi mózg
+categories: [post]
+date: 2023-06-03
 permalink: /second-brain
 ---
 

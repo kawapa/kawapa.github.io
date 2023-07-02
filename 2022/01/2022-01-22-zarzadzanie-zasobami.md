@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Zarządzanie zasobami
-date: 2022-01-22 17:00:00
+categories: [post]
+date: 2022-01-22
 permalink: /zarzadzanie-zasobami
 ---
 

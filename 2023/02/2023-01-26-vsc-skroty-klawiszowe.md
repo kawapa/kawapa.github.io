@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Skróty klawiszowe VSC, które chciałbym zapamiętać
-date: 2023-02-08 07:00:00
+categories: [post]
+date: 2023-02-08
 permalink: /vsc-skroty-klawiszowe
 ---
 

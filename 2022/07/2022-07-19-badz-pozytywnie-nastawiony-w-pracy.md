@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Bądź pozytywnie nastawiony w pracy
-date: 2022-07-19 19:00:00
+categories: [post]
+date: 2022-07-19
 permalink: /badz-pozytywny
 ---
 

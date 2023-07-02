@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Kompilator i kompilacja
-date: 2022-01-09 17:00:00
+categories: [post]
+date: 2022-01-09
 permalink: /kompilator-i-kompilacja
 ---
 # Kompilator i kompilacja
