@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Qt: QMYSQL driver not loaded
+title: "Qt: QMYSQL driver not loaded"
 categories: [post]
 date: 2021-12-12
 permalink: /qt-qmysql-driver-not-loaded

@@ -13,22 +13,23 @@ permalink: /gtest
 
 
 
-- [Google Test](#google-test)
-  - [Przydatne asercje11](#przydatne-asercje11)
-  - [Organizacja testow](#organizacja-testow)
-    - [Opcja 1 - najprostsza](#opcja-1---najprostsza)
-    - [Opcja 2 - ze struktura na czesci wspolne](#opcja-2---ze-struktura-na-czesci-wspolne)
-    - [Opcja 3 - testy parametryczne](#opcja-3---testy-parametryczne)
-  - [Najważniejsze przełączniki do testów](#najważniejsze-przełączniki-do-testów)
-- [Google Mock](#google-mock)
-- [Fake](#fake)
-- [Stub](#stub)
-- [Mock](#mock)
-- [Mockowanie metod](#mockowanie-metod)
-  - [Nowy sposób](#nowy-sposób)
-  - [Stary sposób](#stary-sposób)
-- [Ustawianie spodziewanych oraz zachowań](#ustawianie-spodziewanych-oraz-zachowań)
-- [Bibliografia](#bibliografia)
+- [GoogleTest - wprowadzenie](#googletest---wprowadzenie)
+  - [Google Test](#google-test)
+    - [Przydatne asercje11](#przydatne-asercje11)
+    - [Organizacja testow](#organizacja-testow)
+      - [Opcja 1 - najprostsza](#opcja-1---najprostsza)
+      - [Opcja 2 - ze struktura na czesci wspolne](#opcja-2---ze-struktura-na-czesci-wspolne)
+      - [Opcja 3 - testy parametryczne](#opcja-3---testy-parametryczne)
+    - [Najważniejsze przełączniki do testów](#najważniejsze-przełączniki-do-testów)
+  - [Google Mock](#google-mock)
+  - [Fake](#fake)
+  - [Stub](#stub)
+  - [Mock](#mock)
+  - [Mockowanie metod](#mockowanie-metod)
+    - [Nowy sposób](#nowy-sposób)
+    - [Stary sposób](#stary-sposób)
+  - [Ustawianie spodziewanych oraz zachowań](#ustawianie-spodziewanych-oraz-zachowań)
+  - [Bibliografia](#bibliografia)
 
 ## Google Test
 
@@ -119,6 +120,7 @@ TEST_F(SortTestixture, GiveANonemptyLongString) {
 
 #### Opcja 3 - testy parametryczne
 
+{% raw %}
 ```cpp
 #include <gtest/gtest.h>
 #include "Parentheses.hpp"
@@ -136,6 +138,7 @@ TEST_P(ParenthesesClassFixture, givenEmptyStringWhenIsBalancedIsCalledThenResult
     checkIsBalanceMethod(string, expectedResult);
 }
 
+
 INSTANTIATE_TEST_SUITE_P(MyInstantiationName,
                          ParenthesesClassFixture,
                          testing::Values(
@@ -149,6 +152,7 @@ INSTANTIATE_TEST_SUITE_P(MyInstantiationName,
                          )
 );
 ```
+{% endraw %}
 
 ### Najważniejsze przełączniki do testów
 
