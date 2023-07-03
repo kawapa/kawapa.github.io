@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kontakt
-date: 2023-06-22 15:00:00
+date: 2023-06-22
 permalink: /kontakt
 ---
 
