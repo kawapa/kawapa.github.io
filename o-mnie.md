@@ -24,10 +24,10 @@ W swojej karierze miałem przyjemność pracować dla następujących firm:
 
 Poza pracą komercyjną, jeśli czas na to pozwala, biorę udział w rozwijaniu projektów Open-Source (szczególnie tych, z których sam korzystam). Są to między innymi:
 
-* [Zim-Desktop](https://github.com/zim-desktop-wiki/zim-desktop-wiki) - Minimalistyczna aplikacja do tworzenia stron Wiki, może służyć jako osobisty planer, notatnik. Aplikacja napisana w Python'ie.
-* [Just-The-Docs](https://github.com/just-the-docs/just-the-docs) - Szablon Jekyll'a, którego to modyfikację właśnie oglądasz
+* [Zim-Desktop](https://github.com/zim-desktop-wiki/zim-desktop-wiki) - Minimalistyczna aplikacja do tworzenia stron Wiki. Może służyć także jako osobisty planer lub notatnik. Używane technologie: Python + GTK.
+* [Just-The-Docs](https://github.com/just-the-docs/just-the-docs) - Szablon Jekyll'a, którego to modyfikację właśnie oglądasz. Używane technologie: Jekyll + HTML/CSS.
 
 ## Kontakt
 
-* Mail: pawel dot kawalec dot outlook dot com
-* [Linkedin](https://www.linkedin.com/in/pawelkawalec/)
+* Mail: pawel dot kawalec at outlook dot com
+* [LinkedIn](https://www.linkedin.com/in/pawelkawalec/)
