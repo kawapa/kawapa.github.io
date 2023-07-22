@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/2734719/how-to-compile-a-static-library-in-linux
