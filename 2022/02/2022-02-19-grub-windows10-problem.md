@@ -18,10 +18,12 @@ Podczas rozruchu, po wybraniu systemu operacyjnego Windows, system nie uruchamia
 1. Otwórz plik `/boot/grub/grub.cfg`.
 2. Znajdź wpis dotyczący Windows'a, na przykład:
 
+{% raw %}
 ```bash
 ### BEGIN /etc/grub.d/30_os-prober ###
 menuentry 'Windows 10 (loader) (on /dev/sdXX)'
 ```
+{% endraw %}
 
 3. Po linii `chainloader +1` dopisz: `ntldr /bootmgr`.
 4. Zrestartuj komputer.
