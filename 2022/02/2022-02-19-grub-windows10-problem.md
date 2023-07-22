@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GRUB - Windows 10 nie ładuje się
+title: "GRUB - Windows 10 nie ładuje się"
 categories: [post]
 date: 2022-02-19
 permalink: /grub-windows10-problem
