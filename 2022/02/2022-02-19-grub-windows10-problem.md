@@ -1,8 +1,8 @@
 ---
 layout: post
-title: GRUB - Windows 10 nie ładuje się
+title: GR
 categories: [post]
-date: 2022-02-19
+date: 2022-02-19 06:00:00
 permalink: /grub-windows10-problem
 ---
 
@@ -17,11 +17,6 @@ Podczas rozruchu, po wybraniu systemu operacyjnego Windows, system nie uruchamia
 
 1. Otwórz plik `/boot/grub/grub.cfg`.
 2. Znajdź wpis dotyczący Windows'a, na przykład:
-
-```bash
-### BEGIN /etc/grub.d/30_os-prober ###
-menuentry 'Windows 10 (loader) (on /dev/sdXX)'
-```
 
 3. Po linii `chainloader +1` dopisz: `ntldr /bootmgr`.
 4. Zrestartuj komputer.
