@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bycie efektywnym członkiem zespołu
-categories: [post]
+categories: post
 date: 2022-05-17
 permalink: /bycie-efektywnym-czlonkiem-zespolu
 ---
