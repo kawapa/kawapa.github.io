@@ -24,8 +24,10 @@ W swojej karierze miałem przyjemność pracować dla następujących firm:
 
 Poza pracą komercyjną, jeśli czas na to pozwala, biorę udział w rozwijaniu projektów Open-Source (szczególnie tych, z których sam korzystam). Są to między innymi:
 
-* [Zim-Desktop](https://github.com/zim-desktop-wiki/zim-desktop-wiki) - Minimalistyczna aplikacja do tworzenia stron Wiki. Może służyć także jako osobisty planer lub notatnik. Używane technologie: Python + GTK.
-* [Just-The-Docs](https://github.com/just-the-docs/just-the-docs) - Szablon Jekyll'a, którego to modyfikację właśnie oglądasz. Używane technologie: Jekyll + HTML/CSS.
+* [Zim-Desktop](https://github.com/zim-desktop-wiki/zim-desktop-wiki) - Minimalistyczna aplikacja do tworzenia stron Wiki. Może służyć także jako osobisty planer lub notatnik.
+    * Używane technologie: Python + GTK
+* [Just-The-Docs](https://github.com/just-the-docs/just-the-docs) - Szablon Jekyll'a, którego to modyfikację właśnie oglądasz.
+    * Używane technologie: Jekyll + HTML/CSS
 
 ## Kontakt
 
