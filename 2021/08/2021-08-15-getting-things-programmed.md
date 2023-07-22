@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Książka: Getting Things Programmed. Droga do efektywności
+title: "Książka: Getting Things Programmed. Droga do efektywności"
 categories: [post]
 date: 2021-08-15
 permalink: /getting-things-programmed

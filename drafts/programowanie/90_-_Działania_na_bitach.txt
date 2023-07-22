@@ -7,7 +7,8 @@ Creation-Date: 2022-05-08T10:07:02+02:00
 https://stackoverflow.com/questions/47981/how-do-you-set-clear-and-toggle-a-single-bit
 
 
-
+    * https://www.youtube.com/watch?v=KXwRt7og0gI
+    * https://www.youtube.com/watch?v=HoQhw6_1NAA
 
 
 
@@ -96,3 +97,34 @@ Chcemy wyłączyć 3 najstarszy bit
 
 I teraz robimy AND z negacją a 
 Wynik: Mamy przestawiony 3 najstarszy bit
+
+
+
+
+
+------------
+
+====== 90 - U2 ======
+Created niedziela 08 maja 2022
+
+Zapis liczby ujemnej w systemie U2 czyli systemie uzupełnień do 2.
+* Sposób w jaki zapisane są liczby ujemne w komputerze
+
+-12
+
+1. Omijamy minus i zamieniamy 12 na sys binarny	1100
+2. Dokładamy z lewej strony 0	01100
+3. Tworzymy maskę liczby, negując wszystkie bity	10011
+4. Dokładamy binarnie 1		10100
+
+10011
+		+1
+--
+10100
+
+5. Otrzymujemy 10100 (w kodzie U2, liczba -12 ma wartość 10100)
+
+
+--------------------
+
+Dekodowanie liczby U2 na system dziesietny
