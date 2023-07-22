@@ -9,7 +9,7 @@ permalink: /o-mnie
 
 Hej, nazywam się Paweł Kawalec i pracuję jako inżynier oprogramowania w SpyroSoft. Moja główna specjalność to C++, ale interesują mnie także tematy DevOps.
 
-Przed IT, pracowałem jako menadżer produktu (Product Owner) w szwedzkiej firmie zajmującej się produkcją sprzętu mleczarskiego (:D), ale po kilku latach stwierdziłem, że to nie jest to co chciałbym robić przez resztę życia. Chciałem mieć większy wpływ na wyniki swojej pracy, a także lepiej wykorzystywać swojego naturalne predyspozycje i talenty (wg. raportu Gallup'a, moim wiodącym talentem jest Analityk).
+Przed IT, pracowałem jako menadżer produktu (Product Owner) w szwedzkiej firmie zajmującej się produkcją sprzętu mleczarskiego, ale po kilku latach stwierdziłem, że to nie jest to co chciałbym robić przez resztę życia. Chciałem mieć większy wpływ na wyniki swojej pracy, a także lepiej wykorzystywać swojego naturalne predyspozycje i talenty (wg. raportu Gallup'a, moim wiodącym talentem jest Analityk).
 
 Kiedy nie koduję i nie piszę na bloga spędzam czas z rodziną, czytam, uprawiam sport i gram w szachy.
 
@@ -25,7 +25,7 @@ W swojej karierze miałem przyjemność pracować dla następujących firm:
 Poza pracą komercyjną, jeśli czas na to pozwala, biorę udział w rozwijaniu projektów Open-Source (szczególnie tych, z których sam korzystam). Są to między innymi:
 
 * [Zim-Desktop](https://github.com/zim-desktop-wiki/zim-desktop-wiki) - Minimalistyczna aplikacja do tworzenia stron Wiki, może służyć jako osobisty planer, notatnik. Aplikacja napisana w Python'ie.
-* [Just-The-Docs]() - Szablon Jekyll'a, którego to modyfikację właśnie oglądasz :) 
+* [Just-The-Docs](https://github.com/just-the-docs/just-the-docs) - Szablon Jekyll'a, którego to modyfikację właśnie oglądasz
 
 ## Kontakt
 
