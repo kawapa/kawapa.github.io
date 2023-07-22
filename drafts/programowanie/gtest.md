@@ -8,17 +8,7 @@ permalink: /gtest
 {: .no_toc }
 
 ---
-* Testowanie
-    * Film coders school
-        * https://builtin.com/software-engineering-perspectives/mock-vs-stub
-    * Google Test / Google Mock tutoriale
-        * https://stackoverflow.com/questions/31989040/can-gmock-be-used-for-stubbing-c-functions
-        * https://google.github.io/googletest/gmock_cook_book.html
-        * https://alexott.net/en/cpp/CppTestingIntro.html
-        * https://www.samouczekprogramisty.pl/testy-jednostkowe-z-uzyciem-mock-i-stub/
-        * 10 minutowy film o GMock
-        * https://m.youtube.com/watch?v=vxCH4AuVRgo
-        * https://infotraining.bitbucket.io/cpp-tdd/index.html
+
 
 
 

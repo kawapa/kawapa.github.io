@@ -1,3 +1,10 @@
+---
+layout: post
+title: Advanced Design Patterns Design Principles
+permalink: /stos-czy-sterta
+search_exclude: true
+---
+
 # Advanced Design Patterns Design Principles
 {: .no_toc }
 

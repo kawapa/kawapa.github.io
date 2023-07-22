@@ -341,7 +341,3 @@ To nie ejst dobre bo nie ma np. e.what(). Uniemozliwia to poprawna obsluge bled√
 ## Bibliografia
 
 * http://home.agh.edu.pl/~glowacki/docs/matwykl/O-o/_ProgObiekt-C++14-Rozsz.pdf
-
-
-    * https://www.youtube.com/watch?v=0ojB8c0xUd8
-    * https://medium.com/@manojddesilva/some-useful-facts-to-know-when-using-c-exceptions-2b614492be0
