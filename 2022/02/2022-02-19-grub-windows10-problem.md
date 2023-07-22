@@ -2,7 +2,7 @@
 layout: post
 title: GR
 categories: [post]
-date: 2022-02-19
+date: 2022-02-19 06:00:00
 permalink: /grub-windows10-problem
 ---
 
