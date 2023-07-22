@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GDB - wprowadzenie"
+title: GDB - wprowadzenie
 permalink: /gdb
 ---
 

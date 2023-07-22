@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Zasady SOLID, DRY, KISS i YAGNI"
+title: Zasady SOLID, DRY, KISS i YAGNI
 permalink: /zasady
 search_exclude: true
 ---

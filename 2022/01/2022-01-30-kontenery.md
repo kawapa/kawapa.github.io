@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "STL - Kontenery"
+title: STL - Kontenery
 categories: [post]
 date: 2022-01-30
 permalink: /kontenery

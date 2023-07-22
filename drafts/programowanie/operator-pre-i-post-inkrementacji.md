@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Operator post- i pre-inkrementacji"
+title: Operator post- i pre-inkrementacji
 permalink: /XXX
 search_exclude: true
 ---

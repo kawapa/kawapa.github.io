@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Valgrind - wprowadzenie"
+title: Valgrind - wprowadzenie
 permalink: /XXX
 search_exclude: true
 ---

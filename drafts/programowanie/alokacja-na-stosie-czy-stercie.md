@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kiedy alokować na stosie, a kiedy na stercie"
+title: Kiedy alokować na stosie, a kiedy na stercie
 permalink: /stos-czy-sterta
 search_exclude: true
 ---
