@@ -15,12 +15,16 @@ Notatki z kursu Linkedin - Being an Effective Team Member.
 
 * Szanuj decyzję zespołu, dostosuj się do niej
 
+---
+
 ## Bądź wiarygodny
 
 * Dotrzymuj obietnic
 * Dostarczaj wyniki, które obiecałeś
     * Obiecuj to co realistyczne, jeśli uda się zrobić więcej - świetnie!
 * Informuj o wszelkich trudnościach i opóźnieniach
+
+---
 
 ## Bądź pozytywnie nastawiony
 
@@ -33,6 +37,8 @@ Notatki z kursu Linkedin - Being an Effective Team Member.
     * Nie narzekaj
     * Szukaj pozytywów w każdej sytuacji
     * Negatywne nastawianie obniża efektywność zespołu i morale
+
+---
 
 ## Traktuj ludzi z szacunkiem
 
@@ -47,6 +53,8 @@ Okazywanie szacunku dotyczy:
     * Nawet jeśli nie zgadza się z czyjąś opinią lub pomysłem, musisz je szanować
     * Oddziel osobę od pomysłu / opinii zanim zaczniesz oceniać
 
+---
+
 ## Bądź proaktywny w projektach, w których uczestniczysz
 
 * Jeśli wiesz, że jakieś zadanie ciągnie się już długo, dowiedz się dlaczego i zaproponuj pomoc
@@ -55,6 +63,8 @@ Okazywanie szacunku dotyczy:
     * Myśli strategicznie o roli swojej i jego zespołu w organizacji jako całości (wymaga to znajomości jak działają firma i działy współpracujące)
     * Planuje i myśli o przyszłości (przewiduje zdarzenia które mogą mieć miejsce i odpowiednio przygotowuje się na nie)
 * Ambicja, głód, energia to cechy osoby, która walczy o to co chce osiągnąć
+
+---
 
 ## Zachowaj profesjonalizm w kontaktach ze współpracownikami
 
@@ -74,12 +84,16 @@ Profesjonalizm:
         * Nie używaj przekleństw i obraźliwego słownictwa (nawet kiedy żartujesz)
         * Zanim coś powiesz, przemyśl to
 
+---
+
 ## Pracując przy wspólnym projekcie, myśl długofalowo
 
 * Wykonując bieżące zadania pamiętaj o zachowaniu właściwych relacji ze współpracownikami
     * Twój obecny projekt nie jest ostatnim, dlatego nie pal mostów poprzez niewłaściwą komunikację ze swoimi współpracownikami
 * Wyciągaj lekcje z pomyłek
 * Bądź elastyczny i przygotowany na zmiany
+
+---
 
 ## Przeanalizuj swój wkład do zespołu
 
@@ -97,6 +111,8 @@ Analiza SWAT:
 * Zagrożenia
     * Co stoi Ci na drodze by dostarczać to czego się od Ciebie oczekuje?
         * Brak czasu na zajęcie się jakimś zadaniem?
+
+---
 
 ## Bibliografia
 

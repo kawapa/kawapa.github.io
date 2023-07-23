@@ -7,6 +7,8 @@ permalink: /kompilator-i-kompilacja
 ---
 # Kompilator i kompilacja
 
+---
+
 ## Etapy kompilacji
 
 1. Pre-processing
@@ -16,6 +18,8 @@ permalink: /kompilator-i-kompilacja
    2.3 Wygenerowanie kodu Assembler'a
    2.4 Przetworzenie kodu Assembler'a na kod maszynowy
 3. Linkowanie
+
+---
 
 ### Pre-processing
 

@@ -15,21 +15,33 @@ Notatki z kursu Linkedin - Mistakes You Should Avoid at Work.
 
 - Jeśli jesteś nowy w firmie to potraktuj swoją sytuację jako świeży start - okazję do nauczenia się nowych rzeczy
 
+---
+
 ## Nie bierz zbyt dużo na siebie na samym początku
 
 - W pierwszej kolejności poznaj wszystkie systemy, żargon branżowy, najczęściej używane akronimy i kulturę organizacyjną
 - Skup się na zadaniach, które mają największe znaczenie i na takich których rezultaty będą widoczne dla całego działu / firmy
 - Nie bierz nowych zadań tylko dlatego żeby być "zajętym"
 
+---
+
 ## Poznaj jak działa zespół i dopiero później proponuj zmiany
+
+---
 
 ## Nie narzekaj na obecny stan rzeczy
 
 - Zamiast narzekanie na coś pytaj (np.: dlaczego coś tak działa) i dopiero jeśli nie usłyszysz sensowych powodów dlaczego jest jak jest - zaproponuj jakieś rozwiązanie. Przykłady: skomplikowane procesy, biurokracja, wszystko to co pozornie przeszkadza Ci w zrobieniu dobrze swojej roboty.
 
+---
+
 ## Bądź punktualny
 
+---
+
 ## Komunikuj się w sposób profesjonalny
+
+---
 
 ##  Bądź dobrym słuchaczem
 
@@ -40,21 +52,31 @@ Notatki z kursu Linkedin - Mistakes You Should Avoid at Work.
   - Musisz poznać firmę, domenę i projekt w którym pracujesz
     - Role i odpowiedzialności w firmie / projekcie
 
+---
+
 ## Nie zapominaj szczegółów
 
 - Nie korzystaj z komputera / telefonu podczas spotkań
 - Notuj wszystko odręcznie - potem przenieś to do komputera
 - Przed zakończeniem spotkania ustal rzeczy do zrobienia: kto, co, na kiedy?
 
+---
+
 ## Proś o pomoc
 
 - Zachowaj odpowiedni balans pomiędzy "byciem samodzielnym", a "stratą czasu i energii" - czasem ego nie pozwala prosić o pomoc
 
+---
+
 ## Nie angażuj się w dramaty biurowe
+
+---
 
 ## Nie traktuj biura jako drugiego domu - zawsze zachowuj profesjonalizm
 
 - Dotyczy to również wydarzeń firmowych w biurze
+
+---
 
 ## Nie zajmuj się sprawami prywatnymi w pracy
 
@@ -64,12 +86,16 @@ Notatki z kursu Linkedin - Mistakes You Should Avoid at Work.
 - Płacenie rachunków
 - Korzystanie z mediów społecznościowych
 
+---
+
 ## Pracuj w skupieniu
 
 - Wyłącz powiadomienia
 - Pozbądź się telefonu z pola widzenia
 - Ustal sobie przedziały czasowe na przerwy
 - Zainwestuj w słuchawki z aktywną redukcją szumów
+
+---
 
 ## Prowadź rejestr swoich osiągnięć
 
@@ -79,20 +105,28 @@ Notatki z kursu Linkedin - Mistakes You Should Avoid at Work.
   - Co konkretnie zrobiłeś?
   - Jaki był ostateczny rezultat?
 
+---
+
 ## Stawiaj sobie cele
 
 - Myśl długofalowo - mają cel do którego dążysz łatwiej Ci będzie przetrwać trudniejsze chwile w pracy
   - Cele SMART
   - Przeglądaj okresowo postępy
 
+---
+
 ## Wychodź z inicjatywą
 
 - Wychodząc z inicjatywą miej na uwadzę kulturę organizacyjną firmy
+
+---
 
 ## Spotykaj się regularnie ze swoim szefem
 
 - To nie mają być statusy zadań tylko omówienie postępów w realizacji Twoich celów i budować dobre relacje z szefem
   - To od tej osoby bezpośrednio zależy Twoja kariera - musi on znać Cię jako człowieka i wiedzieć gdzie chcesz być
+
+---
 
 ## Kontroluj siebie czy nie masz oznak wypalenia zawodowego
 
@@ -102,6 +136,8 @@ Notatki z kursu Linkedin - Mistakes You Should Avoid at Work.
 - Wykonywanie zadań zajmuje Ci więcej czasu niż zwykle
 - Dużo się martwisz o rzeczy do zrobienia zamiast rzeczywiście je robić
 
+---
+
 ## Szukaj szans wewnątrz firmy
 
 - Nie myśl w swojej pracy tylko w kontekście stanowiska jakie obecnie piastujesz, "nasłuchuj" szans
@@ -109,7 +145,11 @@ Notatki z kursu Linkedin - Mistakes You Should Avoid at Work.
   - Może coś ciekawego szykuje się w innych działach?
     - Zaprzyjaźnij się z ludźmi z innych działów, dowiedz się czym się zajmują
 
+---
+
 ## Jeśli nie dostajesz szans na naukę i rozwój - odejdź
+
+---
 
 ## Bibliografia
 

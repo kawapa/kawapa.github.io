@@ -83,6 +83,8 @@ Foo bar{}();
 
 Funktor to obiekt klasy, więc może on przechowywać jakieś pola. Może to być istotne jeśli chcemy coś zmieniać między kolejnymi wywołaniami funktora.
 
+---
+
 ## Lambdy
 
 * Lambda to obiekt funkcyjny (*funktor*), tworzona najczęściej w miejscu użycia
@@ -174,11 +176,15 @@ auto function = [value = std::move(ptr)] { return *value; };
 
 * `{ }` czyli ciało funkcji
 
+---
+
 ## Wiszące referencje
 
 * *Dangling references*
 * Lambda jest tworzona jest w miejscu, w którym jest zdefiniowana - na stosie
 * Jeśli przechwycimy zmienne przez referencję, a lambda zostanie wywołana później, w innym miejscu, niektóre zmienne lokalne mogą nie być już dostępne. Jest to niezdefiniowane zachowanie
+
+---
 
 ## Generyczne lambdy
 

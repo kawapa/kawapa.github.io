@@ -21,6 +21,8 @@ Nowe elementy języka umożliwiające wykorzystanie semantyki przenoszenia:
 * `std::move`
 * `std::forward`
 
+---
+
 ## Podział na `r-value` i `l-value`
 
 ### `l-value`
@@ -43,6 +45,8 @@ foo(5);         // obiekt tymczasowy to r-value
 * Obiekt bez nazwy
 * Nie można pobrać adresu obiektu
 * Obiekt tymczasowy (na przykład zwrócony z funkcji, ale nieprzypisany do niczego), który w kolejnej linijce programu przestaje istnieć
+
+---
 
 ## Referencje do r-wartości
 
@@ -82,6 +86,8 @@ std::string&& bar = foo();
 * bar to referencja do r-value
 * samo bar to l-value bo ma adres i nazwę i można się do niej później odnieść
 
+---
+
 ## Użycie semantyki przenoszenia
 
 ```cpp
@@ -107,6 +113,8 @@ c.insert(std::move(str));   // rvalue -> insert(string&&)
                             // moves str into the container, str should not be used
 ```
 
+---
+
 ## Właśności semantyki przenoszenia
 
 * Przenosi dane z obiektu źródłowego do obiektu docelowego
@@ -114,6 +122,8 @@ c.insert(std::move(str));   // rvalue -> insert(string&&)
   * Obiekt źródłowy nie powinien być więcej używany (Undefined behaviour)
     * Na `std::unique_ptr` można wykonać `reset(new int{20})`
   * Można go bezpiecznie usunąć
+
+---
 
 ## Implementacja
 
@@ -163,6 +173,8 @@ class X : public Base {
 };
 ```
 
+---
+
 ## `std::move`
 
 * `std::move` przyjmuje dowolony typ referencji i konwertuje go na referencję do *r-value*
@@ -179,6 +191,8 @@ typename std::remove_reference<T>::type&& move(T&& obj) noexcept {
 }
 ```
 
+---
+
 ## Forwarding reference (Uniwersalne referencja)
 
 * Nazwana przez Scotta Meyersa jako *Universal Reference*
@@ -189,6 +203,8 @@ typename std::remove_reference<T>::type&& move(T&& obj) noexcept {
     * `Entity&& e`
       * Trzeba użyć `std::forward<T>`
 * Oznacza się w funkcji szablonowej, przy typie `T` jako `T&&`
+
+---
 
 ## Reference Collapsing Rules
 
@@ -221,22 +237,11 @@ void g(int& && item);  // passing int& as a param, like g(a) -> g(int&)
 void g(int&& && item); // passing int&& as a param, like g(5) -> g(int&&)
 ```
 
+---
+
 ## Odśmiecanie interfejsów
 
+---
 
-
-
-
-
-
-
-
-
-https://devcode.pl/cpp11-semantyka-przeniesienia/
-1. Co robi konstruktor przenoszacy?
-2. Jaka jest zaleta operacji move?
-https://www.youtube.com/watch?v=St0MNEU5b0o
-https://www.youtube.com/watch?v=IOkgBrXCtfo
-cAły kanał Bo Brian
-
+## Bibliografia
 

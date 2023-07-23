@@ -46,21 +46,41 @@ private:
     Thing thing;
 };
 
+---
+
 ## Przekazywanie przez referencję
+
+---
 
 ## Rozmieszczenie danych w pamięci
 
+---
+
 ## Google benchmark
 
+---
+
 ## Copy elision
+
+---
 
 ## RVO, NRVO
 
 * Zwracając obiekt lokalny zadziała RVO lub NRVO, w innym przypadku trzeba należy przypisywać do referencji do *r-value*
 	* Na przykład jeśli metoda zwraca składową klasy (getter)
 
+---
+
 ## Pamięć cache
+
+---
 
 ## Cache locality
 
+---
+
 ## False sharing
+
+---
+
+## Bibliografia

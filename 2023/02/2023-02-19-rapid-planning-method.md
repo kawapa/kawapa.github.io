@@ -72,6 +72,8 @@ To czy uda Ci się osiągnąć wybrany przez siebie cel zależy od tego:
 
 * Kiedy nauczysz się myśleć w ten sposób, nie będziesz potrzebował żadnego systemu zadań
 
+---
+
 ## Bibliografia
 
 - [Anthony Robbins - Rapid Planning Method](https://www.youtube.com/watch?v=fHVzWwRMTtE)

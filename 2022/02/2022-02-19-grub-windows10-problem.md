@@ -9,6 +9,7 @@ permalink: /grub-windows10-problem
 # GRUB - Windows 10 nie ładuje się
 Podczas rozruchu, po wybraniu systemu operacyjnego Windows, system nie uruchamia się.
 {: .fs-6 .fw-300 }
+
 ---
 
 ## Rozwiązanie krótkoterminowe

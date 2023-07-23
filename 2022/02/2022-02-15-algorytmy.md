@@ -49,6 +49,8 @@ std::reverse_copy(begin(s), end(s), begin(rs));
   * Globalne funkcje działają też dla tablic z C
   * Krótszy zapis o "kropkę"
 
+---
+
 ## Algorytmy niemodyfikujące
 
 ### `std::all_of`, `std::any_of`, `std::none_of`
@@ -126,6 +128,8 @@ if (it != end(v1)) {
 * Szuka dwóch elementów, które sąsiadują ze sobą i są identyczne
   * Można podać predykat stwierdzający co oznacza równość
 * Zwraca iterator na pierwszy z nich
+
+---
 
 ## Algorytmy modyfikujące
 
@@ -282,6 +286,8 @@ std::generate_n(std::back_inserter(v2), 3, [n = 0]() mutable { return n++; });
 * **Żeby `std::unique` usunęło bezwzględne wszystkie duplikaty trzeba najpierw posortować kontener**
 * Zwraca iterator gdzie zaczynają się duplikaty (można go potem wykorzystać w `erase(it, end(v))`) 
 
+---
+
 ## Algorytmy partycjonujące
 
 ### `std::partition`
@@ -364,6 +370,8 @@ W przypadku powtarzających się elementów możemy skorzystać z:
 	* zwraca zakres elementów pasujących do podanego klucza;
 	* zwraca parę lower i upper bound (first -> lower, second -> upper)
  
+---
+
 ## Inne operacje na posortowanych zbiorach
 
 * std::merge
@@ -375,6 +383,8 @@ W przypadku powtarzających się elementów możemy skorzystać z:
 * **inplace_merge:**
 * 
 	* dołącza drugi zakres do pierwszego;
+
+---
 
 ## Operacje na zbiorach
 
@@ -401,6 +411,7 @@ W przypadku powtarzających się elementów możemy skorzystać z:
 
 	* suma wszystkiego co nie jest częścią wspólną
 	(wyklucza część wspólną);
+---
 
 ## Operacje na kopcach (heap)
 
@@ -427,6 +438,8 @@ W przypadku powtarzających się elementów możemy skorzystać z:
 * **is_heap_until:**
 
 * do kiedy kontener spełnia strukturę kopca;
+
+---
 
 ## Operacje znajdujące minimum/maximum
 
@@ -462,6 +475,8 @@ W przypadku powtarzających się elementów możemy skorzystać z:
 * wszystko powyżej 5 -> będzie 5
 * wartości pośrednie nie ulegną zmianie
 
+---
+
 ## Operacje porównujące
 
 * **lexicographical_compare:**
@@ -484,6 +499,8 @@ zwróci jedną z 3 wartości:
 	* większy od 0 jeśli drugi element jest mniejszy
  * wykorzystać będzie można **std::compare_3way** lub **operator <=>**
 
+---
+
 ## Permutacje
 
 ### `std::next_permutation`
@@ -505,6 +522,8 @@ do {
 ### `std::prev_permutation`
 
 * Zwraca poprzednią permutację
+
+---
 
 ## Operacje numeryczne
 
@@ -545,3 +564,8 @@ std::iota(begin(v), end(v), 0);
 ### `std::reduce`
 
 * Tak jak `std::accumulate`, ale wielowątkowy (`std::execution::par`)
+
+---
+
+## Bibliografia
+

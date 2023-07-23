@@ -36,10 +36,14 @@ Notatki z książki
 
 Uwaga: Warto zachowywać tytuł← rozdziałów z których pochodzą notatki. Nada to strukturę twoim notatkom.
 
+---
+
 ## Ile notować?
 
 - Nie zapisuj zbyt wiele, z książki zachowaj tylko fragmenty, z wywiadu kilka najbardziej interesujących cytatów
   - Trzymaj w notatkach link do oryginalnej treści 
+
+---
 
 ## Organizacja notatek - PARA
 
