@@ -10,8 +10,6 @@ permalink: /adl
 
 ---
 
-## Co to jest i do czego służy?
-
 * Cecha C++, która pozwala na automatyczne rozszerzenie przestrzeni nazw, w których kompilator szuka definicji wywołanych funkcji lub operatorów, gdy znajdują się one poza bieżącą przestrzenią nazw
 * Kompilator dodatkowo przeszukuje namespace'y w których:
   * Zdefiniowane są typy argumentów przekazanych do funkcji
