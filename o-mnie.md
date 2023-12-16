@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "O mnie"
-date: 2023-07-22
+title: O mnie
+nav_order: 2
 permalink: /o-mnie
 ---
 

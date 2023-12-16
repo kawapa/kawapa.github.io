@@ -4,6 +4,7 @@ title: "Artykuł: Zacznij dowozić zadania, w czasie krótszym o połowę"
 categories: [post]
 date: 2021-08-22
 permalink: /zacznij-dowozic
+nav_exclude: true
 ---
 
 # Zacznij dowozić zadania, w czasie krótszym o połowę

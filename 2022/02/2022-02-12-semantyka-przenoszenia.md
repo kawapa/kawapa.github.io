@@ -4,6 +4,7 @@ title: Semantyka przenoszenia
 categories: [post]
 date: 2022-02-12
 permalink: /semantyka-przenoszenia
+nav_exclude: true
 ---
 
 # Semantyka przenoszenia

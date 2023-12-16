@@ -4,6 +4,7 @@ title: Optymalizacje
 categories: [post]
 date: 2022-06-18
 permalink: /optymalizacje
+nav_exclude: true
 ---
 
 # Optymalizacje

@@ -4,6 +4,7 @@ title: Thiago Forte - Zbuduj swój drugi mózg
 categories: [post]
 date: 2023-06-03
 permalink: /second-brain
+nav_exclude: true
 ---
 
 # Thiago Forte - Zbuduj swój drugi mózg

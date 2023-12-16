@@ -4,6 +4,7 @@ title: Testowanie metod prywatnych
 categories: [post]
 date: 2021-10-10
 permalink: /testowanie-metod-prywatnych
+nav_exclude: true
 ---
 
 # Testowanie metod prywatnych
@@ -31,7 +32,27 @@ Jeśli musimy przetestować prywatną cześć klasy, trzeba najpierw zdobyć do
 
 * **Integerencja w kod produkcyjny** ...chyba że skorzystamy z tak zwanej kompilacji warunkowej (*conditional compilation*) i w wersji *Release* usuniemy deklarację zaprzyjaźnionych klas
 
-{% gist 6879f0bed792953707705c74cd4bc1d7 %}
+```cpp
+class KlasaWspierajaca;
+
+class KlasaTestowana {
+    int oblicz() { return 0; }
+    friend KlasaWspierajaca;
+};
+
+class KlasaWspierajaca {
+public:
+    void testuj() {
+        KlasaTestowana kt;
+        ASSERT_TRUE(kt.oblicz() == 0);
+    }
+};
+
+int main() {
+    KlasaWspierajaca kw;
+    kw.testuj();
+}
+```
 
 ## Użycie makra `#define private public`
 
@@ -42,14 +63,52 @@ Jeśli musimy przetestować prywatną cześć klasy, trzeba najpierw zdobyć do
 * **Integerencja w kod produkcyjny!**
 * Klasa testująca dziedziczy po klasie którą mamy przetestować
 
-{% gist b1f1fff7054c6614f5dd870d9ef305c2 %}
+```cpp
+class KlasaTestowana {
+protected:
+    int oblicz() { return 0; }   
+};
+
+class KlasaWspierajaca : KlasaTestowana {
+public:
+    void testuj() {
+        ASSERT_TRUE(oblicz() == 0);
+    }
+};
+
+int main() {
+    KlasaWspierajaca kw;
+    kw.testuj();
+}
+```
 
 ## Przeniesienie funkcjonalności do nowej klasy
 
 * Najczystszy sposób, trzymając się tego podejścia tworzymy małe klasy z jasnymi odpowiedzialnościami
 * Preferowane przechowywanie wskaźnika lub referencji i użycie DI
 
-{% gist 666a4a7a87f4ecb2b323a48c749c77e7 %}
+```cpp
+class Kalkulator {
+    int oblicz() { return 0; }
+};
+
+class KlasaTestowana {
+    Kalkulator kalkulator;
+};
+
+class KlasaWspierajaca {
+public:
+    void testuj() {
+        Kalkulator kalkulator;
+        ASSERT_TRUE(kalkulator.oblicz() == 0);
+    }
+};
+
+int main() {
+    KlasaWspierajaca kw;
+    kw.testuj();
+}
+```
 
 ## Bibliografia
 

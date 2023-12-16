@@ -4,6 +4,7 @@ title: Funkcje, funktory i lambdy
 categories: [post]
 date: 2022-02-05
 permalink: /funkcje
+nav_exclude: true
 ---
 
 # Funkcje, funktory i lambdy

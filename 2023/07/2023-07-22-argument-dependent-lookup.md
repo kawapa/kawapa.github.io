@@ -4,6 +4,7 @@ title: Argument-Dependent Lookup (ADL)
 categories: [post]
 date: 2023-07-22
 permalink: /adl
+nav_exclude: true
 ---
 
 # Argument-Dependent Lookup (ADL)
@@ -22,13 +23,56 @@ permalink: /adl
 
 * ADL upraszcza pisanie kodu, nie trzeba wielokrotnie powtarzać namespace'a lub nadużywać słowa kluczowego *using*
 
-{% gist e906f42ddc307915b0d4611e3faccd49 %}
+```cpp
+// Przykład 1:
+
+std::cout << "Test\n";
+// Nie ma zdefiniowanego operatora << w bieżącej przestrzeni nazw,
+// ale ADL sprawdza także przestrzeń stl bo lewy argument stamtąd pochodzi
+// I rzeczywiście, w przestrzeni std znajduje się:
+// std::ostream& std::operator<<(std::ostream&, const char*)
+
+operator<<(std::cout, "Test\n"); // Zapis alternatywny
+
+// Przykład 2:
+
+namespace A {
+    struct Entity {};
+
+    void foo(Entity e) { }
+}
+
+int main() {
+    A::Entity e;
+    foo(e);    // ADL - nie trzeba pisać A::foo
+}
+```
 
 ## Wady
 
 * W niektórych przypadkach konieczne jest dokładne wskazanie funkcji o którą nam chodzi
 
-{% gist c3b1117cc14542750d4a21ab090fcfae %}
+```cpp
+namespace A {
+    struct Entity {};
+
+    void swap(Entity& lhs, Entity& rhs) {
+        std::cout << "A::Entity::swap function\n";
+    }
+
+    void foo(Entity& lhs, Entity& rhs) {
+        using std::swap;
+        swap(lhs, rhs);  // wywoła A::swap zamiast std::swap
+    }
+}
+
+int main() {
+    A::Entity e1;
+    A::Entity e2;
+
+    foo(e1, e2);
+}
+```
 
 ### Inne ciekawe
 

@@ -4,6 +4,7 @@ title: STL - Kontenery
 categories: [post]
 date: 2022-01-30
 permalink: /kontenery
+nav_exclude: true
 ---
 
 # STL - Kontenery
@@ -48,7 +49,14 @@ Kontener sekwencyjny - elementy są przechowywane dokładnie w takiej kolejnośc
 * Dostęp do n-tego elementu - O(1)
 * Żeby funkcja mogła przyjmować jako argument `std::array` trzeba zrobić z niej funkcję szablonową:
 
-{% gist 5e6f45b79f5b7894e7ec5c46760ba711 %}
+```cpp
+template <size_t T>
+void print(const std::array<int, T>& array) {
+  for (int i = i; i < T, ++i) {
+    std::cout << array[i] << "\n";
+  }
+}
+```
 
 | Metoda | Opis |
 |:-------------|:------------------|

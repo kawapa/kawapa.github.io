@@ -4,6 +4,7 @@ title: Wstęp do CMake
 categories: [post]
 date: 2021-08-08
 permalink: /wstep-do-cmake
+nav_exclude: true
 ---
 
 # Wstęp do CMake

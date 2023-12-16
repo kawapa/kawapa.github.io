@@ -4,6 +4,7 @@ title: Instalowanie i odinstalowywanie aplikacji python'owych ze źródeł
 categories: [post]
 date: 2022-10-15
 permalink: /python-usuwanie-aplikacji
+nav_exclude: true
 ---
 
 # Instalowanie i odinstalowywanie aplikacji python'owych ze źródeł

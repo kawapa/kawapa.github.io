@@ -4,6 +4,7 @@ title: Algorytmy STL
 categories: [post]
 date: 2022-02-15
 permalink: /algorytmy
+nav_exclude: true
 ---
 
 # Algorytmy STL

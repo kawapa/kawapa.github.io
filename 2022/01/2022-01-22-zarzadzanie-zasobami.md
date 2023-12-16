@@ -4,6 +4,7 @@ title: Zarządzanie zasobami
 categories: [post]
 date: 2022-01-22
 permalink: /zarzadzanie-zasobami
+nav_exclude: true
 ---
 
 # Zarządzanie zasobami
@@ -118,7 +119,17 @@ Alokacja na stercie to:
 * Wywołanie konstruktora `T`
 * Przypisanie adresu do wskaźnika
 
-{% gist 6175b4a1054b2fdc735143bf7b71a47d %}
+```cpp
+// C++
+int* i = new int(5);  // operator new
+delete i;
+
+// C
+int* i;
+i = (int*)malloc(sizeof(int));
+*i = 5;
+free(i);
+```
 
 ---
 

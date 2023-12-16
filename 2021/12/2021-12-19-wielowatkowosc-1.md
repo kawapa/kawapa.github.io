@@ -4,6 +4,7 @@ title: Wielowątkowość w C++ - część 1
 categories: [post]
 date: 2021-12-24
 permalink: /wielowatkowosc
+nav_exclude: true
 ---
 
 # Wielowątkowość w C++ - część 1
@@ -80,7 +81,69 @@ Równoległość (*parallelism*) - rodzaj przetwarzania, w którym kilka oblicze
 
 * Żeby pomyślnie utworzyć wątek należy przekazać mu: funkcję, funktor (obiekt funkcyjny - jest on kopiowany do wątku), lambdę... `std::thread name(function)`
 
-{% gist 8743939b20bf756299f2787bf1ff4050 %}
+```cpp
+#include <thread>
+#include <iostream>
+
+struct Bar1 {
+    void operator()() { std::cout << "Hello World!"; }
+};
+
+struct Bar2 {
+    void foo() { std::cout << "Hello World!"; }
+};
+
+void foo() {
+    std::cout << "Hello World!";
+}
+
+class Car {
+    int production_year;
+    std::string model_name;
+
+public:
+    void setData(int year, const std::string& model) {
+        production_year = year;
+        model_name = model;
+    }
+}
+
+int main() {
+    std::thread t1([]() { std:: cout << "Hello World!"; });
+
+    std::thread t2(foo);
+    // przekazanie funkcji
+
+    std::thread t3(&foo);
+    // przekazanie referencji do funkcji
+
+    Bar1 bar1;
+    std::thread t4(bar1);
+    // przekazanie funktora (obiekt funkcyjny)
+
+    std::thread t5(*foo);
+    // przekazanie wskaźnika do funkcji
+
+    Bar2 bar2;
+    std::thread t6(&Bar2::foo, &bar2);
+
+    Car toyota;
+    // każda funkcja klasy jest "pod spodem" tłumaczona przez kompilator
+    // na normalną funkcję przyjmującą wskaźnik na obiekt (this)
+    // dlatego tutaj trzeba przekazać &toyota
+    std::thread t7(&Car::setData, &toyota, 2015, "Corolla");
+    // "Corolla" nie wymaga `std::ref()` bo to obiekt tymczasowy
+    // (można podpiąć pod `const &`)
+
+    t1.join();
+    t2.join();
+    t3.join();
+    t4.join();
+    t5.join();
+    t6.join();
+    t7.join();
+}
+```
 
 ---
 
@@ -93,7 +156,37 @@ Równoległość (*parallelism*) - rodzaj przetwarzania, w którym kilka oblicze
   * Kompilator zoptymalizuje kod i "wyrzuci" zbędne kopiowanie (*RVO* - *Return Value Optimisation*)
 * Jeśli podczas wykonywania programu wyskoczy wyjątek, nie będzie możliwe złączenie wątku dlatego należy korzystać z RAII
 
-{% gist a4732bb2da2b2eb1c03210a7db98fd6b %}
+```cpp
+class ThreadGuard {
+    std::thread &t;
+
+public:
+    explicit ThreadGuard(std::thread& t_) : t(t_) {
+        if (!t.joinable()) {
+            throw std::logic_error("Not a thread");
+        }
+    }
+
+    ~ThreadGuard() {
+        if (t.joinable()) {
+            t.join();
+        }
+    }
+
+    ThreadGuard(const ThreadGuard &) = delete;
+    ThreadGuard(ThreadGuard &&) = default;
+    ThreadGuard& operator=(const ThreadGuard &) = delete;
+    ThreadGuard& operator=(ThreadGuard &&) = default;
+};
+
+void fun() { }
+
+int main() {
+    std::thread t(fun);
+    ThreadGuard g(t);
+    // lub ThreadGuard(std::thread(fun));
+}
+```
 
 ---
 
@@ -139,19 +232,74 @@ Równoległość (*parallelism*) - rodzaj przetwarzania, w którym kilka oblicze
 
 * O ile wątki nie pracują na dużych porcjach danych, **zawsze preferowane jest kopiowanie**
 
-{% gist 6aede78167ca169b83a3386b35ba77e6 %}
+```cpp
+Struct SomeStruct { };
+
+void bar(int x, std::string str, SomeStruct obj) { }
+
+int main() {
+    std::thread t(bar, 10, "String", SomeStruct{});
+    t.join();
+}
+```
 
 ### Przekazywanie przez referencję
 
 Jeśli funkcja przyjmuje referencję, a przekażemy zmienną "tak jak zawsze" to nowy wątek dostanie referencję do kopii zmiennej, którą chcieliśmy zmodyfikować. Rozwiązaniem problemu jest zastosowanie *wrapper'a* `std::ref` (lub `std::cref()` dla referencji stałych).
 
-{% gist d0e29ef878b29c1726a7c36248d674f3 %}
+```cpp
+
+void bar(int& x, int* y) {
+    std::cout << "Inside fun: = " << x << " | y = " << *y << std::endl;
+    x = 20;
+    *y = 30;
+}
+
+int main() {
+    int x = 10;
+    int y = 10;
+    std::thread t(bar, std::ref(x), &y);
+    t.join();
+    std::cout << "Outside fun: x = " << x << " | y = " << y << std::endl;
+
+    return 0;
+}
+```
 
 #### Problem wiszącej referencji
 
 * Długość życia referencji lub wskaźnika, który otrzymuje wątek musi być dłuższa niż długość życia samego wątku
 
-{% gist 7b859d56071f544b1d3169c394b8b7ae %}
+```cpp
+#include <thread>
+
+void do_sth([[maybe_unused]] int i) { /* ... */ }
+
+struct A {
+    int& ref_;
+    A(int& a) : ref_(a) {}
+    void operator()() {
+        do_sth(ref_); // potential access to
+                      // a dangling reference
+    }
+};
+
+std::thread create_thread() {
+    int local = 0;
+    A worker(local);
+    std::thread t(worker);
+    return t;
+} // local is destroyed, reference in worker is dangling
+
+int main() {
+    auto t = create_thread();  // Undefined Behavior
+    auto t2 = create_thread(); // Undefined Behavior
+    t.join();
+    t2.join();
+
+    return 0;
+}
+```
 
 #### Problem niejawnej konwersji
 
@@ -162,7 +310,16 @@ Jeśli funkcja przyjmuje referencję, a przekażemy zmienną "tak jak zawsze" to
 
 Rozwiązanie: przygotowanie łańcucha znaków wcześniej: `std::thread t(f, 3, std::string(buffer));`
 
-{% gist 5b0aa63beb5e53b420edd27362118c8a %}
+```cpp
+void f(int i, std::string const& s);
+
+void oops(int arg) {
+    char buffer[1024];
+    sprintf(buffer, "%i", arg);
+    std::thread t(f, 3, buffer);
+    t.detach();
+}
+```
 
 * **Jeśli przy przekazywaniu argumentów do wątku istnieje ryzyko niejawnej konwersji, należy przekonwertować wymagany argument wcześniej**
 
@@ -182,7 +339,34 @@ Rozwiązanie: przygotowanie łańcucha znaków wcześniej: `std::thread t(f, 3, 
     * Wątek rzucający wyjątek przypisuje do niego `std::current_exception()`
     * Wątek, który chce złapać wyjątek sprawdza czy `std::current_expection() != 0)`. Jeśli tak, bieżący wątek rzuca dany wyjątek ponownie poprzez `std::rethrow_exception()`
 
-{% gist 4be9aa5624cc787fdfbeb836d78d05c6 %}
+```cpp
+#include <iostream>
+#include <thread>
+#include <exception>
+#include <stdexcept>
+
+int main() {
+    std::exception_ptr thread_exception = nullptr;
+    std::thread t([](std::exception_ptr & te) {
+        try {
+            throw std::runtime_error("WTF");
+        } catch (...) {
+            te = std::current_exception();
+        }
+    }, std::ref(thread_exception));     // tu przekazanie referencji
+    t.join();
+
+    if (thread_exception) {
+        try {
+            std::rethrow_exception(thread_exception);
+        } catch (const std::exception & ex) {
+            std::cout << "Thread exited with an exception: "
+                      << ex.what() << "\n";
+        }
+    }
+    return 0;
+}
+```
 
 ## Współdzielenie danych
 
@@ -210,7 +394,44 @@ Strumień wyjściowy cout jest jeden. Jeśli więcej niż jeden wątek wysyła 
 * Zalecane użycie `std::scoped_lock` do rozwiązania problemu zakleszczenia
 * Operacja czekania na wątek nie blokuje procesora
 
-{% gist be4549ce30c4a36fbcc135c4e4aa4b64 %}
+```cpp
+#include <thread>
+#include <mutex>
+
+using namespace std;
+
+class X {
+
+    mutable mutex mtx_;
+    int value_ = 0;
+
+public:
+    explicit X(int v) : value(v) {}
+
+    bool operator< (const X & other) const {
+        lock_guard<mutex> ownGuard(mtx_);
+        locK_guard<mutex> otherGuard(other.mtx_);
+        // Rozwiazanie:
+        // std::scoped_lock l(mtx_, other.mtx_);
+
+        return value_ < other.value_;
+    }
+};
+
+int main() {
+
+    X x1(5);
+    X x2(6);
+
+    thread t1([&](){ x1 < x2; });
+    thread t2([&](){ x2 < x1; });
+
+    t1.join();
+    t2.join();
+
+    return 0;
+}
+```
 
 * Słowo kluczowe `mutable` przy mutexie oznacza tyle, że nawet w przypadku metody `const` stan mutexu `mtx_` może zostać zmieniony (wywoływanie `lock()` i `unlock()` to w pewnym sensie jego modyfikacja)
 * Słowo kluczowe `explicit` przy konstruktorze blokuje niejawne konwersje
@@ -227,7 +448,22 @@ Strumień wyjściowy cout jest jeden. Jeśli więcej niż jeden wątek wysyła 
 * Problem wyścigów jest krytyczny czasowo i może być nie do wychwycenia przy użyciu debuggera. Debugger spowalnia wykonywanie operacji 
 * Do wykrywania tego zjawiska służy tzw. Thread Sanitizer (*TSan*, *Data race detector* wbudowany g++ oraz clang)
 
-{% gist 5923863c5f94785c93c049caa6d32347 %}
+```cpp
+void abc(int &a) { a = 2; }
+void def(int &a) { a = 3; }
+
+int main()
+{
+    int x = 1;
+    std::thread t1(abc, std::ref(x));
+    std::thread t2(def, std::ref(x));
+
+    t1.join();
+    t2.join();
+
+    std::cout << x << std::endl;
+}
+```
 
 ### Data races
 
@@ -297,7 +533,35 @@ Funkcja | Opis
 `void unlock()` | {::nomarkdown}<ul><li> Odblokowanie mutexu</li></ul>{:/} |
 `bool try_lock()` | {::nomarkdown}<ul><li> Próba zablokowania mutexu (zwraca `true` jeśli udało się zablokować i blokuje, `false` jeśli mutex zajęty i nie udało się go zablokować)</li><li> Operacja nieblokująca - w przypadku nieudanej próby zajęcia mutexu możemy wykonać inne czynności</li></ul>{:/} |
 
-{% gist 8be69b1d8bd422bd39e2fcde0ab2eaa7 %}
+```cpp
+#include <vector>
+#include <thread>
+#include <chrono>
+#include <iostream>
+#include <mutex>
+
+void do_work(int id)
+{
+    this_thread::sleep_for(100ms);
+    m.lock();
+    cout << ss.rdbuf();
+    m.unlock();
+}
+
+int main()
+{
+    std::mutex m;
+    std::vector<std::thread> threads;
+
+    for (int i = 0; i < 20; i++)
+        threads.emplace_back(thread(do_work, i));
+
+    for (auto && t : threads)
+        t.join();
+
+    return 0;
+}
+```
 
 ---
 
@@ -346,7 +610,40 @@ Funkcja | Opis
 * Przyjmuje dodatkowy patarametr
 * Niekopiowalny
 
-{% gist b615c63e9211ce8d9979db09de4cb613 %}
+```cpp
+#include <vector>
+#include <thread>
+#include <chrono>
+#include <iostream>
+#include <mutex>
+#include <sstream>
+
+void do_work(int id, mutex& m) {
+    this_thread::sleep_for(100ms);
+
+    stringstream ss;
+    ss << "Thread [" << id << "]: " << "Job done!" << std::endl;
+
+    lock_guard<mutex> lock(m);
+
+    cout << ss.rdbuf();
+    // Tak naprawdę nie trzeba tutaj mutexa bo to pojedyncza operacja
+    // Nie da się jej "zakłócić"
+}
+
+int main() {
+    std::mutex m;
+    std::vector<std::thread> threads;
+
+    for (int i = 0; i < 20; i++)
+        threads.emplace_back(thread(do_work, i, std::ref(m)));
+
+    for (auto && t : threads)
+        t.join();
+
+    return 0;
+}
+```
 
 ---
 
@@ -372,7 +669,45 @@ Funkcja | Opis
   * Destruktor odblokowuje je w kolejności odwrotnej
 * Niekopiowalny
 
-{% gist 1b69b95b35cb469559ad135688400e22 %}
+```cpp
+#include <iostream>
+#include <mutex>
+#include <thread>
+
+class X {
+    mutable std::mutex mtx_;
+    int value_ = 0;
+
+public:
+    explicit X(int v) : value_(v) {}
+
+    bool operator<(const X & other) const {
+        std::scoped_lock l(mtx_, other.mtx_);
+        return value_ < other.value_;
+    }
+};
+
+int main() {
+
+    X x1(5);
+    X x2(6);
+
+    std::thread t1([&] {
+        if (x1 < x2)
+            std::cout << "x1 is less" << std::endl;
+    });
+
+    std::thread t2([&] {
+        if (x2 < x1)
+            std::cout << "x2 is less" << std::endl;
+    });
+
+    t1.join();
+    t2.join();
+
+    return 0;
+}
+```
 
 ---
 
@@ -397,6 +732,24 @@ Funkcja | Opis
     * Informacja dla konstruktora, że otrzyma on już zablokowane mutexy (wcześniej pojawia się `std::lock()`)
     * Działanie przeciwne do `std::defer_lock`
 
-{% gist b2b402830f6c14f3f828b9772303f633 %}
+```cpp
+// defer_lock
+bool operator<(const X & other) const {
+    std::unique_lock<std::mutex> l1(mtx_, defer_lock);
+    std::unique_lock<std::mutex> l2(other.mtx_, defer_lock);
+    std::lock(l1, l2);
+
+    return value_ < other.value_;
+}
+
+// adopt_lock
+bool operator<(const X & other) const {
+    std::lock(mtx_, other.mtx_);
+    std::lock_guard<std::mutex> l1(mtx_, adopt_lock);
+    std::lock_guard<std::mutex> l2(other.mtx_, adopt_lock);
+
+    return value_ < other.value_;
+}
+```
 
 **Funkcja `std::lock()` gwarantuje zablokowanie wszystkich mutexów bez zakleszczenia niezależnie od kolejności ich pozyskania.**

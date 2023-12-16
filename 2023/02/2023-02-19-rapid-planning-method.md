@@ -4,6 +4,7 @@ title: Rapid Planning Method
 categories: [post]
 date: 2023-02-19
 permalink: /rapid-planning-method
+nav_exclude: true
 ---
 
 # Rapid Planning Method

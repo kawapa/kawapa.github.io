@@ -4,6 +4,7 @@ title: Bądź pozytywnie nastawiony w pracy
 categories: [post]
 date: 2022-07-19
 permalink: /badz-pozytywny
+nav_exclude: true
 ---
 
 # Bądź pozytywnie nastawiony w pracy

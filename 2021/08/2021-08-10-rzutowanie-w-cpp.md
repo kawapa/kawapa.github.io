@@ -4,6 +4,7 @@ title: Rzutowanie w C++
 categories: [post]
 date: 2021-08-10
 permalink: /rzutowanie-w-cpp
+nav_exclude: true
 ---
 
 # Rzutowanie w C++

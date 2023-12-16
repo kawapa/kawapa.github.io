@@ -4,6 +4,7 @@ title: Błędy, których powinieneś unikać w pracy
 categories: [post]
 date: 2022-11-20
 permalink: /bledy-w-pracy
+nav_exclude: true
 ---
 
 # Błędy, których powinieneś unikać w pracy

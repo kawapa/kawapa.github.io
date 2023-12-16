@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Strona główna
+title: Posty
 nav_order: 1
 permalink: /
 ---

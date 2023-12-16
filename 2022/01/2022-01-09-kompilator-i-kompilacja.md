@@ -4,6 +4,7 @@ title: Kompilator i kompilacja
 categories: [post]
 date: 2022-01-09
 permalink: /kompilator-i-kompilacja
+nav_exclude: true
 ---
 # Kompilator i kompilacja
 

@@ -4,6 +4,7 @@ title: Skróty klawiszowe VSC, które chciałbym zapamiętać
 categories: [post]
 date: 2023-02-08
 permalink: /vsc-skroty-klawiszowe
+nav_exclude: true
 ---
 
 # Skróty klawiszowe VSC, które chciałbym zapamiętać

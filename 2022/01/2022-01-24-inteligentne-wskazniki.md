@@ -4,6 +4,7 @@ title: Inteligentne wskaźniki
 categories: [post]
 date: 2022-01-24
 permalink: /inteligentne-wskazniki
+nav_exclude: true
 ---
 
 # Inteligentne wskaźniki
