@@ -63,7 +63,7 @@ Uwaga: Warto zachowywać tytuł← rozdziałów z których pochodzą notatki. Na
     - Nieaktywne jednostki z pozostałych z pozostałych trzech kategorii
     - Z biegiem czasu notatki przedawniają się dlatego nie chcemy aby rzucały się w oczy, ale jednocześnie były łątwo dostępne
 
-**Strona 110**
+**Strona 109**
 
 ---
 

@@ -17,6 +17,7 @@ Kiedy nie koduję i nie piszę na bloga spędzam czas z rodziną, czytam, upraw
 
 W swojej karierze miałem przyjemność pracować dla następujących firm:
 
+* [GlobalLogic](https://www.globallogic.com/) - amerykańska firma świadczącą świadcząca usługi z inżynierii cyfrowej. Od 2021 spółka-córka marki Hitachi
 * [SpyroSoft](https://spyro-soft.com) - wrocławski Software House tworzący oprogramowanie głównie dla przemysłu motoryzacyjnego, ale nie tylko
 * [Wazdan Limited](https://wazdan.com) - jeden z większych producentów gier kasynowych
 
