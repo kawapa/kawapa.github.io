@@ -5,7 +5,7 @@ content:
     type: collection
     path: /
     view:
-      fields: [ title, date]
+      fields: [ title, date ]
     fields:
       - { name: title, label: Title, type: string }
       - { name: layout, label: Layout, type: string, default: post, hidden: true }
