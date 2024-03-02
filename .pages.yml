@@ -1,1 +1,14 @@
 media: /
+content:
+  - name: /
+    label: Posts
+    type: collection
+    path: /
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: layout, type: string, default: post }
+      - { name: date, label: Date, type: date }
+      - { name: categories, label: Category, type: string }
+      - { name: permalink, label: Permalink, type: string }
+      - { name: search_exclude, label: Searchable?, type: boolean, default: true }
+      - { name: nav_exclude, hidden: true, type: boolean, default: true }
