@@ -14,3 +14,4 @@ content:
       - { name: permalink, label: Permalink, type: string }
       - { name: search_exclude, label: Searchable?, type: boolean, default: false }
       - { name: nav_exclude, hidden: true, type: boolean, default: true }
+      - { name: body, label: Body, type: rich-text }
