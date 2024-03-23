@@ -9,7 +9,7 @@ content:
       - { name: title, label: Title, type: string }
       - { name: layout, label: Layout, type: string, default: post, hidden: true }
       - { name: date, label: Date, type: date }
-      - { name: categories, label: Category, type: string, default: [post], hidden: true }
+      - { name: categories, label: Category, type: string, default: [post]}
       - { name: permalink, label: Permalink, type: string }
       - { name: search_exclude, label: Not visible using Search, type: boolean, default: false }
       - { name: nav_exclude, hidden: true, type: boolean, default: true }
