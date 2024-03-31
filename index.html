@@ -1,0 +1,21 @@
+---
+layout: default
+title: Strona główna
+---
+
+<h1>Hej</h1>
+
+<p>Nazywam się Paweł Kawalec i pracuję jako inżynier oprogramowania w GlobalLogic. Moja główna specjalność to C++, ale interesują mnie także tematy DevOps.</p>
+<p>"Przed IT", pracowałem jako menadżer produktu (Product Owner) w szwedzkiej firmie zajmującej się produkcją sprzętu mleczarskiego, ale po kilku latach stwierdziłem, że to nie jest to co chciałbym robić przez resztę życia. Chciałem mieć większy wpływ na wyniki swojej pracy, a także lepiej wykorzystywać swojego naturalne predyspozycje i talenty (według raportu Gallup’a, moim wiodącym talentem jest Analityk).</p>
+<p>Kiedy nie koduję i nie piszę na bloga spędzam czas z rodziną, czytam, uprawiam sport i gram w szachy.</p>
+
+<h2>Najnowsze posty</h2>
+
+{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+{% for post in sorted_posts limit:5 %}
+    <div class="blog-posts">
+        <div>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+    </div>
+{% endfor %}

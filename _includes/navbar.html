@@ -1,0 +1,18 @@
+<nav>
+    <div class="title">
+        <a href="/">CppDev</a>
+    </div>
+    <a href="/cv">O mnie</a>  
+    <a href="/posty">Posty</a>  
+    <a href="/notatki">Notatki</a>  
+    <input type="text" id="search-input" placeholder="Szukaj">
+    <ul id="results-container"></ul>
+    <script src="/js/simple-jekyll-search.min.js" type="text/javascript"></script>
+    <script>
+        SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json'
+        })
+    </script>
+</nav>

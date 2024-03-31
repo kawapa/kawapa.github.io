@@ -1,0 +1,54 @@
+---
+layout: default
+title: Posty
+permalink: posty
+---
+
+<h1>Posty</h1>
+
+{% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+{% for year in posts_by_year %}
+  <h2 class="blog-year">{{ year.name }}</h2>
+
+  {% for post in year.items %}
+    {% unless post.draft %}
+      {% assign year = page.date | date: "%Y" %}
+      {% assign day = post.date | date: "%-d" %}
+      {% assign month = post.date | date: "%b" %}
+      {% assign polished_month = month %}
+      {% case month %}
+      {% when 'Jan' %}
+      {% assign polished_month = 'Sty' %}
+      {% when 'Feb' %}
+      {% assign polished_month = 'Lut' %}
+      {% when 'Mar' %}
+      {% assign polished_month = 'Mar' %}
+      {% when 'Apr' %}
+      {% assign polished_month = 'Kwi' %}
+      {% when 'May' %}
+      {% assign polished_month = 'Maj' %}
+      {% when 'Jun' %}
+      {% assign polished_month = 'Cze' %}
+      {% when 'Jul' %}
+      {% assign polished_month = 'Lip' %}
+      {% when 'Aug' %}
+      {% assign polished_month = 'Sie' %}
+      {% when 'Sep' %}
+      {% assign polished_month = 'Wrz' %}
+      {% when 'Oct' %}
+      {% assign polished_month = 'Paź' %}
+      {% when 'Nov' %}
+      {% assign polished_month = 'Lis' %}
+      {% when 'Dec' %}
+      {% assign polished_month = 'Gru' %}
+      {% endcase %}
+
+      <div class="blog-posts">
+        <div>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+        <div class="post-entry-date">{{ day }} {{ polished_month }}</div>
+      </div>
+    {% endunless %}
+  {% endfor %}
+{% endfor %}

@@ -1,0 +1,10 @@
+title: CppDev
+description: Prywatna baza wiedzy
+baseurl: ""
+url: "https://cppdev.pl"
+
+plugins:
+  - jekyll-feed
+  - jekyll-minifier
+  - jekyll-seo-tag
+  - jekyll-sitemap

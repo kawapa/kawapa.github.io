@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% assign year = page.date | date: "%Y" %}
+{% assign day = post.date | date: "%-d" %}
+{% assign day = page.date | date: "%-d" %}
+{% assign month = page.date | date: "%b" %}
+{% assign polished_month = month %}
+{% case month %}
+{% when 'Jan' %}
+{% assign polished_month = 'Sty' %}
+{% when 'Feb' %}
+{% assign polished_month = 'Lut' %}
+{% when 'Mar' %}
+{% assign polished_month = 'Mar' %}
+{% when 'Apr' %}
+{% assign polished_month = 'Kwi' %}
+{% when 'May' %}
+{% assign polished_month = 'Maj' %}
+{% when 'Jun' %}
+{% assign polished_month = 'Cze' %}
+{% when 'Jul' %}
+{% assign polished_month = 'Lip' %}
+{% when 'Aug' %}
+{% assign polished_month = 'Sie' %}
+{% when 'Sep' %}
+{% assign polished_month = 'Wrz' %}
+{% when 'Oct' %}
+{% assign polished_month = 'Paź' %}
+{% when 'Nov' %}
+{% assign polished_month = 'Lis' %}
+{% when 'Dec' %}
+{% assign polished_month = 'Gru' %}
+{% endcase %}
+
+<article class='post'>
+  <h1>{{ page.title }}</h1><time class="post-date">{{ day }} {{ polished_month }}, {{ year }}</time>
+  {{ content }}
+</article>

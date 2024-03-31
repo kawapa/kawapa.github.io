@@ -1,0 +1,17 @@
+---
+layout: default
+title: Notatki
+permalink: notatki
+---
+
+<h1>Notatki</h1><br>
+
+{% for post in site.posts %}
+  {% if post.draft == true %}
+    <div class="blog-posts">
+      <div>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
