@@ -12,10 +12,16 @@ title: Strona główna
 <h2>Najnowsze posty</h2>
 
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
-{% for post in sorted_posts limit:5 %}
-    <div class="blog-posts">
-        <div>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </div>
-    </div>
+{% assign count = 0 %}
+{% for post in sorted_posts %}
+    {% if post.draft != true %}
+        {% assign count = count | plus: 1 %}
+        {% if count <= 5 %}
+            <div class="blog-posts">
+                <div>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
 {% endfor %}
