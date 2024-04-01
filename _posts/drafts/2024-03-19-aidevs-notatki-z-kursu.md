@@ -3,6 +3,7 @@ layout: post
 title: AIDevs - notatki z kursu
 date: 2024-03-19
 permalink: /aidevs
+draft: true
 ---
 
 # C01L01 — Wprowadzenie do Generative AI
