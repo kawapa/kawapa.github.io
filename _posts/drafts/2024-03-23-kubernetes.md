@@ -132,43 +132,6 @@ Czeka aż pod hello-kiamol będzie gotowy.
         
 [Kontynuuj oglądanie](https://youtu.be/X48VuDVv0do?t=1829).
 
-
-
-kubectl get - wyświetla jeden lub więcej zasobów. Możesz użyć tej komendy, aby uzyskać listę różnych zasobów (np. pods, services, deployments) dostępnych w klastrze.
-
-kubectl describe - wyświetla szczegółowe informacje o określonym zasobie, w tym szczegółowe stany, powiązane zasoby itp.
-
-kubectl create - tworzy zasób z pliku definicji lub ze standardowego wejścia. Przykładem może być uruchomienie nowego poda z określonego pliku YAML.
-
-kubectl apply - stosuje zmianę konfiguracji do zasobu z pliku definicji. Jest to preferowana metoda zarządzania zasobami poprzez deklaratywne pliki konfiguracyjne.
-
-kubectl delete - usuwa zasoby z plików, z stdin lub poprzez podanie selektorów, nazw, identyfikatorów zasobów itd.
-
-kubectl logs - wyświetla dzienniki dla określonych kontenerów w twoich podach, co jest nieocenione do debugowania i monitorowania.
-
-kubectl exec - wykonuje polecenie w kontenerze wewnątrz poda. Jest to przydatne, na przykład, do diagnostyki problemów w uruchomionych aplikacjach.
-
-kubectl scale - zmienia ilość replik danego deploymentu lub replika set na żądaną liczbę, umożliwia szybkie skalowanie usług w górę lub w dół.
-
-kubectl rollout - zarządza procesem wdrażania nowych wersji aplikacji. Do często używanych subkomend należą rollout status, rollout undo i rollout restart.
-
-kubectl config - zarządza konfiguracją kubectl, w tym kontami, kontekstami i przestrzeniami nazw. Dzięki temu możesz łatwo przełączać się między różnymi klastrami i przestrzeniami nazw.
-
-kubectl port-forward - przekierowuje ruch z lokalnego komputera do poda w klastrze, co jest bardzo przydatne do testowania i debugowania.
-
-kubectl proxy - uruchamia serwer proxy między twoim interfejsem a API Kubernetes, umożliwiając bezpieczny dostęp do klastra.
-
-
-Podłączenie do apisix-etcd-1
-kubectl exec -it -n ansys-tsa-dev apisix-etcd-1 -- /bin/bash
-
-Logi
-kubectl logs -f -n ansys-tsa-dev apisix-etcd-1
-
-kubectl port-forward svc/apisix-dashboard -n ansys-tsa-dev 9000:http
-
-
-
 # Bibliografia
 
 - [TechWorld with Nana - Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=X48VuDVv0do)
