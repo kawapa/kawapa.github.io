@@ -82,6 +82,10 @@ private:
 
 ## False sharing
 
+## Small string optimization
+
+Alokowanie obiektów na stosie jest dużo szybsze niż na stercie
+
 ---
 
 ## Bibliografia

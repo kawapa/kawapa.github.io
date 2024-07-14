@@ -7,16 +7,14 @@ permalink: /adl
 nav_exclude: true
 ---
 
-# Argument-Dependent Lookup (ADL)
+Cecha C++, która pozwala na automatyczne rozszerzenie przestrzeni nazw, w których kompilator szuka definicji wywołanych funkcji lub operatorów, gdy znajdują się one poza bieżącą przestrzenią nazw
 
----
-
-* Cecha C++, która pozwala na automatyczne rozszerzenie przestrzeni nazw, w których kompilator szuka definicji wywołanych funkcji lub operatorów, gdy znajdują się one poza bieżącą przestrzenią nazw
-* Kompilator dodatkowo przeszukuje namespace'y w których:
+Kompilator dodatkowo przeszukuje namespace'y w których:
   * Zdefiniowane są typy argumentów przekazanych do funkcji
   * Zdefiniowany jest typ obiektu na którym został wywołany jego operator
-* Standardowo kompilator poszukuje tych definicji w bieżącej przestrzeni nazw oraz w przestrzeniach rodziców
-* Nazywany również *Koenig Lookup* (ale Andrew Koening go nie stworzył)
+
+Standardowo kompilator poszukuje tych definicji w bieżącej przestrzeni nazw oraz w przestrzeniach rodziców
+Nazywany również *Koenig Lookup* (ale Andrew Koening go nie stworzył)
   * Andrew Koening - programista Bell Labs, który pracował z Bjarne Stroustrup'em
 
 ## Zalety
