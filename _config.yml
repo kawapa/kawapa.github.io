@@ -1,0 +1,21 @@
+title: 
+description: Blog
+baseurl: ""
+url: "https://pawelkawalec.com"
+
+remote_theme: kawapa/just-the-docs
+# theme: just-the-docs # local development
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+
+back_to_top: false
+
+footer_content: "&copy; 2024 Paweł Kawalec"
+
+gh_edit_link: false
+gh_edit_repository: "https://github.com/kawapa/kawapa-github-io"
