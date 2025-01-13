@@ -19,3 +19,5 @@ footer_content: "&copy; 2024 Paweł Kawalec"
 
 gh_edit_link: false
 gh_edit_repository: "https://github.com/kawapa/kawapa-github-io"
+
+enable_copy_code_button: false
