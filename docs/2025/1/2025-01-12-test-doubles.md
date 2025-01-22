@@ -13,37 +13,25 @@ In unit testing, it’s often necessary to isolate the unit under test from its 
 
 ## Fake
 
-A fake is an object that mimics a real dependency but is implemented in a simpler way. It is typically used when the real dependency is too complex to implement or when its full functionality is unnecessary for the test.
+A fake is an object that replaces real implementations of classes or functions during unit tests. The purpose of a fake is to simulate the behavior of external components in a controlled and predictable way, enabling the testing of specific parts of code in isolation, without relying on actual resources such as databases, APIs, or file systems.
 
-Example: Instead of using a full database, a fake implementation might be used that keeps data in memory (e.g., in a collection within the application).
+### Example
 
-Use case: Fakes are useful when the test needs to operate on real data but the full functionality of the external dependency is not required.
+Consider a system that uses a `Database` class to save data, but a unit test is required that does not depend on a real database. For simplicity, the interface is as follows:
 
-```cpp
-class IDatabase {
-public:
-    virtual void save(int data) = 0;
-    virtual int get(int index) = 0;
-};
+{% gist 617bdbd66d460d2f6e8f693c77f5896b fake1.cpp %}
 
-class FakeDatabase : public IDatabase {
-private:
-    std::vector<int> dataStore;
-public:
-    void save(int data) override {
-        dataStore.push_back(data);  // Simulate saving to a database
-    }
+For testing purposes, a fake database is created that stores data in a vector instead of using a real database:
 
-    int get(int index) override {
-        return dataStore[index];  // Simulate retrieving from a database
-    }
-};
+{% gist 617bdbd66d460d2f6e8f693c77f5896b fake2.cpp %}
 
-int main() {
-    FakeDatabase fakeDb;
-    fakeDb.save(42);
-}
-```
+The class that is under test, `DataProcessor`, uses `IDatabase` to save data:
+
+{% gist 617bdbd66d460d2f6e8f693c77f5896b fake3.cpp %}
+
+During unit testing, a FakeDatabase is provided to the `DataProcessor` to test its behavior without needing a real database. The **arrange** step involves setting up the fake database and the `DataProcessor`. The **act** step calls the method being tested, and the **assert** step verifies that the expected behavior occurred (i.e., the data was saved in the fake database).
+
+{% gist 617bdbd66d460d2f6e8f693c77f5896b fake4.cpp %}
 
 ---
 
@@ -55,36 +43,7 @@ Example: A stub can simulate a method that would normally fetch data from an ext
 
 Use case: Stubs are used to provide specific input data in tests and ensure that the unit under test handles the data correctly.
 
-```cpp
-class IExternalService {
-public:
-    virtual int fetchData() = 0;
-};
-
-class StubService : public IExternalService {
-public:
-    int fetchData() override {
-        return 100;  // Return predefined data
-    }
-};
-
-class Application {
-private:
-    ExternalService& service;
-public:
-    Application(ExternalService& svc) : service(svc) {}
-    
-    void processData() {
-        int data = service.fetchData();
-    }
-};
-
-int main() {
-    StubService stubService;
-    Application app(stubService);
-    app.processData();
-}
-```
+{% gist 617bdbd66d460d2f6e8f693c77f5896b stub1.cpp %}
 
 ---
 
@@ -96,41 +55,16 @@ Example: A mock can check whether the sendEmail() method was called during the t
 
 Use case: Mocks are used to verify that the unit under test interacts with other objects as expected, such as calling methods under specific conditions.
 
-```cpp
-class IEmailService {
-public:
-    virtual void sendEmail(const std::string& message) = 0;
-};
+{% gist 617bdbd66d460d2f6e8f693c77f5896b mock1.cpp %}
 
-class MockEmailService : public IEmailService {
-public:
-    bool wasCalled = false;
-    std::string receivedMessage;
+FOO
 
-    void sendEmail(const std::string& message) override {
-        wasCalled = true;
-        receivedMessage = message;
-    }
-};
+<script src="https://gist.github.com/kawapa/617bdbd66d460d2f6e8f693c77f5896b.js?file=fake1.cpp"></script>
 
-class UserNotification {
-private:
-    EmailService& emailService;
-public:
-    UserNotification(EmailService& service) : emailService(service) {}
+FOO
 
-    void notify(const std::string& message) {
-        emailService.sendEmail(message);
-    }
-};
+<script src="https://gist.github.com/kawapa/617bdbd66d460d2f6e8f693c77f5896b.js?file=fake2.cpp"></script>
 
-int main() {
-    MockEmailService mockService;
-    UserNotification notification(mockService);
+BAR
 
-    notification.notify("Test Message");
-
-    assert(mockService.wasCalled == true);
-    assert(mockService.receivedMessage == "Test Message");
-}
-```
+<script src="https://gist.github.com/kawapa/617bdbd66d460d2f6e8f693c77f5896b.js?file=fake3.cpp"></script>
