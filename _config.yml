@@ -9,7 +9,6 @@ remote_theme: kawapa/just-the-docs
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
-  - jekyll-gist
 
 sass:
   style: compressed
