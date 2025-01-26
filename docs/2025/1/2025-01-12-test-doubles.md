@@ -22,8 +22,8 @@ Consider a system that uses a `Database` class to save data, but a unit test is 
 ```cpp
 class IDatabase {
 public:
-    virtual void save(const std::string& data) = 0;
-    virtual ~Database() = default;
+  virtual void save(const std::string& data) = 0;
+  virtual ~Database() = default;
 };
 ```
 
@@ -33,16 +33,16 @@ For testing purposes, a fake database is created that stores data in a vector in
 ```cpp
 class FakeDatabase : public IDatabase {
 public:
-    std::vector<std::string> saved_data;
+  std::vector<std::string> saved_data;
 
-    void save(const std::string& data) override {
-        saved_data.push_back(data);
-        // Simulate saving to a database
-    }
+  void save(const std::string& data) override {
+    saved_data.push_back(data);
+    // Simulate saving to a database
+  }
 
-    bool contains(const std::string& data) const {
-        return std::find(saved_data.begin(), saved_data.end(), data) != saved_data.end();
-    }
+  bool contains(const std::string& data) const {
+    return std::find(saved_data.begin(), saved_data.end(), data) != saved_data.end();
+  }
 };
 ```
 
@@ -51,13 +51,13 @@ The class that is under test, `DataProcessor`, uses `IDatabase` to save data:
 ```cpp
 class DataProcessor {
 private:
-    IDatabase& db;
+  IDatabase& db;
 public:
-    explicit DataProcessor(IDatabase& database) : db(database) {}
+  explicit DataProcessor(IDatabase& database) : db(database) {}
 
-    void processData(const std::string& data) {
-        db.save(data);
-    }
+  void processData(const std::string& data) {
+    db.save(data);
+  }
 };
 ```
 
@@ -65,16 +65,16 @@ During unit testing, a FakeDatabase is provided to the `DataProcessor` to test i
 
 ```cpp
 TEST(DataProcessorTest, ProcessDataStoresDataInFakeDatabase) {
-    // Arrange
-    FakeDatabase fakeDb;
-    DataProcessor processor(fakeDb);
+  // Arrange
+  FakeDatabase fakeDb;
+  DataProcessor processor(fakeDb);
 
-    // Act
-    processor.processData("Test data");
+  // Act
+  processor.processData("Test data");
 
-    // Assert
-    ASSERT_TRUE(fakeDb.contains("Test data"));
-    // Check if the data was saved in the FakeDatabase
+  // Assert
+  ASSERT_TRUE(fakeDb.contains("Test data"));
+  // Check if the data was saved in the FakeDatabase
 }
 ```
 
@@ -91,31 +91,31 @@ Use case: Stubs are used to provide specific input data in tests and ensure that
 ```cpp
 class IExternalService {
 public:
-    virtual int fetchData() = 0;
+  virtual int fetchData() = 0;
 };
 
 class StubService : public IExternalService {
 public:
-    int fetchData() override {
-        return 100;  // Return predefined data
-    }
+  int fetchData() override {
+    return 100;  // Return predefined data
+  }
 };
 
 class Application {
 private:
-    ExternalService& service;
+  ExternalService& service;
 public:
-    Application(ExternalService& svc) : service(svc) {}
-    
-    void processData() {
-        int data = service.fetchData();
-    }
+  Application(ExternalService& svc) : service(svc) {}
+  
+  void processData() {
+    int data = service.fetchData();
+  }
 };
 
 int main() {
-    StubService stubService;
-    Application app(stubService);
-    app.processData();
+  StubService stubService;
+  Application app(stubService);
+  app.processData();
 }
 ```
 
@@ -132,38 +132,38 @@ Use case: Mocks are used to verify that the unit under test interacts with other
 ```cpp
 class IEmailService {
 public:
-    virtual void sendEmail(const std::string& message) = 0;
+  virtual void sendEmail(const std::string& message) = 0;
 };
 
 class MockEmailService : public IEmailService {
 public:
-    bool wasCalled = false;
-    std::string receivedMessage;
+  bool wasCalled = false;
+  std::string receivedMessage;
 
-    void sendEmail(const std::string& message) override {
-        wasCalled = true;
-        receivedMessage = message;
-    }
+  void sendEmail(const std::string& message) override {
+    wasCalled = true;
+    receivedMessage = message;
+  }
 };
 
 class UserNotification {
 private:
-    EmailService& emailService;
+  EmailService& emailService;
 public:
-    UserNotification(EmailService& service) : emailService(service) {}
+  UserNotification(EmailService& service) : emailService(service) {}
 
-    void notify(const std::string& message) {
-        emailService.sendEmail(message);
-    }
+  void notify(const std::string& message) {
+    emailService.sendEmail(message);
+  }
 };
 
 int main() {
-    MockEmailService mockService;
-    UserNotification notification(mockService);
+  MockEmailService mockService;
+  UserNotification notification(mockService);
 
-    notification.notify("Test Message");
+  notification.notify("Test Message");
 
-    assert(mockService.wasCalled == true);
-    assert(mockService.receivedMessage == "Test Message");
+  assert(mockService.wasCalled == true);
+  assert(mockService.receivedMessage == "Test Message");
 }
 ```
